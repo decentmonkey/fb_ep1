@@ -91,12 +91,20 @@ python early:
             copy_what = re.sub("\?\s{1,}", "?\n", copy_what)
             copy_what = re.sub("\.\s{1,}", ".\n", copy_what)
             mycopytext(copy_what) #put into clipboard
+        keyPressed = pygame.key.get_pressed()
+        if keyPressed[pygame.K_SLASH]:
+            return
 
+        what = re.sub(r'(\n\s*)', " ", what)
+        what = t__(what)
+        what = what.replace(" ", " ")
         what = re.sub("\!\s{1,}", "!\n", what)
         what = re.sub("\?\s{1,}", "?\n", what)
         what = re.sub("\.\s{1,}", ".\n", what)
         what = re.sub("Mr\.\\n", "Mr. ", what)
         what = re.sub("Mrs\.\\n", "Mrs. ", what)
+        what = re.sub("Ms\.\\n", "Ms. ", what)
+        renpy.say(who, what)
 
         renpy.say(who, what)
 

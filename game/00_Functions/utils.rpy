@@ -14,6 +14,12 @@ init python:
     def mycopytext(t):
         pygame.scrap.put(pygame.scrap.SCRAP_TEXT, t.encode("utf-8"))
 
+    def check_hide_text():
+        if not renpy.get_screen("screen_sprites"):
+            renpy.hide_screen("say")
+            return
+        return True
+        
 label mycopytext_label(txt):
     $ mycopytext(txt)
     return
