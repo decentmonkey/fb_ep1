@@ -7,7 +7,7 @@ label street_steve_office:
 
     $ scene_name = "street_steve_office"
     $ sceneIsStreet = True
-    $ scene_caption = _("STEVE'S OFFICE")
+    $ scene_caption = t_("STEVE'S OFFICE")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True:
         $ scene_image = "scene_Street_Steve_Office_Driver" + day_suffix
@@ -18,7 +18,7 @@ label street_steve_office:
 
     $ add_object_to_scene("Teleport_Building", {"type":2, "base":"Street_Steve_Office_Building", "click" : "street_steve_office_teleport", "actions" : "lw", "zorder" : 1, "b":0.05})
 #    $ add_object_to_scene("Monica", {"type":2, "base":"Bank_Street_Driver_Monica_" + cloth + day_suffix, "click" : "street_bank_environment", "actions" : "l", "zorder" : 10})
-#    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_steve_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+#    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_steve_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
     return
 
 #                            $ brightness_adjustment = 0.1

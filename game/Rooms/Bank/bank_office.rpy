@@ -7,7 +7,7 @@ label bank_office:
     $ miniMapData = []
 
     $ scene_name = "bank_office"
-    $ scene_caption = _("BANK")
+    $ scene_caption = t_("BANK")
     $ clear_scene_from_objects(scene_name)
     if clerksOffended == False:
         $ scene_image = "scene_Bank_Clerks_1"
@@ -29,7 +29,7 @@ label bank_office:
     $ add_object_to_scene("Folder1", {"type":2, "base":"Bank_Office_Folder1", "click" : "bank_office_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Folder2", {"type":2, "base":"Bank_Office_Folder2", "click" : "bank_office_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "bank_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "bank_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
     return
 
 #                            $ brightness_adjustment = 0.1

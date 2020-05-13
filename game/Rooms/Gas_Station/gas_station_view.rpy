@@ -23,7 +23,7 @@ label gas_station_view1:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view1"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     if saleWomanAtCashier == True:
@@ -43,7 +43,7 @@ label gas_station_view1:
 
     $ add_object_to_scene("Logo", {"type":2, "base":"Gas_Station_View1_Logo", "click" : "street_gas_station_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Street_Gas_Station", {"type":3, "text" : _("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Gas_Station", {"type":3, "text" : t_("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07
@@ -126,7 +126,7 @@ label gas_station_view1_environment(obj_name, obj_data):
 label gas_station_no_saleswoman_caption:
     m "Странно, а где кассир?"
     call question_helper_enable("question_gas_trader1") from _call_question_helper_enable
-    $ add_objective("find_gas_cashier", _("Найти кассира"), c_blue, 30)
+    $ add_objective("find_gas_cashier", t_("Найти кассира"), c_blue, 30)
     $ gasStationFindingFuelQuestStage = 1
     $ gasStationRoomsBlocked = True
     $ autorun_to_object("gas_station_view_cashier", "gas_station_no_saleswoman_caption2")
@@ -155,7 +155,7 @@ label gas_station_view2:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view2"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View2"
@@ -182,7 +182,7 @@ label gas_station_view2:
     $ add_object_to_scene("Book19", {"type":2, "base":"Gas_Station_View2_Book19", "click" : "gas_station_view2_environment", "actions" : "l", "zorder" : 0, "b":0.15})
     $ add_object_to_scene("Book20", {"type":2, "base":"Gas_Station_View2_Book20", "click" : "gas_station_view2_environment", "actions" : "l", "zorder" : 0, "b":0.15})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view2_environment(obj_name, obj_data):
@@ -213,7 +213,7 @@ label gas_station_view3:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view3"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View3"
@@ -231,7 +231,7 @@ label gas_station_view3:
     $ add_object_to_scene("Cakes8", {"type":2, "base":"Gas_Station_View3_Cakes8", "click" : "gas_station_view3_environment", "actions" : "l", "zorder" : 1})
     $ add_object_to_scene("Cakes9", {"type":2, "base":"Gas_Station_View3_Cakes9", "click" : "gas_station_view3_environment", "actions" : "l", "zorder" : 1})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view3_environment(obj_name, obj_data):
@@ -266,7 +266,7 @@ label gas_station_view4:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view4"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View4"
@@ -300,7 +300,7 @@ label gas_station_view4:
     $ add_object_to_scene("Wine12", {"type":2, "base":"Gas_Station_View4_Wine12", "click" : "gas_station_view4_environment", "actions" : "l", "zorder" : 0, "b":0.15})
     $ add_object_to_scene("Wine13", {"type":2, "base":"Gas_Station_View4_Wine13", "click" : "gas_station_view4_environment", "actions" : "l", "zorder" : 0, "b":0.15})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view4_environment(obj_name, obj_data):
@@ -375,7 +375,7 @@ label gas_station_view5:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view5"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View5"
@@ -387,7 +387,7 @@ label gas_station_view5:
     $ add_object_to_scene("Juice", {"type":2, "base":"Gas_Station_View5_Juice", "click" : "gas_station_view5_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Desk", {"type":2, "base":"Gas_Station_View5_Desk", "click" : "gas_station_view5_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view5_environment(obj_name, obj_data):
@@ -423,7 +423,7 @@ label gas_station_view6:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view6"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     if gasStationBottle2Broken == False:
@@ -453,7 +453,7 @@ label gas_station_view6:
         else:
             $ add_object_to_scene("Bottle2", {"type":2, "base":"Gas_Station_View6_Bottle2", "click" : "gas_station_view6_environment", "actions" : "l", "zorder" : 0, "b":0.15})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View5", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view6_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View5", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view6_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view6_teleport(obj_name, obj_data):
@@ -518,7 +518,7 @@ label gas_station_view_cashier:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view_cashier"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     if saleWomanAtCashier == True:
@@ -564,7 +564,7 @@ label gas_station_view_cashier:
 
         $ add_object_to_scene("Logo", {"type":2, "base":"Gas_Station_View_Cashier_Logo", "click" : "street_gas_station_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label gas_station_view_cashier_teleport(obj_name, obj_data):
@@ -610,7 +610,7 @@ label gas_station_view_door:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view_door"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View_Door"
@@ -619,7 +619,7 @@ label gas_station_view_door:
     $ add_object_to_scene("Cashier", {"type":2, "base":"Gas_Station_View_Door_Cashier", "click" : "gas_station_view1_environment", "actions" : "lw", "zorder" : 0})
     $ add_object_to_scene("Door", {"type":2, "base":"Gas_Station_View_Door_Door", "click" : "gas_station_view_door_environment", "actions" : "lt", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Gas_Station_View_Cashier", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view_door_environment", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Gas_Station_View_Cashier", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view_door_environment", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 label gas_station_view_door_environment(obj_name, obj_data):
@@ -655,7 +655,7 @@ label gas_station_door_talk:
             $ gasStationRoomsBlocked = False
             mt "Там она или нет, но надо привлечь ее внимание."
             "Попробую осмотреться вокруг, вдруг что-то найду?"
-            $ add_objective("gas_cashier_mischief", _("Привлечь внимание кассира какой-нибудь пакостью!"), c_red, 35)
+            $ add_objective("gas_cashier_mischief", t_("Привлечь внимание кассира какой-нибудь пакостью!"), c_red, 35)
 #                    $ autorun_to_object("gas_station_view2", "gas_saleswoman_scene1_1")
 #                    $ autorun_to_object("gas_station_view3", "gas_saleswoman_scene1_2")
 #                    $ autorun_to_object("gas_station_view6", "gas_saleswoman_scene1_3")

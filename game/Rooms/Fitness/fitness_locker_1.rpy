@@ -3,7 +3,7 @@ label fitness_locker_1:
     $ miniMapData = []
 
     $ scene_name = "fitness_locker_1"
-    $ scene_caption = _("Fitness Gym")
+    $ scene_caption = t_("Fitness Gym")
     $ clear_scene_from_objects(scene_name)
     if fitnessStephanieRebeccaInLocker == True:
         $ scene_image = "scene_fitness_locker_1_Stephanie_Rebecca"
@@ -15,8 +15,8 @@ label fitness_locker_1:
 
 #    $ add_object_to_scene("Lockers", {"type":2, "base":"fitness_locker_1_Lockers", "click" : "fitness_locker_1_environment", "actions" : "lw", "zorder" : 0})
     $ add_object_to_scene("Benches", {"type":2, "base":"fitness_locker_1_Benches", "click" : "fitness_locker_1_environment", "actions" : "l", "zorder" : 0})
-    $ add_object_to_scene("Teleport_Lockers", {"type":3, "text" : _("ШКАФЧИКИ ДЛЯ ПЕРЕОДЕВАНИЯ"), "larrow" : "arrow_down_2", "base":"fitness_locker_1_Lockers", "click" : "fitness_locker_1_teleport", "xpos" : 1492, "ypos" : 311, "zorder":11})
-    $ add_object_to_scene("Teleport_Gym", {"type":3, "text" : _("НАЗАД В ЗАЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "fitness_locker_1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Lockers", {"type":3, "text" : t_("ШКАФЧИКИ ДЛЯ ПЕРЕОДЕВАНИЯ"), "larrow" : "arrow_down_2", "base":"fitness_locker_1_Lockers", "click" : "fitness_locker_1_teleport", "xpos" : 1492, "ypos" : 311, "zorder":11})
+    $ add_object_to_scene("Teleport_Gym", {"type":3, "text" : t_("НАЗАД В ЗАЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "fitness_locker_1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     if driveTriggers.has_key("stephanie_return_event") == True and driveTriggers["stephanie_return_event"] == "on":
         call stephanie_fitness_return_scene() from _call_stephanie_fitness_return_scene
         call refresh_scene_fade() from _call_refresh_scene_fade_81

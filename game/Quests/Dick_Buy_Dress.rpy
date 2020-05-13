@@ -60,7 +60,7 @@ label dick_meeting1:
     "Садись в машину."
 
     $ monicaEnterCarLookingCharacter = "Dick"
-    $ add_objective("drive_to_cloth_shop", _("Ехать с Диком в магазин одежды"), c_orange, 25)
+    $ add_objective("drive_to_cloth_shop", t_("Ехать с Диком в магазин одежды"), c_orange, 25)
     $ dickMeeting1Drive1DialoguePlanned = True
     $ focus_map("Teleport_Cloth_Shop", "dick_meeting1_map_disabled")
 
@@ -136,7 +136,7 @@ label drive_speak_monica_dick_day1_drive1():
 
     $ dickBuyDressInProgress = True
     $ remove_objective("drive_to_cloth_shop")
-    $ add_objective("dick_cloth_shop_buy_dress", _("Подобрать подходящее платье в магазине"), c_orange, 25)
+    $ add_objective("dick_cloth_shop_buy_dress", t_("Подобрать подходящее платье в магазине"), c_orange, 25)
 
     return
 

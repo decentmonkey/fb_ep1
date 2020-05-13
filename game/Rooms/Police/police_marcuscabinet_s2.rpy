@@ -5,7 +5,7 @@ label police_marcuscabinet_s2:
     $ miniMapData = []
 
     $ scene_name = "police_marcuscabinet_s2"
-    $ scene_caption = _("Marcus Cabinet")
+    $ scene_caption = t_("Marcus Cabinet")
     $ clear_scene_from_objects(scene_name)
 
     if marcusCabinetState == 4:

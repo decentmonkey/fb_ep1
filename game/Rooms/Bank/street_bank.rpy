@@ -5,7 +5,7 @@ label street_bank:
 
     $ scene_name = "street_bank"
     $ sceneIsStreet = True
-    $ scene_caption = _("BANK")
+    $ scene_caption = t_("BANK")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True:
         $ scene_image = "scene_Bank_Street_Driver_Monica_" + cloth + day_suffix

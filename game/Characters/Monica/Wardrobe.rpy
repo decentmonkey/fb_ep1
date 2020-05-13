@@ -78,7 +78,7 @@ label wardrobe(name, obj_data):
                         if businessClothNotFoundDay1Seen == True:
                             return
                         $ businessClothNotFoundDay1Seen = True
-                        $ add_objective("find_julia", _("Найти Юлию и узнать где платье."), c_pink, 20)
+                        $ add_objective("find_julia", t_("Найти Юлию и узнать где платье."), c_pink, 20)
                         $ autorun_to_object("floor1_stairs", "floor1_no_julia")
                         call question_helper_enable("question_helper_hairdye_find_julia") from _call_question_helper_enable_4
 
@@ -170,7 +170,7 @@ label wardrobe(name, obj_data):
                         "Надо спросить у Юлии."
                         "..."
                         "Меня это начинает бесить."
-                        $ add_objective("ask_julia_businesscloth2", _("Спросить у Юлии где мой бизнес наряд"), c_red, 3)
+                        $ add_objective("ask_julia_businesscloth2", t_("Спросить у Юлии где мой бизнес наряд"), c_red, 3)
                         return
                     sound snd_found_dress
                     img 1512
@@ -180,7 +180,7 @@ label wardrobe(name, obj_data):
                     m "Теперь я готова делать Бизнес!"
 
                     $ remove_objective("go_outside_fitness")
-                    $ add_objective("go_fitness", _("Ехать в фитнес зал"), c_orange, 10)
+                    $ add_objective("go_fitness", t_("Ехать в фитнес зал"), c_orange, 10)
                     $ change_cloth("BusinessCloth", "BusinessCloth2")
                     $ driverMode = 2
         if day_time == "evening":

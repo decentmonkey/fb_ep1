@@ -7,7 +7,7 @@ label dick_office_entrance:
     $ miniMapData = []
 
     $ scene_name = "dick_office_entrance"
-    $ scene_caption = _("Dick's Office Reception")
+    $ scene_caption = t_("Dick's Office Reception")
     $ clear_scene_from_objects(scene_name)
     if dickReceptionStage == 0 or dickReceptionStage == 2 or dickReceptionStage == 3 or dickReceptionStage == 4:
         $ scene_image = "scene_Office_Dick_Entrance_Monica_Reception_AfterJail_1"
@@ -29,8 +29,8 @@ label dick_office_entrance:
     $ add_object_to_scene("Vase", {"type":2, "base":"Office_Dick_Entrance_Vase", "click" : "dick_office_entrance_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Chandelier", {"type":2, "base":"Office_Dick_Entrance_Chandelier", "click" : "dick_office_entrance_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Inside", {"type":3, "text" : _("ОФИСЫ"), "rarrow" : "arrow_right_2", "base":"Office_Dick_Entrance_Teleport_Inside", "click" : "dick_office_entrance_teleport", "xpos" : 1530, "ypos" : 190, "zorder":9})
-    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : _("НА УЛИЦУ"), "larrow" : "arrow_left_2", "base":"Office_Dick_Entrance_Teleport_Street", "click" : "dick_office_entrance_teleport", "xpos" : 647, "ypos" : 190, "zorder":9})
+    $ add_object_to_scene("Teleport_Inside", {"type":3, "text" : t_("ОФИСЫ"), "rarrow" : "arrow_right_2", "base":"Office_Dick_Entrance_Teleport_Inside", "click" : "dick_office_entrance_teleport", "xpos" : 1530, "ypos" : 190, "zorder":9})
+    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : t_("НА УЛИЦУ"), "larrow" : "arrow_left_2", "base":"Office_Dick_Entrance_Teleport_Street", "click" : "dick_office_entrance_teleport", "xpos" : 647, "ypos" : 190, "zorder":9})
     music Groove2_85
     if dickReceptionVisited == False:
         hide screen Rain

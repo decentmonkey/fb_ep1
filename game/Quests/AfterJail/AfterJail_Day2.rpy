@@ -291,8 +291,8 @@ label afterJail_Day2_DickOffice_Secretary_dialogue2:
 
     $ dickOfficeSecretaryMonicaStage = 1
     $ remove_objective("dick_search")
-    $ add_objective("wait_dick", _("Дождаться Дика"), c_orange, 5)
-    $ add_objective("wait_dick_chair", _("Подождать Дика в удобном кресле"), c_green, 6)
+    $ add_objective("wait_dick", t_("Дождаться Дика"), c_orange, 5)
+    $ add_objective("wait_dick_chair", t_("Подождать Дика в удобном кресле"), c_green, 6)
     $ autorun_to_object("dick_office_hall1", "afterJail_Day2_DickOffice_Secretary_dialogue3")
     call refresh_scene_fade() from _call_refresh_scene_fade_147
 
@@ -309,7 +309,7 @@ label afterJail_Day2_DickOffice_Secretary_dialogue3:
     "Пойду ей это предъявлю!"
     $ dickOfficeSecretaryMonicaStage = 2
     $ remove_objective("wait_dick_chair")
-    $ add_objective("wait_dick_chair", _("Тут негде ждать! Она издевается???"), c_red, 6)
+    $ add_objective("wait_dick_chair", t_("Тут негде ждать! Она издевается???"), c_red, 6)
     call refresh_scene_fade() from _call_refresh_scene_fade_148
 
     return
@@ -351,7 +351,7 @@ label afterJail_Day2_DickOffice_Secretary_dialogue4:
     $ dickOfficeSecretaryMonicaStage = 3
 
     $ remove_objective("wait_dick_chair")
-    $ add_objective("wait_dick2", _("Зайти попозже узнать появился-ли Дик"), c_blue, 6)
+    $ add_objective("wait_dick2", t_("Зайти попозже узнать появился-ли Дик"), c_blue, 6)
     $ autorun_to_object("street_dick_office", "afterJail_Day2_DickOffice_Secretary_dialogue5")
     call refresh_scene_fade() from _call_refresh_scene_fade_149
     return
@@ -497,7 +497,7 @@ label afterJail_Day2_DickOffice_Secretary_dialogue11:
 
     $ remove_objective("wait_dick")
     $ remove_objective("wait_dick2")
-    $ add_objective("dick_tomorrow1", _("Придти к Дику завтра"), c_white, 6)
+    $ add_objective("dick_tomorrow1", t_("Придти к Дику завтра"), c_white, 6)
     $ dickOfficeSecretaryMonicaStage = 7
     $ dickReceptionStage = 4
 
@@ -530,7 +530,7 @@ label afterJail_Day2_DickOffice_street_dialogue1:
         "Он не слишком приятен, но может быть он знает где находится какой-нибудь недорогой отель?"
     $ whore1Enabled = False
     $ whoresMonicaDisturb = True
-    $ add_objective("ask_shawarma", _("Спросить у продавца кебаба, может быть он знает где переночевать?"), c_blue, 6)
+    $ add_objective("ask_shawarma", t_("Спросить у продавца кебаба, может быть он знает где переночевать?"), c_blue, 6)
 
     return
 
@@ -652,7 +652,7 @@ label afterJail_Day2_Shawarma_dialogue1:
     $ renpy.music.set_pause(False, "rain")
     $ lightning = True
     $ remove_objective("ask_shawarma")
-    $ add_objective("go_hostel", _("Найти дешевый хостел"), c_green, 6)
+    $ add_objective("go_hostel", t_("Найти дешевый хостел"), c_green, 6)
     $ streetHostelPathEnabled = True
     call refresh_scene_fade() from _call_refresh_scene_fade_154
     return

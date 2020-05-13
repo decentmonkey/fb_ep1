@@ -1,7 +1,7 @@
 label bank_office_talk1:
 #    img 1649
 #    w
-#    $ add_objective("goto_bank1", _("Ехать в Банк по вопросу денег от Стива"), c_red, 20)
+#    $ add_objective("goto_bank1", t_("Ехать в Банк по вопросу денег от Стива"), c_red, 20)
     $ remove_objective("goto_bank1")
     music Stealth_Groover
     img 1650
@@ -123,7 +123,7 @@ label bank_office_talk1:
     music casualMusic
     $ bankOfficeState = 2
 
-    $ add_objective("goto_office1", _("Ехать в Офис"), c_pink, 20)
+    $ add_objective("goto_office1", t_("Ехать в Офис"), c_pink, 20)
     $ drivingPlacePlannedArray["Steve_Office"] = "steve1_drive1"
     $ focus_map("Teleport_Monica_Office", "steve1_drive1_discard_others")
     $ mapSubstMonicaOfficeToSteve = True

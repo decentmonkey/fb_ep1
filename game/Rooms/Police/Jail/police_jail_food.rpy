@@ -7,7 +7,7 @@ label police_jail_food_scene:
     if scene_name != "police_jail_food_scene":
         $ jailFoodLastScene = scene_name
     $ scene_name = "police_jail_food_scene"
-    $ scene_caption = _("JAIL")
+    $ scene_caption = t_("JAIL")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Police_Cell_Food"
@@ -30,7 +30,7 @@ label police_jail_food_scene_environment(obj_name, obj_data):
             sound snd_eating
             stop music fadeout 1.0
             sound snd_eating
-            call textonblack(_("Спустя 5 минут...")) from _call_textonblack_16
+            call textonblack(t_("Спустя 5 минут...")) from _call_textonblack_16
             img black_screen
             with Dissolve(1)
             call change_scene(jailFoodLastScene, "Fade", False) from _call_change_scene_191

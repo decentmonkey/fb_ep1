@@ -214,7 +214,7 @@ init -1500 python in iap:
 
 
         def set_title(self):
-            self.helper.dialogTitle = __("Contacting App Store\nPlease Wait...")
+            self.helper.dialogTitle = _t_("Contacting App Store\nPlease Wait...")
 
         def identifier(self, p):
             """

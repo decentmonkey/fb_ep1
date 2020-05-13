@@ -8,7 +8,7 @@ label whores_place:
 
     $ scene_name = "whores_place"
     $ sceneIsStreet = True
-    $ scene_caption = _("Whores place")
+    $ scene_caption = t_("Whores place")
     $ clear_scene_from_objects(scene_name)
     if whore1Enabled == True:
         $ scene_image = "scene_street_Whores_Place_Whores_Monica_" + cloth + day_suffix
@@ -32,8 +32,8 @@ label whores_place:
     $ add_object_to_scene("Trash5", {"type":2, "base":"Street_Whores_Place_Trash5", "click" : "whores_place_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Trash6", {"type":2, "base":"Street_Whores_Place_Trash6", "click" : "whores_place_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : _("ВНИЗ ПО УЛИЦЕ"), "larrow" : "arrow_left_2", "base":"Street_Whores_Place_Teleport_Shawarma", "click" : "whores_place_teleport", "xpos" : 195, "ypos" : 778, "zorder":15})
-    $ add_object_to_scene("Teleport_Street1", {"type":3, "text" : _("ВВЕРХ ПО УЛИЦЕ"), "rarrow" : "arrow_right_2", "base":"Street_Whores_Place_Teleport_Street1", "click" : "whores_place_teleport", "xpos" : 1642, "ypos" : 218, "zorder":15})
+    $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : t_("ВНИЗ ПО УЛИЦЕ"), "larrow" : "arrow_left_2", "base":"Street_Whores_Place_Teleport_Shawarma", "click" : "whores_place_teleport", "xpos" : 195, "ypos" : 778, "zorder":15})
+    $ add_object_to_scene("Teleport_Street1", {"type":3, "text" : t_("ВВЕРХ ПО УЛИЦЕ"), "rarrow" : "arrow_right_2", "base":"Street_Whores_Place_Teleport_Street1", "click" : "whores_place_teleport", "xpos" : 1642, "ypos" : 218, "zorder":15})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

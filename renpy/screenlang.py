@@ -23,7 +23,7 @@ import renpy.display
 import contextlib
 
 # Grab the python versions of the parser and ast modules.
-ast = __import__("ast")
+ast = __import_t_("ast")
 
 # The filename of the file we're parsing.
 filename = None
@@ -1265,7 +1265,7 @@ class ScreenLangScreen(renpy.object.Object):
 class ScreenParser(Parser):
 
     def __init__(self):
-        super(ScreenParser, self).__init__("screen")
+        super(ScreenParser, self).__init_t_("screen")
 
     def parse(self, l, name="_name"):
 

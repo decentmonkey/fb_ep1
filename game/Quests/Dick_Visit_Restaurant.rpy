@@ -6,7 +6,7 @@ default dick_meeting1_restaurant_dialogue3_completed = False
 
 
 label dick_meeting1_restaurant_init:
-    $ add_objective("dick_meeting1_goto_restaurant", _("Ехать с Диком в ресторан"), c_pink, 25)
+    $ add_objective("dick_meeting1_goto_restaurant", t_("Ехать с Диком в ресторан"), c_pink, 25)
     $ dick_meeting1_restaurant_drive_dialogue1_planned = True
     $ dickMeeting1RestaurantPlanned = True
     $ focus_map("Teleport_Rich_Hotel", "dick_meeting1_restaurant_map_disabled")
@@ -1156,7 +1156,7 @@ label dick_meeting1_restaurant_dialogue4_waitress_b():
     $ dickWaitingMonica3 = False
     $ dickWaitingMonica4 = True
     music casualMusic
-    $ add_objective("dick_meeting1_goto_car", _("Сесть в машину"), c_blue, 25)
+    $ add_objective("dick_meeting1_goto_car", t_("Сесть в машину"), c_blue, 25)
     $ autorun_to_object("street_rich_hotel", "dick_meeting1_car_parting1")
     call change_scene("rich_hotel_reception", "Fade_long") from _call_change_scene_200
     return

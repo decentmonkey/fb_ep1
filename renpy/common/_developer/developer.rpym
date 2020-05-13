@@ -40,24 +40,24 @@ screen _developer:
         fixed:
             vbox:
 
-                textbutton _("Interactive Director (D)"):
+                textbutton t_("Interactive Director (D)"):
                     action [ director.Start(), Hide("_developer") ]
-                textbutton _("Reload Game (Shift+R)"):
+                textbutton t_("Reload Game (Shift+R)"):
                     action ui.callsinnewcontext("_save_reload_game")
-                textbutton _("Console (Shift+O)"):
+                textbutton t_("Console (Shift+O)"):
                     action [ Hide("_developer"), _console.enter ]
-                textbutton _("Variable Viewer"):
+                textbutton t_("Variable Viewer"):
                     action ui.callsinnewcontext("_debugger_screen")
-                textbutton _("Image Location Picker"):
+                textbutton t_("Image Location Picker"):
                     action ui.callsinnewcontext("_image_location_picker")
-                textbutton _("Filename List"):
+                textbutton t_("Filename List"):
                     action ui.callsinnewcontext("_filename_list")
 
                 if not renpy.get_screen("_image_load_log"):
-                    textbutton _("Show Image Load Log (F4)"):
+                    textbutton t_("Show Image Load Log (F4)"):
                         action Show("_image_load_log")
                 else:
-                    textbutton _("Hide Image Load Log (F4)"):
+                    textbutton t_("Hide Image Load Log (F4)"):
                         action Hide("_image_load_log")
 
         hbox:
@@ -80,7 +80,7 @@ screen _variable_viewer(entries):
         has side "t c b":
             spacing gui._scale(10)
 
-        label _("Variable Viewer")
+        label t_("Variable Viewer")
 
         viewport:
             scrollbars "both"
@@ -92,7 +92,7 @@ screen _variable_viewer(entries):
             vbox:
 
                 if not entries:
-                    text _("Nothing to inspect.")
+                    text t_("Nothing to inspect.")
 
                 for vn, value in entries:
                     text "[vn] = [value!q]"
@@ -220,7 +220,7 @@ label _theme_test:
             ui.close() # hbox
 
             ui.frame(style='menu_frame', xalign=.01, yalign=.99)
-            ui.textbutton(_("Return to the developer menu"), clicked=ui.returns("return"))
+            ui.textbutton(t_("Return to the developer menu"), clicked=ui.returns("return"))
 
             rv = ui.interact()
             if rv == "return":
@@ -380,17 +380,17 @@ init python:
                     rv.blit(sr, (x, y))
 
                     # text.append("Imagemap rectangle: %r" % ((minx, miny, maxx, maxy),))
-                    text.append(__("Rectangle: %r") % ((x, y, w, h),))
+                    text.append(_t_("Rectangle: %r") % ((x, y, w, h),))
 
             if self.mouse:
                 mx, my = self.mouse
                 if mx < cr.width and my < cr.height:
-                    text.append(__("Mouse position: %r") % (self.mouse,))
+                    text.append(_t_("Mouse position: %r") % (self.mouse,))
 
             if self.clipboard:
                 text.append(self.clipboard)
 
-            text.append(__("Right-click or escape to quit."))
+            text.append(_t_("Right-click or escape to quit."))
 
             td = Text("\n".join(text), size=14, color="#fff", outlines=[ (1, "#000", 0, 0 ) ])
             tr = renpy.render(td, width, height, st, at)
@@ -422,10 +422,10 @@ init python:
 
                 if w or h:
                     text = repr((x, y, w, h))
-                    self.clipboard = __("Rectangle copied to clipboard.")
+                    self.clipboard = _t_("Rectangle copied to clipboard.")
                 else:
                     text = repr((x, y))
-                    self.clipboard = __("Position copied to clipboard.")
+                    self.clipboard = _t_("Position copied to clipboard.")
 
                 import pygame.scrap
                 pygame.scrap.put(pygame.scrap.SCRAP_TEXT, text)
@@ -444,7 +444,7 @@ screen _image_location_picker(image_files):
             label _(u"Image Location Picker")
 
             hbox:
-                text _("Type to filter: ")
+                text t_("Type to filter: ")
                 input value ScreenVariableInputValue("filter")
 
         viewport:
@@ -572,11 +572,11 @@ screen _image_load_log():
 
             has vbox
 
-            text _("Textures: [tex_count] ([tex_size_mb:.1f] MB)"):
+            text t_("Textures: [tex_count] ([tex_size_mb:.1f] MB)"):
                 size 14
                 color "#fff"
 
-            text _("Image cache: [cache_pct:.1f]% ([cache_size_mb:.1f] MB)"):
+            text t_("Image cache: [cache_pct:.1f]% ([cache_size_mb:.1f] MB)"):
                 size 14
                 color "#fff"
 
@@ -586,15 +586,15 @@ screen _image_load_log():
             for when, filename, preload in load_log:
                 if preload:
                     $ color="#ccffcc"
-                    $ prefix=__("✔ ")
+                    $ prefix=_t_("✔ ")
                 else:
                     $ color="#ffcccc"
-                    $ prefix=__("✘ ")
+                    $ prefix=_t_("✘ ")
 
                 text "[prefix][filename!q]" color color size 14
 
             if show_help:
-                text _("\n{color=#cfc}✔ predicted image (good){/color}\n{color=#fcc}✘ unpredicted image (bad){/color}\n{color=#fff}Drag to move.{/color}"):
+                text t_("\n{color=#cfc}✔ predicted image (good){/color}\n{color=#fcc}✘ unpredicted image (bad){/color}\n{color=#fff}Drag to move.{/color}"):
                     size 14
 
     timer 10.0 action SetScreenVariable("show_help", False)

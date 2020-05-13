@@ -7,7 +7,7 @@ label street_rich_hotel:
 
     $ scene_name = "street_rich_hotel"
     $ sceneIsStreet = True
-    $ scene_caption = _("Hotel La Grand")
+    $ scene_caption = t_("Hotel La Grand")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True:
         $ scene_image = "scene_Street_Rich_Hotel_Driver" + day_suffix

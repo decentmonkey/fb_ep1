@@ -3,7 +3,7 @@ label monica_office_entrance_s2:
     $ miniMapData = []
 
     $ scene_name = "monica_office_entrance_s2"
-    $ scene_caption = _("Monica's Office Entrance")
+    $ scene_caption = t_("Monica's Office Entrance")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Monica_Office_Entrance_Monica_" + cloth
@@ -15,8 +15,8 @@ label monica_office_entrance_s2:
     $ add_object_to_scene("Paint", {"type" : 2, "base" : "Monica_Office_Entrance_Paint", "click" : "monica_office_entrance_environment2", "actions" : "l", "zorder":0})
     $ add_object_to_scene("Plants", {"type" : 2, "base" : "Monica_Office_Entrance_Plants", "click" : "monica_office_entrance_environment2", "actions" : "l", "zorder":0})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : _("ЛИФТ"), "larrow" : "arrow_left_2", "base":"Monica_Office_Entrance_Lift", "click" : "monica_office_entrance_teleport2", "xpos" : 691, "ypos" : 884, "zorder":11})
-    $ add_object_to_scene("Teleport_Street_Monica_Office", {"type":3, "text" : _("НАЗАД"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_entrance_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : t_("ЛИФТ"), "larrow" : "arrow_left_2", "base":"Monica_Office_Entrance_Lift", "click" : "monica_office_entrance_teleport2", "xpos" : 691, "ypos" : 884, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Monica_Office", {"type":3, "text" : t_("НАЗАД"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_entrance_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

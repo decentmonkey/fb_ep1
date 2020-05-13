@@ -34,18 +34,18 @@ label start:
             print i
 
     $ map_objects = {
-            "Teleport_Monica_Office" : {"text" : _("ОФИС МОНИКИ"), "xpos" : 882, "ypos" : 320, "base" : "map_marker", "state" : "visible"},
-            "Teleport_Street_Corner" : {"text" : _("УГОЛ УЛИЦЫ"), "xpos" : 124, "ypos" : 476, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Dick_Office" : {"text" : _("ОФИС ДИКА"), "xpos" : 1370, "ypos" : 127, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Gas_Station" : {"text" : _("ЗАПРАВКА"), "xpos" : 1125, "ypos" : 910, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Police" : {"text" : _("ПОЛИЦИЯ"), "xpos" : 912, "ypos" : 809, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Rich_Hotel" : {"text" : _("ОТЕЛЬ ЛЯ ГРАНД"), "xpos" : 1782, "ypos" : 593, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Fitness" : {"text" : _("ФИТНЕСС"), "xpos" : 356, "ypos" : 411, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Steve_Office" : {"text" : _("ОФИС СТИВА"), "xpos" : 1333, "ypos" : 724, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Bank" : {"text" : _("БАНК"), "xpos" : 1212, "ypos" : 439, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Cloth_Shop" : {"text" : _("МАГАЗИН ОДЕЖДЫ"), "xpos" : 340, "ypos" : 901, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_Street_Corner" : {"text" : _("УГОЛ УЛИЦЫ"), "xpos" : 88, "ypos" : 942, "base" : "map_marker", "state" : "invisible"},
-            "Teleport_House" : {"text" : _("ДОМ МОНИКИ"), "xpos" : 95, "ypos" : 798, "base" : "map_marker_house", "state" : "active"}
+            "Teleport_Monica_Office" : {"text" : t_("ОФИС МОНИКИ"), "xpos" : 882, "ypos" : 320, "base" : "map_marker", "state" : "visible"},
+            "Teleport_Street_Corner" : {"text" : t_("УГОЛ УЛИЦЫ"), "xpos" : 124, "ypos" : 476, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Dick_Office" : {"text" : t_("ОФИС ДИКА"), "xpos" : 1370, "ypos" : 127, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Gas_Station" : {"text" : t_("ЗАПРАВКА"), "xpos" : 1125, "ypos" : 910, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Police" : {"text" : t_("ПОЛИЦИЯ"), "xpos" : 912, "ypos" : 809, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Rich_Hotel" : {"text" : t_("ОТЕЛЬ ЛЯ ГРАНД"), "xpos" : 1782, "ypos" : 593, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Fitness" : {"text" : t_("ФИТНЕСС"), "xpos" : 356, "ypos" : 411, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Steve_Office" : {"text" : t_("ОФИС СТИВА"), "xpos" : 1333, "ypos" : 724, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Bank" : {"text" : t_("БАНК"), "xpos" : 1212, "ypos" : 439, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Cloth_Shop" : {"text" : t_("МАГАЗИН ОДЕЖДЫ"), "xpos" : 340, "ypos" : 901, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_Street_Corner" : {"text" : t_("УГОЛ УЛИЦЫ"), "xpos" : 88, "ypos" : 942, "base" : "map_marker", "state" : "invisible"},
+            "Teleport_House" : {"text" : t_("ДОМ МОНИКИ"), "xpos" : 95, "ypos" : 798, "base" : "map_marker_house", "state" : "active"}
     }
 #mousedown_3, hide_windows
 #    $ print(config.keymap["game_menu"])
@@ -57,7 +57,7 @@ label start:
     $ map_enabled = False
     call intro_scene() from _call_intro_scene
 
-    $ add_objective("monica_wakeup", _("Разбудить Монику"), c_green, 0)
+    $ add_objective("monica_wakeup", t_("Разбудить Монику"), c_green, 0)
 
     $ scene_transition = "Fade_long"
     $ autorun_to_object("intro_scene", "intro_scene_start")
@@ -66,10 +66,10 @@ label start:
 label start_new_game:
     music casualMusic
     $ map_enabled = True
-    $ add_objective("dress_homecloth", _("Одеть домашнюю одежду"), c_blue, 0)
-    $ add_objective("take_bath", _("Принять душ"), c_green, 1)
-    $ add_objective("eat", _("Позавтракать"), c_green, 2)
-    $ add_objective("go_outside", _("Одеться и идти на улицу"), c_orange, 10)
+    $ add_objective("dress_homecloth", t_("Одеть домашнюю одежду"), c_blue, 0)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 1)
+    $ add_objective("eat", t_("Позавтракать"), c_green, 2)
+    $ add_objective("go_outside", t_("Одеться и идти на улицу"), c_orange, 10)
 
     $ miniMapDisabled = ["Basement"]
 

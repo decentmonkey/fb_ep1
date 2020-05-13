@@ -6,7 +6,7 @@ label hostel_street:
 
     $ scene_name = "hostel_street"
     $ sceneIsStreet = True
-    $ scene_caption = _("HOSTEL STREET")
+    $ scene_caption = t_("HOSTEL STREET")
     $ clear_scene_from_objects(scene_name)
 
 
@@ -20,8 +20,8 @@ label hostel_street:
 
 #    $ add_object_to_scene("Car", {"type":2, "base":"hostel_street_Car", "click" : "hostel_street_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Hostel_Edge_C", {"type":3, "text" : _("УГОЛ ДОМА"), "rarrow" : "arrow_right_2", "base":"Hostel_Street_Teleport_Hostel_Edge_C", "click" : "hostel_street_teleport", "xpos" : 1655, "ypos" : 822, "zorder":15})
-    $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : _("НАЗАД К ШАВЕРМЕ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_street_teleport", "xpos" : 210, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Hostel_Edge_C", {"type":3, "text" : t_("УГОЛ ДОМА"), "rarrow" : "arrow_right_2", "base":"Hostel_Street_Teleport_Hostel_Edge_C", "click" : "hostel_street_teleport", "xpos" : 1655, "ypos" : 822, "zorder":15})
+    $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : t_("НАЗАД К ШАВЕРМЕ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_street_teleport", "xpos" : 210, "ypos" : 956, "zorder":15})
 
     return
 #                            $ brightness_adjustment = 0.1

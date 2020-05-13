@@ -3,7 +3,7 @@ label hostel_bedroom2:
     $ miniMapData = []
 
     $ scene_name = "hostel_bedroom2"
-    $ scene_caption = _("HOSTEL BEDROOM")
+    $ scene_caption = t_("HOSTEL BEDROOM")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_hostel_bedroom2_Monica_Nude"
@@ -16,7 +16,7 @@ label hostel_bedroom2:
     $ add_object_to_scene("WhoreBody", {"type":2, "base":"Hostel_Bedroom2_WhoreBody", "click" : "hostel_bedroom2_environment", "actions" : "l", "zorder" : 1, "b":0.13})
     $ add_object_to_scene("WhoreFeet", {"type":2, "base":"Hostel_Bedroom2_WhoreFeet", "click" : "hostel_bedroom2_environment", "actions" : "l", "zorder" : 0, "b":0.13})
 
-    $ add_object_to_scene("Teleport_Hostel_Bedroom", {"type":3, "text" : _("ДУШ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bedroom2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hostel_Bedroom", {"type":3, "text" : t_("ДУШ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bedroom2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
 
     $ hostelReceptionVisited = True

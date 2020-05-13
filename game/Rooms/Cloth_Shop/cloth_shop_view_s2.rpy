@@ -7,7 +7,7 @@ label cloth_shop_view1_s2:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_view1_s2"
-    $ scene_caption = _("Clothing Shop")
+    $ scene_caption = t_("Clothing Shop")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Cloth_Shop_View1"
@@ -30,8 +30,8 @@ label cloth_shop_view1_s2:
 
     $ add_object_to_scene("Teleport_Cashier", {"type":2, "base":"Cloth_Shop_View1_Cashier", "click" : "cloth_shop_view1_teleport2", "actions" : "lw", "zorder" : 0})
     $ add_object_to_scene("Teleport_Dressing_Room", {"type":2, "base":"Cloth_Shop_View1_DressingRoom", "click" : "cloth_shop_view1_teleport2", "actions" : "lw", "zorder" : 0})
-    $ add_object_to_scene("Teleport_View2", {"type":3, "text" : _("ИДТИ ДАЛЬШЕ"), "rarrow" : "arrow_up_2", "base":"Cloth_Shop_View1_Teleport_View2", "click" : "cloth_shop_view1_teleport2", "xpos" : 183, "ypos" : 929, "zorder":11})
-    $ add_object_to_scene("Teleport_Street_Cloth_Shop", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view1_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_View2", {"type":3, "text" : t_("ИДТИ ДАЛЬШЕ"), "rarrow" : "arrow_up_2", "base":"Cloth_Shop_View1_Teleport_View2", "click" : "cloth_shop_view1_teleport2", "xpos" : 183, "ypos" : 929, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Cloth_Shop", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view1_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     if clothShopInited == False:
         call cloth_shop_init() from _call_cloth_shop_init_1

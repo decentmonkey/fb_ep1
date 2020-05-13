@@ -4,7 +4,7 @@ label basement_bedroom2:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_24
 
     $ scene_name = "basement_bedroom2"
-    $ scene_caption = _("BASEMENT")
+    $ scene_caption = t_("BASEMENT")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Basement_Bedroom2_Monica_" + cloth
@@ -28,7 +28,7 @@ label basement_bedroom2:
     $ add_object_to_scene("Picture9", {"type":2, "base":"Basement_Bedroom2_Picture9", "click" : "basement_bedroom2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Table", {"type":2, "base":"Basement_Bedroom2_Table", "click" : "basement_bedroom2_environment", "actions" : "lw", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Bedroom1", {"type":3, "text" : _("ШКАФ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_bedroom2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Bedroom1", {"type":3, "text" : t_("ШКАФ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_bedroom2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 

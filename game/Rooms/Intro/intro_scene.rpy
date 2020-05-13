@@ -2,7 +2,7 @@ label intro_scene:
     $ print "enter_intro_scene"
 
     $ scene_name = "intro_scene"
-    $ scene_caption = _("Bedroom")
+    $ scene_caption = t_("Bedroom")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Intro"

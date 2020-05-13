@@ -4,7 +4,7 @@ label street_monica_office:
 
     $ scene_name = "street_monica_office"
     $ sceneIsStreet = True
-    $ scene_caption = _("Monica's Office Outside")
+    $ scene_caption = t_("Monica's Office Outside")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True:
         $ scene_image = "scene_Street_Monica_Office_Driver" + day_suffix

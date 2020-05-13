@@ -15,7 +15,7 @@ label quest_house_monica_day2_day_init:
 #    $ juliaPunishedNone = True #debug
 #    $ juliaLocation = "floor1" #debug
 
-    call textonblack(_("ДЕНЬ 2...")) from _call_textonblack_35
+    call textonblack(t_("ДЕНЬ 2...")) from _call_textonblack_35
     img black_screen
     with Dissolve(1)
     $ changeDayTime("day")
@@ -145,13 +145,13 @@ label quest_house_monica_day2_day_init:
 
     $ going_to_fitness_quest = True
     $ map_objects["Teleport_Fitness"]["state"] = "visible"
-    $ add_objective("dress_homecloth", _("Одеть домашнюю одежду"), c_blue, 0)
-    $ add_objective("take_bath", _("Принять душ"), c_green, 1)
-    $ add_objective("eat", _("Позавтракать"), c_orange, 2)
-    $ add_objective("go_outside_fitness", _("Одеться и ехать в фитнес зал"), c_orange, 10)
+    $ add_objective("dress_homecloth", t_("Одеть домашнюю одежду"), c_blue, 0)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 1)
+    $ add_objective("eat", t_("Позавтракать"), c_orange, 2)
+    $ add_objective("go_outside_fitness", t_("Одеться и ехать в фитнес зал"), c_orange, 10)
     $ drivingPlacePlannedArray["Fitness"] = "drive_speak_monica_fred_fitness"
     if juliaPunished == True:
-        $ add_objective("julia_check_spot", _("Проверить Юлию"), c_red, 3)
+        $ add_objective("julia_check_spot", t_("Проверить Юлию"), c_red, 3)
 
     music Mandeville
     $ casualMusic = "Mandeville"
@@ -165,10 +165,10 @@ label quest_house_monica_day2_evening_init:
     "Поесть."
     "Принять ванну и ложиться спать."
     $ remove_objective("return_to_home")
-    $ add_objective("dress_homecloth", _("Одеть домашнюю одежду"), c_blue, 0)
-    $ add_objective("take_bath", _("Принять душ"), c_green, 1)
-    $ add_objective("eat", _("Поужинать"), c_orange, 2)
-    $ add_objective("sleep", _("Лечь спать"), c_orange, 4)
+    $ add_objective("dress_homecloth", t_("Одеть домашнюю одежду"), c_blue, 0)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 1)
+    $ add_objective("eat", t_("Поужинать"), c_orange, 2)
+    $ add_objective("sleep", t_("Лечь спать"), c_orange, 4)
     $ bathTakenJust = False
     $ bathTaken = False
     $ monicaEated = False

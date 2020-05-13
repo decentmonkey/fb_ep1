@@ -5,7 +5,7 @@ label bedroom2:
     $ miniMapSubst["all"] = "miniMapBedroomCheckCloth"
 
     $ scene_name = "bedroom2"
-    $ scene_caption = _("Bedroom")
+    $ scene_caption = t_("Bedroom")
     $ scene_image = "scene_Bedroom2_Monica_" + cloth + day_suffix
 
     $ monica_tint = [1.0, 1.0, 1.0]
@@ -35,15 +35,15 @@ label bedroom2:
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07
 #                            $ contrast_adjustment = 1.3
-    $ add_object_to_scene("Teleport_Bedroom1", {"type":3, "text" : _("КРОВАТЬ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "bedroom2_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
-    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("ХОЛЛ"), "rarrow" : "arrow_right_2", "base":"Bedroom2_Teleport_Floor2", "click" : "bedroom2_teleport", "xpos" : 1330, "ypos" : 1005, "zorder":11})
+    $ add_object_to_scene("Teleport_Bedroom1", {"type":3, "text" : t_("КРОВАТЬ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "bedroom2_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("ХОЛЛ"), "rarrow" : "arrow_right_2", "base":"Bedroom2_Teleport_Floor2", "click" : "bedroom2_teleport", "xpos" : 1330, "ypos" : 1005, "zorder":11})
 
 
     if gameStage > 2:
         if scene_name != lastSceneName and lastSceneName != "bedroom1":
             $ autorun_to_object(scene_name, "afterJailHouse_dialogue16a")
 
-#    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("HALL"), "rarrow" : "arrow_right_2", "base":"Bedroom2_Teleport_Floor2", "click" : "bedroom2_teleport", "xpos" : 1310, "ypos" : 1005, "zorder":11, "b":0.4, "s":0.0, "c":1.0, "tint":[0.90625, 0.69140625, 0.19140625]})
+#    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("HALL"), "rarrow" : "arrow_right_2", "base":"Bedroom2_Teleport_Floor2", "click" : "bedroom2_teleport", "xpos" : 1310, "ypos" : 1005, "zorder":11, "b":0.4, "s":0.0, "c":1.0, "tint":[0.90625, 0.69140625, 0.19140625]})
 #    $ renpy.pause(10.0, hard=True)
 
     return

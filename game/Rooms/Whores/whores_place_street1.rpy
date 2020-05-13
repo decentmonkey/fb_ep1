@@ -4,7 +4,7 @@ label whores_place_street1:
 
     $ scene_name = "whores_place_street1"
     $ sceneIsStreet = True
-    $ scene_caption = _("Dirty street")
+    $ scene_caption = t_("Dirty street")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_street_Whores_Street1_" + cloth + day_suffix
     $ add_object_to_scene("Monica", {"type":2, "base":"Street_Whores_Street1_" + cloth + day_suffix, "click" : "whores_place_street1_environment", "actions" : "l", "zorder" : 10})
@@ -16,8 +16,8 @@ label whores_place_street1:
     $ add_object_to_scene("Street_Sign", {"type":2, "base":"Street_Whores_Street1_Street_Sign", "click" : "whores_place_street1_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Trash_Can", {"type":2, "base":"Street_Whores_Street1_Trash_Can", "click" : "whores_place_street1_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Street_Corner", {"type":3, "text" : _("УГОЛ УЛИЦЫ"), "rarrow" : "arrow_right_2", "base":"Street_Whores_Street1_Teleport_Street_Corner", "click" : "whores_place_street1_teleport", "xpos" : 1724, "ypos" : 462, "zorder":15})
-    $ add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : _("ПЕРЕКРЕСТОК"), "larrow" : "arrow_left_2", "base":"Street_Whores_Street1_Teleport_Whores_Place", "click" : "whores_place_street1_teleport", "xpos" : 308, "ypos" : 515, "zorder":15})
+    $ add_object_to_scene("Teleport_Street_Corner", {"type":3, "text" : t_("УГОЛ УЛИЦЫ"), "rarrow" : "arrow_right_2", "base":"Street_Whores_Street1_Teleport_Street_Corner", "click" : "whores_place_street1_teleport", "xpos" : 1724, "ypos" : 462, "zorder":15})
+    $ add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : t_("ПЕРЕКРЕСТОК"), "larrow" : "arrow_left_2", "base":"Street_Whores_Street1_Teleport_Whores_Place", "click" : "whores_place_street1_teleport", "xpos" : 308, "ypos" : 515, "zorder":15})
 
     if whoresMonicaDisturb == True:
         $ autorun_to_object("whores_place_s2", "afterjail_whores_disturb_dialogue1")

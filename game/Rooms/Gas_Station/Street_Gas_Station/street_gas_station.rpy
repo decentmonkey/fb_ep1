@@ -8,7 +8,7 @@ label street_gas_station:
 
     $ scene_name = "street_gas_station"
     $ sceneIsStreet = True
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
 

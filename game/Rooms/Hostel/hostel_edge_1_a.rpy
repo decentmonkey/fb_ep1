@@ -6,7 +6,7 @@ label hostel_edge_1_a:
 
     $ scene_name = "hostel_edge_1_a"
     $ sceneIsStreet = True
-    $ scene_caption = _("BLIND ALLEY")
+    $ scene_caption = t_("BLIND ALLEY")
     $ clear_scene_from_objects(scene_name)
 
     $ localDaySuffix = ""
@@ -32,8 +32,8 @@ label hostel_edge_1_a:
     $ add_object_to_scene("Window3", {"type":2, "base":"Hostel_Edge_1_a_Window3", "click" : "hostel_edge_1_a_environment", "actions" : "l", "zorder" : 11, "b":0.13})
 #    $ add_object_to_scene("Teleport_Hostel_1_a", {"type":2, "base":"hostel_edge_1_a_Teleport_Hostel_Edge_a", "click" : "hostel_edge_1_a_teleport", "actions" : "lw", "zorder" : 11, "b":0.13, "tint":[1.0, 1.0, 0.8]})
 
-    $ add_object_to_scene("Teleport_Hostel_1_c", {"type":3, "text" : _("УЛИЦА"), "rarrow" : "arrow_right_2", "base":"Hostel_Edge_1_a_Teleport_Hostel_Edge_C", "click" : "hostel_edge_1_a_teleport", "xpos" : 1800, "ypos" : 780, "zorder":15})
-    $ add_object_to_scene("Teleport_Hostel_1_b", {"type":3, "text" : _("ДРУГАЯ СТОРОНА"), "larrow" : "arrow_down_2", "base":"Hostel_Edge_1_a_Teleport_Hostel_Edge_B", "click" : "hostel_edge_1_a_teleport", "xpos" : 550, "ypos" : 933, "zorder":15})
+    $ add_object_to_scene("Teleport_Hostel_1_c", {"type":3, "text" : t_("УЛИЦА"), "rarrow" : "arrow_right_2", "base":"Hostel_Edge_1_a_Teleport_Hostel_Edge_C", "click" : "hostel_edge_1_a_teleport", "xpos" : 1800, "ypos" : 780, "zorder":15})
+    $ add_object_to_scene("Teleport_Hostel_1_b", {"type":3, "text" : t_("ДРУГАЯ СТОРОНА"), "larrow" : "arrow_down_2", "base":"Hostel_Edge_1_a_Teleport_Hostel_Edge_B", "click" : "hostel_edge_1_a_teleport", "xpos" : 550, "ypos" : 933, "zorder":15})
 
     $ hostel_edge_1_a_visited = True
     return

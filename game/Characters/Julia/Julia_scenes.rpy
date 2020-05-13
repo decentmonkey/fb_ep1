@@ -4,7 +4,7 @@ default juliaBasementSceneStage = 0
 default juliaBasementSexLiked = False
 
 label julia_scene_basement1:
-    call textonblack(_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_1
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_1
     img black_screen
     with Dissolve(1)
     #juliaNeedToCheckStreet

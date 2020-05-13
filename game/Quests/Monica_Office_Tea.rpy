@@ -56,9 +56,9 @@ label monica_office_tea_enter_secretary:
     return
 
 label monica_office_tea_talk1:
-#    $ add_objective("goto_office_for_tea", _("Ехать в свой офис"), c_green, 20)
+#    $ add_objective("goto_office_for_tea", t_("Ехать в свой офис"), c_green, 20)
     $ remove_objective("goto_office_for_tea")
-    $ add_objective("tea_with_secretary", _("Попить чай с секретаршей"), c_pink, 20)
+    $ add_objective("tea_with_secretary", t_("Попить чай с секретаршей"), c_pink, 20)
 
     music RnB4_100
     img 1829
@@ -290,10 +290,10 @@ label monica_office_tea_talk2:
     call question_helper_enable("question_office_tea_lost_phone") from _call_question_helper_enable_7
     $ monicaOfficeDay2TeaPlanned = False
     $ remove_objective("tea_with_secretary")
-    $ add_objective("find_phone", _("Найти телефон!"), c_orange, 20)
+    $ add_objective("find_phone", t_("Найти телефон!"), c_orange, 20)
 
     sound highheels_run1
-    show screen notify(_("Секретарша убежала искать телефон..."))
+    show screen notify(t_("Секретарша убежала искать телефон..."))
 
     $ monicaOfficeDay2PhoneLost = True
     $ autorun_to_object("monica_office_secretary", "monica_office_tea_secretary_searching_phone")
@@ -352,7 +352,7 @@ label monica_office_tea_phone_talk_after_found:
     "Надо вернуть его скорее пока не закрылся тот дурацкий магазин."
 
     $ remove_objective("find_phone")
-    $ add_objective("return_dress", _("Вернуть платье в магазин!"), c_pink, 20)
+    $ add_objective("return_dress", t_("Вернуть платье в магазин!"), c_pink, 20)
 #    $ drivingPlacePlannedArray["Cloth_Shop"] = "dress_return_drive1"
     $ drivingPlacePlannedArray["Street_Corner"] = "dress_return_drive1"
 

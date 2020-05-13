@@ -3,7 +3,7 @@ label hostel_bathroom_toilet:
     $ miniMapData = []
 
     $ scene_name = "hostel_bathroom_toilet"
-    $ scene_caption = _("HOSTEL BATHROOM")
+    $ scene_caption = t_("HOSTEL BATHROOM")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_hostel_bathroom_toilet_Monica_Nude" + day_suffix
@@ -11,7 +11,7 @@ label hostel_bathroom_toilet:
 
     $ add_object_to_scene("Toilet", {"type":2, "base":"Hostel_Bathroom_Toilet_Toilet", "click" : "hostel_bathroom_toilet_environment", "actions" : "lh", "zorder" : 0, "b":0.13})
 
-    $ add_object_to_scene("Teleport_Hostel_Bathroom", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bathroom_toilet_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hostel_Bathroom", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bathroom_toilet_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 #                            $ brightness_adjustment = 0.1

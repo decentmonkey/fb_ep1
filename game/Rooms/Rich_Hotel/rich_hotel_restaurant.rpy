@@ -8,7 +8,7 @@ label rich_hotel_restaurant:
     $ miniMapData = []
 
     $ scene_name = "rich_hotel_restaurant"
-    $ scene_caption = _("Restaurant")
+    $ scene_caption = t_("Restaurant")
     $ clear_scene_from_objects(scene_name)
 
     if richHotelRestaurantState == 0:
@@ -46,7 +46,7 @@ label rich_hotel_restaurant:
     $ add_object_to_scene("EmptyTable9", {"type":2, "base":"rich_hotel_restaurant_EmptyTable9", "click" : "rich_hotel_restaurant_environment", "actions" : "l", "zorder" : 1})
     $ add_object_to_scene("EmptyTable10", {"type":2, "base":"rich_hotel_restaurant_EmptyTable10", "click" : "rich_hotel_restaurant_environment", "actions" : "l", "zorder" : 1})
 
-    $ add_object_to_scene("Teleport_Reception", {"type":3, "text" : _("РЕЦЕПШИН"), "larrow" : "arrow_left_2", "base":"rich_hotel_restaurant_Teleport_Reception", "click" : "rich_hotel_restaurant_teleport", "xpos" : 954, "ypos" : 138, "zorder":11})
+    $ add_object_to_scene("Teleport_Reception", {"type":3, "text" : t_("РЕЦЕПШИН"), "larrow" : "arrow_left_2", "base":"rich_hotel_restaurant_Teleport_Reception", "click" : "rich_hotel_restaurant_teleport", "xpos" : 954, "ypos" : 138, "zorder":11})
 
     return
 #                            $ brightness_adjustment = 0.1

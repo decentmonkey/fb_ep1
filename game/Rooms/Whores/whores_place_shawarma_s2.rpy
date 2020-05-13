@@ -5,7 +5,7 @@ label whores_place_shawarma_s2:
 
     $ scene_name = "whores_place_shawarma_s2"
     $ sceneIsStreet = True
-    $ scene_caption = _("Shawarma")
+    $ scene_caption = t_("Shawarma")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_street_whores_place_shawarma_Monica" + day_suffix
     $ add_object_to_scene("Monica", {"type":2, "base":"Street_whores_place_shawarma_Monica_" + cloth + day_suffix, "click" : "whores_place_shawarma_environment2", "actions" : "l", "zorder" : 10})
@@ -25,9 +25,9 @@ label whores_place_shawarma_s2:
     $ add_object_to_scene("Trash7", {"type":2, "base":"Street_whores_place_shawarma_Trash7", "click" : "whores_place_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Trash8", {"type":2, "base":"Street_whores_place_shawarma_Trash8", "click" : "whores_place_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Clothing_Shop", {"type":3, "text" : _("К МАГАЗИНУ ОДЕЖДЫ"), "larrow" : "arrow_down_2", "base":"Street_whores_place_shawarma_Teleport_Clothing_Shop", "click" : "whores_place_shawarma_teleport2", "xpos" : 304, "ypos" : 856, "zorder":15})
-    $ add_object_to_scene("Teleport_Street_Hostel", {"type":3, "text" : _("ПОДВОРОТНЯ"), "larrow" : "arrow_left_2", "base":"Street_whores_place_shawarma_Teleport_Street_Hostel", "click" : "whores_place_shawarma_teleport2", "xpos" : 182, "ypos" : 376, "zorder":15})
-    $ add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : _("К ПЕРЕКРЕСТКУ"), "rarrow" : "arrow_right_2", "base":"Street_whores_place_shawarma_Teleport_Whores_Place", "click" : "whores_place_shawarma_teleport2", "xpos" : 1375, "ypos" : 1022, "zorder":15})
+    $ add_object_to_scene("Teleport_Clothing_Shop", {"type":3, "text" : t_("К МАГАЗИНУ ОДЕЖДЫ"), "larrow" : "arrow_down_2", "base":"Street_whores_place_shawarma_Teleport_Clothing_Shop", "click" : "whores_place_shawarma_teleport2", "xpos" : 304, "ypos" : 856, "zorder":15})
+    $ add_object_to_scene("Teleport_Street_Hostel", {"type":3, "text" : t_("ПОДВОРОТНЯ"), "larrow" : "arrow_left_2", "base":"Street_whores_place_shawarma_Teleport_Street_Hostel", "click" : "whores_place_shawarma_teleport2", "xpos" : 182, "ypos" : 376, "zorder":15})
+    $ add_object_to_scene("Teleport_Whores_Place", {"type":3, "text" : t_("К ПЕРЕКРЕСТКУ"), "rarrow" : "arrow_right_2", "base":"Street_whores_place_shawarma_Teleport_Whores_Place", "click" : "whores_place_shawarma_teleport2", "xpos" : 1375, "ypos" : 1022, "zorder":15})
 
     if whoresMonicaDisturb == True:
         $ autorun_to_object("whores_place_s2", "afterjail_whores_disturb_dialogue1")

@@ -42,7 +42,7 @@ label steve1_drive1(target_scene):
     "Стиву."
     fred "Принято, Мэм!"
     $ remove_objective("goto_office1")
-    $ add_objective("catch_steve", _("Добраться до Стива"), c_red, 20)
+    $ add_objective("catch_steve", t_("Добраться до Стива"), c_red, 20)
 
     imgl 1679
     mt "Он сбрасывает мой звонок."
@@ -743,7 +743,7 @@ label steve1_steve_talk5:
 
     steve "Спасибо, Моника."
 
-    $ add_objective("goto_office_for_tea", _("Ехать в свой офис"), c_green, 20)
+    $ add_objective("goto_office_for_tea", t_("Ехать в свой офис"), c_green, 20)
     $ autorun_to_object("street_steve_office", "steve1_end_monica_thinking")
     $ autorun_to_object("monica_office_entrance", "steve1_scene1_1")
     $ steveOfficeSteveTableStateTalk = 4
@@ -818,14 +818,14 @@ label steve1_secretary_talk4:
         img 1702
         jane "Нет, Миссис Бакфетт! Я не против!"
         m "Замечательно, деточка."
-    $ add_objective("go_to_steve_after", _("Заехать к Стиву немного позже."), c_blue, 25)
+    $ add_objective("go_to_steve_after", t_("Заехать к Стиву немного позже."), c_blue, 25)
 
     return
 
 label steve1_scene1_1: #разговор с Джейн и Тиффани
 
     music Hidden_Agenda
-    call textonblack(_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_2
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_2
     img black_screen
     with Dissolve(1)
 #    img

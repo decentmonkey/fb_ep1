@@ -6,7 +6,7 @@ label police_marcuscabinet:
     $ miniMapData = []
 
     $ scene_name = "police_marcuscabinet"
-    $ scene_caption = _("Marcus Cabinet")
+    $ scene_caption = t_("Marcus Cabinet")
     $ clear_scene_from_objects(scene_name)
 
     if marcusCabinetState == 0:
@@ -32,7 +32,7 @@ label police_marcuscabinet:
         $ add_object_to_scene("TableItems", {"type":2, "base":"Police_MarcusCabinet_TableItems", "click" : "police_marcuscabinet_environment", "actions" : "l", "zorder" : 0})
         $ add_object_to_scene("Water", {"type":2, "base":"Police_MarcusCabinet_Water", "click" : "police_marcuscabinet_environment", "actions" : "l", "zorder" : 0})
 
-        $ add_object_to_scene("Teleport_Police_Entrance", {"type":3, "text" : _("ВЫХОД"), "larrow" : "arrow_down_2", "base":"Police_MarcusCabinet_Teleport_Entrance", "click" : "police_marcuscabinet_teleport", "xpos" : 100, "ypos" : 716, "zorder":5})
+        $ add_object_to_scene("Teleport_Police_Entrance", {"type":3, "text" : t_("ВЫХОД"), "larrow" : "arrow_down_2", "base":"Police_MarcusCabinet_Teleport_Entrance", "click" : "police_marcuscabinet_teleport", "xpos" : 100, "ypos" : 716, "zorder":5})
 
 
     if marcusCabinetState == 2:

@@ -4,7 +4,7 @@ label hostel_street2:
 
     $ scene_name = "hostel_street2"
     $ sceneIsStreet = True
-    $ scene_caption = _("HOSTEL ENTRANCE")
+    $ scene_caption = t_("HOSTEL ENTRANCE")
     $ clear_scene_from_objects(scene_name)
 
 
@@ -16,7 +16,7 @@ label hostel_street2:
 
 #    $ add_object_to_scene("Car", {"type":2, "base":"hostel_street2_Car", "click" : "hostel_street2_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Hostel_Street", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_street2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hostel_Street", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_street2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 #                            $ brightness_adjustment = 0.1

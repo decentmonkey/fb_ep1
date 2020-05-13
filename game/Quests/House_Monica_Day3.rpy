@@ -16,13 +16,13 @@ label quest_house_monica_day3_day_init:
 #    $ juliaLocation = "floor1" #debug
     $ autorun_to_object("floor1", False)
     if juliaPunished == True:
-        call textonblack(_("ЭТИМ ВЕЧЕРОМ...")) from _call_textonblack_26
+        call textonblack(t_("ЭТИМ ВЕЧЕРОМ...")) from _call_textonblack_26
         img black_screen
         with Dissolve(1)
         call julia_scene_floor2_evening1_1() from _call_julia_scene_floor2_evening1_1
 
 
-    call textonblack(_("ДЕНЬ 3...")) from _call_textonblack_27
+    call textonblack(t_("ДЕНЬ 3...")) from _call_textonblack_27
     img black_screen
     with Dissolve(1)
     $ changeDayTime("day")
@@ -67,7 +67,7 @@ label quest_house_monica_day3_day_init:
 
                 menu:
                     "Уволить Юлию.":
-                        $ add_objective("fire_julia", _("Уволить Юлию"), c_white, 21)
+                        $ add_objective("fire_julia", t_("Уволить Юлию"), c_white, 21)
                         $ juliaFirePlanned = True
                         $ fireAmount = fireAmount + 1
                         img 1967
@@ -110,8 +110,8 @@ label quest_house_monica_day3_day_init:
 
             menu:
                 "Уволить Джейн и Тиффани.":
-                    $ add_objective("fire_jane", _("Уволить Джейн"), c_white, 22)
-                    $ add_objective("fire_tiffany", _("Уволить Тиффани"), c_white, 23)
+                    $ add_objective("fire_jane", t_("Уволить Джейн"), c_white, 22)
+                    $ add_objective("fire_tiffany", t_("Уволить Тиффани"), c_white, 23)
                     $ janeTiffanyFirePlanned = True
                     $ fireAmount = fireAmount + 1
                     img 1972
@@ -159,7 +159,7 @@ label quest_house_monica_day3_day_init:
 
             menu:
                 "Уволить Фреда.":
-                    $ add_objective("fire_fred", _("Уволить Фреда"), c_white, 24)
+                    $ add_objective("fire_fred", t_("Уволить Фреда"), c_white, 24)
                     $ fredFirePlanned = True
                     $ fireAmount = fireAmount + 1
                     img 1980
@@ -248,10 +248,10 @@ label quest_house_monica_day3_day_init:
     $ casualMusic = "Cheery_Monday"
 
 #    $ map_objects["Teleport_Fitness"]["state"] = "visible"
-    $ add_objective("dress_homecloth", _("Одеть домашнюю одежду"), c_blue, 0)
-    $ add_objective("take_bath", _("Принять душ"), c_green, 1)
-    $ add_objective("eat", _("Позавтракать"), c_orange, 2)
-    $ add_objective("drive_to_office", _("Ехать в свой офис"), c_pink, 26)
+    $ add_objective("dress_homecloth", t_("Одеть домашнюю одежду"), c_blue, 0)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 1)
+    $ add_objective("eat", t_("Позавтракать"), c_orange, 2)
+    $ add_objective("drive_to_office", t_("Ехать в свой офис"), c_pink, 26)
 
     #go_to_steve_after
 
@@ -259,10 +259,10 @@ label quest_house_monica_day3_day_init:
     $ drivingPlacePlannedArray["Police"] = "police_phone_dialogue1"
     $ steveOfficeSteveInOffice = False
     $ mapSubstMonicaOfficeToPolice = True
-#    $ add_objective("go_outside_fitness", _("Одеться и ехать в фитнес зал"), c_orange, 10)
+#    $ add_objective("go_outside_fitness", t_("Одеться и ехать в фитнес зал"), c_orange, 10)
 #    $ drivingPlacePlannedArray["Fitness"] = "drive_speak_monica_fred_fitness"
 #    if juliaPunished == True:
-#        $ add_objective("julia_check_spot", _("Проверить Юлию"), c_red, 3)
+#        $ add_objective("julia_check_spot", t_("Проверить Юлию"), c_red, 3)
 
 #    music Mandeville
 #    $ casualMusic = "Mandeville"

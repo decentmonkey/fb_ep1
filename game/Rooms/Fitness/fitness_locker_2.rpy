@@ -3,7 +3,7 @@ label fitness_locker_2:
     $ miniMapData = []
 
     $ scene_name = "fitness_locker_2"
-    $ scene_caption = _("Fitness Gym")
+    $ scene_caption = t_("Fitness Gym")
     $ clear_scene_from_objects(scene_name)
     if fitnessStephanieRebeccaInLocker == True:
         if fitnessStephanieRebeccaTalked == False:
@@ -32,7 +32,7 @@ label fitness_locker_2:
 
     $ add_object_to_scene("Monica_Locker", {"type":2, "base":"fitness_locker_2_Monica_Locker", "click" : "fitness_locker_2_environment", "actions" : "lh", "zorder" : 0})
     $ add_object_to_scene("Benches", {"type":2, "base":"fitness_locker_2_Benches", "click" : "fitness_locker_1_environment", "actions" : "l", "zorder" : 0})
-    $ add_object_to_scene("Teleport_Gym", {"type":3, "text" : _("НАЗАД В ЗАЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "fitness_locker_2_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Gym", {"type":3, "text" : t_("НАЗАД В ЗАЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "fitness_locker_2_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07
@@ -118,7 +118,7 @@ label fitness_locker_2_environment(obj_name, obj_data):
                 mt "Мне не к чему переодеваться, пора ехать по делам!"
                 return
 
-#                    $ add_objective("change_cloth_to_fitness", _("Переодеться в раздевалке"), c_green, 20)
+#                    $ add_objective("change_cloth_to_fitness", t_("Переодеться в раздевалке"), c_green, 20)
 
 
     return

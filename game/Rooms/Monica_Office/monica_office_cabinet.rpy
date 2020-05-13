@@ -3,7 +3,7 @@ label monica_office_cabinet:
     $ miniMapData = []
 
     $ scene_name = "monica_office_cabinet"
-    $ scene_caption = _("Monica's Office")
+    $ scene_caption = t_("Monica's Office")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Office_Monica_Cabinet_Monica_" + cloth + day_suffix
@@ -15,7 +15,7 @@ label monica_office_cabinet:
     $ add_object_to_scene("Windows", {"type" : 2, "base" : "Office_Monica_Cabinet_Windows", "click" : "monica_office_cabinet_environment", "actions" : "l", "zorder":0})
     $ add_object_to_scene("Projector", {"type" : 2, "base" : "Office_Monica_Cabinet_Projector", "click" : "monica_office_cabinet_environment", "actions" : "l", "zorder":0})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : _("К СЕКРЕТАРЮ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_cabinet_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : t_("К СЕКРЕТАРЮ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_cabinet_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

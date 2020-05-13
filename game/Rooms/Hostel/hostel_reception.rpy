@@ -7,7 +7,7 @@ label hostel_reception:
     $ miniMapData = []
 
     $ scene_name = "hostel_reception"
-    $ scene_caption = _("HOSTEL RECEPTION")
+    $ scene_caption = t_("HOSTEL RECEPTION")
     $ clear_scene_from_objects(scene_name)
 
     if hostelReceptionStage == 0:
@@ -63,9 +63,9 @@ label hostel_reception:
     $ add_object_to_scene("Papers", {"type":2, "base":"Hostel_Reception_Papers", "click" : "hostel_reception_environment", "actions" : "l", "zorder" : 0, "b":0.13})
 #    $ add_object_to_scene("Teleport_Hostel_1_a", {"type":2, "base":"hostel_reception_Teleport_Hostel_Edge_a", "click" : "hostel_reception_teleport", "actions" : "lw", "zorder" : 11, "b":0.13, "tint":[1.0, 1.0, 0.8]})
 
-    $ add_object_to_scene("Teleport_Hostel_Street", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_reception_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hostel_Street", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_reception_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
-    $ add_object_to_scene("Teleport_Hostel_Bedroom", {"type":3, "text" : _("ОБЩАЯ СПАЛЬНЯ"), "rarrow" : "arrow_right_2", "base":"Hostel_Reception_Teleport_Bedroom", "click" : "hostel_reception_teleport", "xpos" : 1500, "ypos" : 200, "zorder":15})
+    $ add_object_to_scene("Teleport_Hostel_Bedroom", {"type":3, "text" : t_("ОБЩАЯ СПАЛЬНЯ"), "rarrow" : "arrow_right_2", "base":"Hostel_Reception_Teleport_Bedroom", "click" : "hostel_reception_teleport", "xpos" : 1500, "ypos" : 200, "zorder":15})
 
 
     $ hostelReceptionVisited = True

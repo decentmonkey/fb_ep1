@@ -7,7 +7,7 @@ label steve_office_office:
     $ miniMapData = []
 
     $ scene_name = "steve_office_office"
-    $ scene_caption = _("STEVE'S CABINET")
+    $ scene_caption = t_("STEVE'S CABINET")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_steve_office_office_Monica_" + cloth
     if steveOfficeSteveInOffice == True:
@@ -35,7 +35,7 @@ label steve_office_office:
     $ add_object_to_scene("Sofa", {"type":2, "base":"steve_office_office_Sofa", "click" : "steve_office_office_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Table", {"type":2, "base":"steve_office_office_Table_Object", "click" : "steve_office_office_environment", "actions" : "lw", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Steve_Office_Secretary", {"type":3, "text" : _("НАЗАД К СЕКРЕТАРШЕ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "steve_office_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Steve_Office_Secretary", {"type":3, "text" : t_("НАЗАД К СЕКРЕТАРШЕ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "steve_office_office_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
     return
 
 #                            $ brightness_adjustment = 0.1

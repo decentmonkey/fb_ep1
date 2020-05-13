@@ -8,7 +8,7 @@ label bathroom_bath:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_13
 
     $ scene_name = "bathroom_bath"
-    $ scene_caption = _("Bathroom Bath")
+    $ scene_caption = t_("Bathroom Bath")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Bathroom_Bath_Monica_" + cloth
 
@@ -17,8 +17,8 @@ label bathroom_bath:
 
     $ add_object_to_scene("Bath", {"type":2, "base":"Bathroom_Bath_Bath", "click" : "bathroom_environment", "actions" : "lh", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "bathroom_teleport", "xpos" : 960, "ypos" : 956, "zorder":11, "high_sprite_hover": True})
-    $ add_object_to_scene("Teleport_Bathroom_Shower", {"type":3, "text" : _("ДУШ"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "bathroom_teleport", "xpos" : 1650, "ypos" : 520, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "bathroom_teleport", "xpos" : 960, "ypos" : 956, "zorder":11, "high_sprite_hover": True})
+    $ add_object_to_scene("Teleport_Bathroom_Shower", {"type":3, "text" : t_("ДУШ"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "bathroom_teleport", "xpos" : 1650, "ypos" : 520, "zorder":11})
 
     if gameStage > 2:
         if monicaBathroomForbidden == True and scene_name != lastSceneName:

@@ -10,7 +10,7 @@ label floor2_mirrors:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate
 
     $ scene_name = "floor2_mirrors"
-    $ scene_caption = _("Mirrors")
+    $ scene_caption = t_("Mirrors")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Floor2_Mirrors"
     if hairDyeTaken == True:
@@ -37,7 +37,7 @@ label floor2_mirrors:
         $ add_object_to_scene("Journal", {"type":2, "base":"Floor2_Mirrors_Journal", "click" : "floor2_mirrors_environment", "actions" : "lh", "zorder" : 0})
 
 
-    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor2_mirrors_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor2_mirrors_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 #    $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})

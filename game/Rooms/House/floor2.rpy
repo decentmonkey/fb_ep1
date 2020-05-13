@@ -8,7 +8,7 @@ label floor2:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_12
 
     $ scene_name = "floor2"
-    $ scene_caption = _("Hall Top Floor")
+    $ scene_caption = t_("Hall Top Floor")
     $ clear_scene_from_objects(scene_name)
     $ monica_tint = [1.0, 1.0, 1.0]
     if (cloth_type == "Lingerie" or cloth_type == "HomeCloth"):
@@ -22,7 +22,7 @@ label floor2:
                 $ add_object_to_scene("Spot", {"type" : 2, "base" : "Floor2_Monica_" + cloth_type + "_Spot", "img_mask": "Floor2_Spot_Mask", "click" : "floor2_environment", "actions" : "l", "zorder":5, "hover_enabled":False})
 
         $ add_object_to_scene("Sofa", {"type":2, "base":"Floor2_Sofa", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
-        $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 158, "zorder":9})
+        $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 158, "zorder":9})
         if juliaPunished == False or juliaMonicaForgivenessAfterPunishment == True:
             $ scene_image = "scene_Floor2_Monica_" + cloth + day_suffix
             $ add_object_to_scene("Monica", {"type" : 2, "base" : "Floor2_Monica_" + cloth + day_suffix, "click" : "floor2_environment", "actions" : "l", "zorder":10, "tint": monica_tint})
@@ -43,7 +43,7 @@ label floor2:
                 $ add_object_to_scene("Spot", {"type" : 2, "base" : "Floor2_Monica_" + cloth_type + "_Spot", "img_mask": "Floor2_Spot_Washing_Accessories_Mask", "click" : "floor2_environment", "actions" : "l", "zorder":5, "hover_overlay":True})
                 $ add_object_to_scene("Sofa", {"type":2, "base":"Floor2_Sofa_Washing_Accessories", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
 
-            $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 58, "zorder":9})
+            $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 58, "zorder":9})
 
         if floor2SpotEnabled == False:
             if hairDyeTaken == False:
@@ -51,8 +51,8 @@ label floor2:
             else:
                 $ add_object_to_scene("Carpet", {"type" : 2, "base" : "Floor2_Carpet", "click" : "floor2_environment", "actions" : "lh", "zorder":10, "tint": monica_tint})
         $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors_Object", "click" : "floor2_environment", "actions" : "lw", "zorder" : 2})
-        $ add_object_to_scene("Teleport_Bedroom", {"type":3, "text" : _("СПАЛЬНЯ"), "rarrow" : "arrow_down_2", "base":"Floor2_Teleport_Bedroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 1006, "zorder":11})
-        $ add_object_to_scene("Teleport_Bathroom", {"type":3, "text" : _("ВАННАЯ КОМНАТА"), "larrow" : "arrow_left_2", "base":"Floor2_Bathroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 250, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
+        $ add_object_to_scene("Teleport_Bedroom", {"type":3, "text" : t_("СПАЛЬНЯ"), "rarrow" : "arrow_down_2", "base":"Floor2_Teleport_Bedroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 1006, "zorder":11})
+        $ add_object_to_scene("Teleport_Bathroom", {"type":3, "text" : t_("ВАННАЯ КОМНАТА"), "larrow" : "arrow_left_2", "base":"Floor2_Bathroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 250, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
 
     if gameStage >= 3:
         if bettyLocation == "Floor2":
@@ -63,11 +63,11 @@ label floor2:
             $ scene_image = "scene_Floor2_Monica_" + cloth + day_suffix
             $ add_object_to_scene("Monica", {"type" : 2, "base" : "Floor2_Monica_" + cloth + day_suffix, "click" : "floor2_environment", "actions" : "l", "zorder":10, "tint": monica_tint})
         $ add_object_to_scene("Spot", {"type" : 2, "base" : "Floor2_Spot", "click" : "floor2_environment", "actions" : "l", "zorder":10})
-        $ add_object_to_scene("Teleport_BedroomBardie", {"type":3, "text" : _("КОМНАТА БАРДИ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomBardie", "click" : "floor2_teleport", "xpos" : 341, "ypos" : 454, "zorder":11})
-        $ add_object_to_scene("Teleport_BedroomSecond", {"type":3, "text" : _("СПАЛЬНЯ ДЛЯ ГОСТЕЙ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomSecond", "click" : "floor2_teleport", "xpos" : 420, "ypos" : 916, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
-        $ add_object_to_scene("Teleport_Bedroom", {"type":3, "text" : _("СПАЛЬНЯ ХОЗЯЕВ"), "larrow" : "arrow_down_2", "base":"Floor2_Teleport_Bedroom", "click" : "floor2_teleport", "xpos" : 1570, "ypos" : 1006, "zorder":11})
-        $ add_object_to_scene("Teleport_Bathroom", {"type":3, "text" : _("ВАННАЯ КОМНАТА"), "larrow" : "arrow_left_2", "base":"Floor2_Bathroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 250, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
-        $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 58, "zorder":9})
+        $ add_object_to_scene("Teleport_BedroomBardie", {"type":3, "text" : t_("КОМНАТА БАРДИ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomBardie", "click" : "floor2_teleport", "xpos" : 341, "ypos" : 454, "zorder":11})
+        $ add_object_to_scene("Teleport_BedroomSecond", {"type":3, "text" : t_("СПАЛЬНЯ ДЛЯ ГОСТЕЙ"), "larrow" : "arrow_left_2", "base":"Floor2_Teleport_BedroomSecond", "click" : "floor2_teleport", "xpos" : 420, "ypos" : 916, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
+        $ add_object_to_scene("Teleport_Bedroom", {"type":3, "text" : t_("СПАЛЬНЯ ХОЗЯЕВ"), "larrow" : "arrow_down_2", "base":"Floor2_Teleport_Bedroom", "click" : "floor2_teleport", "xpos" : 1570, "ypos" : 1006, "zorder":11})
+        $ add_object_to_scene("Teleport_Bathroom", {"type":3, "text" : t_("ВАННАЯ КОМНАТА"), "larrow" : "arrow_left_2", "base":"Floor2_Bathroom", "click" : "floor2_teleport", "xpos" : 350, "ypos" : 250, "zorder":15, "b":0.15, "tint":[1.0, 1.0, 0.9]})
+        $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 58, "zorder":9})
         $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors_Object", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
 
 
@@ -75,7 +75,7 @@ label floor2:
     $ add_object_to_scene("Flower2", {"type":2, "base":"Floor2_Flower2", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Lamps", {"type":2, "base":"Floor2_Lamps", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
 
-#    $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 158, "zorder":9})
+#    $ add_object_to_scene("Teleport_Floor2_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Object", "click" : "floor2_teleport", "xpos" : 1030, "ypos" : 158, "zorder":9})
 
 #    $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
 #                            $ brightness_adjustment = 0.1

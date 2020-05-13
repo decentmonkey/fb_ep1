@@ -5,7 +5,7 @@ label bedroom1:
     $ miniMapSubst["all"] = "miniMapBedroomCheckCloth"
 
     $ scene_name = "bedroom1"
-    $ scene_caption = _("Bedroom")
+    $ scene_caption = t_("Bedroom")
     $ scene_image = "scene_Bedroom1_Monica_" + cloth + day_suffix
     $ clear_scene_from_objects(scene_name)
 
@@ -33,7 +33,7 @@ label bedroom1:
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07
 #                            $ contrast_adjustment = 1.3
-    $ add_object_to_scene("Teleport_Bedroom2", {"type":3, "text" : _("ГАРДЕРОБ"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "bedroom1_teleport", "xpos" : 1630, "ypos" : 920, "zorder":11})
+    $ add_object_to_scene("Teleport_Bedroom2", {"type":3, "text" : t_("ГАРДЕРОБ"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "bedroom1_teleport", "xpos" : 1630, "ypos" : 920, "zorder":11})
 
 
     return

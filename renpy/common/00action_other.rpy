@@ -352,7 +352,7 @@ init -1500 python:
             the default language of the game script.
         """
 
-        alt = _("Language [text]")
+        alt = t_("Language [text]")
 
         def __init__(self, language):
             self.language = language

@@ -29,22 +29,22 @@ label define_autorun:
 
     $ actions_objects = { #иконки действий
         "l" : {
-            "description" : _("Смотреть"),
+            "description" : t_("Смотреть"),
             "label_suffix" : "_use",
             "icon" : "/Icons/eye" + res.suffix + ".png",
         },
         "h" : {
-            "description" : _("Взять"),
+            "description" : t_("Взять"),
             "label_suffix" : "_hand",
             "icon" : "/Icons/hand" + res.suffix + ".png"
         },
         "t" : {
-            "description" : _("Говорить"),
+            "description" : t_("Говорить"),
             "label_suffix" : "_talk",
             "icon" : "/Icons/talk3" + res.suffix +".png",
         },
         "w" : {
-            "description" : _("Идти"),
+            "description" : t_("Идти"),
             "label_suffix" : "_walk",
             "icon" : "/Icons/walk" + res.suffix + ".png",
         }
@@ -92,7 +92,7 @@ label define_autorun:
 
     call define_hudpresets() from _call_define_hudpresets
 
-    $ calendar_days = [_("Пн"), _("Вт"), _("Ср"), _("Чт"), _("Пт"), _("Сб"), _("Вс")]
+    $ calendar_days = [t_("Пн"), t_("Вт"), t_("Ср"), t_("Чт"), t_("Пт"), t_("Сб"), t_("Вс")]
     return
 
 label define_hudpresets:
@@ -169,12 +169,12 @@ label game_init:
 
 #    $ map_enabled = False
 
-    $ define_inventory_object("papers", {"description" : _("Papers"), "label_suffix" : "_use_papers", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/big_papers" + res.suffix + ".png"})
-    $ define_inventory_object("phone", {"description" : _("Телефон"), "label_suffix" : "_use_phone", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/cell_phone" + res.suffix + ".png"})
+    $ define_inventory_object("papers", {"description" : t_("Papers"), "label_suffix" : "_use_papers", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/big_papers" + res.suffix + ".png"})
+    $ define_inventory_object("phone", {"description" : t_("Телефон"), "label_suffix" : "_use_phone", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/cell_phone" + res.suffix + ".png"})
     $ define_inventory_object("shovel", {"description" : "Shovel", "label_suffix" : "_use_shovel", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shovel" + res.suffix + ".png"})
-    $ define_inventory_object("journal", {"description" : _("Журнал Моды"), "label_suffix" : "_use_journal", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/journal" + res.suffix + ".png"})
-    $ define_inventory_object("hairdye", {"description" : _("Краска для волос"), "label_suffix" : "_use_hairdye", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/hairdye" + res.suffix + ".png"})
-    $ define_inventory_object("crumpled_dress", {"description" : _("Мятое платье"), "label_suffix" : "_use_crumpled_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/crumpled_dress" + res.suffix + ".png"})
+    $ define_inventory_object("journal", {"description" : t_("Журнал Моды"), "label_suffix" : "_use_journal", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/journal" + res.suffix + ".png"})
+    $ define_inventory_object("hairdye", {"description" : t_("Краска для волос"), "label_suffix" : "_use_hairdye", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/hairdye" + res.suffix + ".png"})
+    $ define_inventory_object("crumpled_dress", {"description" : t_("Мятое платье"), "label_suffix" : "_use_crumpled_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/crumpled_dress" + res.suffix + ".png"})
 
     $ scene_transition = False
     $ scene_sound = False

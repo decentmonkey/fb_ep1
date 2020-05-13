@@ -5,7 +5,7 @@ label street_bank_s2:
 
     $ scene_name = "street_bank_s2"
     $ sceneIsStreet = True
-    $ scene_caption = _("BANK")
+    $ scene_caption = t_("BANK")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Bank_Street_Monica_" + cloth + day_suffix
     $ add_object_to_scene("Monica", {"type":2, "base":"Bank_Street_Monica_" + cloth + day_suffix, "click" : "street_bank_environment_s2", "actions" : "l", "zorder" : 10})

@@ -12,7 +12,7 @@ label street_dick_office:
 
     $ scene_name = "street_dick_office"
     $ sceneIsStreet = True
-    $ scene_caption = _("Dick's Office")
+    $ scene_caption = t_("Dick's Office")
     $ clear_scene_from_objects(scene_name)
 
     if streetDickOfficeStage == 0:

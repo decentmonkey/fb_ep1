@@ -5,7 +5,7 @@ label street_fitness:
 
     $ scene_name = "street_fitness"
     $ sceneIsStreet = True
-    $ scene_caption = _("Fitness")
+    $ scene_caption = t_("Fitness")
     $ clear_scene_from_objects(scene_name)
 
     if bFredFollowingMonica == True:

@@ -29,7 +29,7 @@ import time
 import renpy.display
 import renpy.test
 
-pyast = __import__("ast", { })
+pyast = __import_t_("ast", { })
 
 # The number of statements that have been run since the last infinite loop
 # check.

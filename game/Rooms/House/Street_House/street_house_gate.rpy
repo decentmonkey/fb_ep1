@@ -5,16 +5,16 @@ label street_house_gate:
 
     $ scene_name = "street_house_gate"
     $ sceneIsStreet = True
-    $ scene_caption = _("House Gates")
+    $ scene_caption = t_("House Gates")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Street_House_Gate_Monica_" + cloth + day_suffix
 
     $ add_object_to_scene("Monica", {"type" : 2, "base" : "Street_House_Gate_Monica_" + cloth + day_suffix, "click" : "street_house_gate_environment", "actions" : "l", "zorder":10, "tint": monica_tint})
 
-#    $ add_object_to_scene("Teleport_House_Outside", {"type":3, "text" : _("ЗА ВОРОТА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_gate_teleport", "xpos" : 638, "ypos" : 564, "zorder":11, "b":0.2, "tint":[1.0, 1.0, 0.7]})
+#    $ add_object_to_scene("Teleport_House_Outside", {"type":3, "text" : t_("ЗА ВОРОТА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_gate_teleport", "xpos" : 638, "ypos" : 564, "zorder":11, "b":0.2, "tint":[1.0, 1.0, 0.7]})
     $ add_object_to_scene("Gates", {"type":2, "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_gate_environment", "actions" : "lw", "zorder" : 0, "b":0.2, "tint":[1.0, 1.0, 0.7]})
-#    $ add_object_to_scene("Teleport_House_Outside", {"type":3, "text" : _("ЗА ВОРОТА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_gate_teleport", "xpos" : 638, "ypos" : 564, "zorder":11, "b":0.2, "tint":[1.0, 1.0, 0.7]})
-    $ add_object_to_scene("Teleport_House_Yard", {"type":3, "text" : _("НАЗАД ВО ДВОР"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_house_gate_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+#    $ add_object_to_scene("Teleport_House_Outside", {"type":3, "text" : t_("ЗА ВОРОТА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_gate_teleport", "xpos" : 638, "ypos" : 564, "zorder":11, "b":0.2, "tint":[1.0, 1.0, 0.7]})
+    $ add_object_to_scene("Teleport_House_Yard", {"type":3, "text" : t_("НАЗАД ВО ДВОР"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_house_gate_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

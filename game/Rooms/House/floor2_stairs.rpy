@@ -18,8 +18,8 @@ label floor2_stairs:
         $ add_object_to_scene("Sofa", {"type":2, "base":"Floor2_Stairs_Sofa", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Lamps", {"type":2, "base":"Floor2_Stairs_Lamps", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor2_stairs_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
-    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА ВНИЗ"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Stairs", "click" : "floor2_stairs_teleport", "xpos" : 735, "ypos" : 331, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor2_stairs_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА ВНИЗ"), "rarrow" : "arrow_down_2", "base":"Floor2_Stairs_Stairs", "click" : "floor2_stairs_teleport", "xpos" : 735, "ypos" : 331, "zorder":11})
     return
 
 #    $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})

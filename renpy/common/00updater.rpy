@@ -369,7 +369,7 @@ init -1500 python in updater:
             """
 
             if getattr(renpy, "mobile", False):
-                raise UpdateError(_("The Ren'Py Updater is not supported on mobile devices."))
+                raise UpdateError(t_("The Ren'Py Updater is not supported on mobile devices."))
 
             self.load_state()
             self.test_write()
@@ -488,7 +488,7 @@ init -1500 python in updater:
                 raise UpdateCancelled()
 
             if self.simulate == "error":
-                raise UpdateError(_("An error is being simulated."))
+                raise UpdateError(t_("An error is being simulated."))
 
             if self.simulate == "not_available":
                 self.can_cancel = False
@@ -669,7 +669,7 @@ init -1500 python in updater:
             fn = os.path.join(self.updatedir, "current.json")
 
             if not os.path.exists(fn):
-                raise UpdateError(_("Either this project does not support updating, or the update status file was deleted."))
+                raise UpdateError(t_("Either this project does not support updating, or the update status file was deleted."))
 
             with open(fn, "rb") as f:
                 self.current_state = json.load(f)
@@ -683,10 +683,10 @@ init -1500 python in updater:
 
                 os.unlink(fn)
             except:
-                raise UpdateError(_("This account does not have permission to perform an update."))
+                raise UpdateError(t_("This account does not have permission to perform an update."))
 
             if not self.log:
-                raise UpdateError(_("This account does not have permission to write the update log."))
+                raise UpdateError(t_("This account does not have permission to write the update log."))
 
         def check_updates(self):
             """
@@ -713,7 +713,7 @@ init -1500 python in updater:
                 try:
                     rsa.verify(updates_json, signature, self.public_key)
                 except:
-                    raise UpdateError(_("Could not verify update signature."))
+                    raise UpdateError(t_("Could not verify update signature."))
 
                 if "monkeypatch" in self.updates:
                     exec self.updates["monkeypatch"] in globals(), globals()
@@ -988,7 +988,7 @@ init -1500 python in updater:
                 if os.path.exists(new_fn + ".part"):
                     os.rename(new_fn + ".part", new_fn)
                 else:
-                    raise UpdateError(_("The update file was not downloaded."))
+                    raise UpdateError(t_("The update file was not downloaded."))
 
             # Check that the downloaded file has the right digest.
             import hashlib
@@ -1006,7 +1006,7 @@ init -1500 python in updater:
                 digest = hash.hexdigest()
 
             if digest != self.updates[module]["digest"]:
-                raise UpdateError(_("The update file does not have the correct digest - it may have been corrupted."))
+                raise UpdateError(t_("The update file does not have the correct digest - it may have been corrupted."))
 
             if os.path.exists(new_fn + ".part.old"):
                 os.unlink(new_fn + ".part.old")
@@ -1062,7 +1062,7 @@ init -1500 python in updater:
                     continue
 
                 if not info.isreg():
-                    raise UpdateError(__("While unpacking {}, unknown type {}.").format(info.name, info.type))
+                    raise UpdateError(_t_("While unpacking {}, unknown type {}.").format(info.name, info.type))
 
                 # Extract regular files.
                 tff = tf.extractfile(info)
@@ -1409,34 +1409,34 @@ init -1500:
             has side "t c b":
                 spacing gui._scale(10)
 
-            label _("Updater")
+            label t_("Updater")
 
             fixed:
 
                 vbox:
 
                     if u.state == u.ERROR:
-                        text _("An error has occured:")
+                        text t_("An error has occured:")
                     elif u.state == u.CHECKING:
-                        text _("Checking for updates.")
+                        text t_("Checking for updates.")
                     elif u.state == u.UPDATE_NOT_AVAILABLE:
-                        text _("This program is up to date.")
+                        text t_("This program is up to date.")
                     elif u.state == u.UPDATE_AVAILABLE:
-                        text _("[u.version] is available. Do you want to install it?")
+                        text t_("[u.version] is available. Do you want to install it?")
                     elif u.state == u.PREPARING:
-                        text _("Preparing to download the updates.")
+                        text t_("Preparing to download the updates.")
                     elif u.state == u.DOWNLOADING:
-                        text _("Downloading the updates.")
+                        text t_("Downloading the updates.")
                     elif u.state == u.UNPACKING:
-                        text _("Unpacking the updates.")
+                        text t_("Unpacking the updates.")
                     elif u.state == u.FINISHING:
-                        text _("Finishing up.")
+                        text t_("Finishing up.")
                     elif u.state == u.DONE:
-                        text _("The updates have been installed. The program will restart.")
+                        text t_("The updates have been installed. The program will restart.")
                     elif u.state == u.DONE_NO_RESTART:
-                        text _("The updates have been installed.")
+                        text t_("The updates have been installed.")
                     elif u.state == u.CANCELLED:
-                        text _("The updates were cancelled.")
+                        text t_("The updates were cancelled.")
 
                     if u.message is not None:
                         null height gui._scale(10)
@@ -1451,7 +1451,7 @@ init -1500:
                 spacing gui._scale(25)
 
                 if u.can_proceed:
-                    textbutton _("Proceed") action u.proceed
+                    textbutton t_("Proceed") action u.proceed
 
                 if u.can_cancel:
-                    textbutton _("Cancel") action u.cancel
+                    textbutton t_("Cancel") action u.cancel

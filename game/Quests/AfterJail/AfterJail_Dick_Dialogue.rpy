@@ -463,7 +463,7 @@ label dickAfterJail_secretary_dialogue5:
             img 5695
             "Неужели ты не можешь ничего придумать?"
             if dickDriveDialOffend1 == True: #Я сегодня уже слышала это. И тот кто это сказал был болваном.
-                show screen notify (_("Моника нагрубила Дику про погоду... (негатив)"))
+                show screen notify (t_("Моника нагрубила Дику про погоду... (негатив)"))
                 $ dickSavesMonica = False
                 img 5696
                 dick "Раньше ты говорила по другому, Моника."
@@ -471,7 +471,7 @@ label dickAfterJail_secretary_dialogue5:
                 img 5697
                 m "Дик, я же просто шутила..."
             if richHotelRestaurantDickOffended1ChoiceMade == True: #Сказать Дику что он смешной. Ресторан
-                show screen notify (_("Моника сказала в ресторане что Дик смешной... (негатив)"))
+                show screen notify (t_("Моника сказала в ресторане что Дик смешной... (негатив)"))
                 $ dickSavesMonica = False
                 img 5698
                 dick "Я смешной, Моника. Это твои слова."
@@ -479,7 +479,7 @@ label dickAfterJail_secretary_dialogue5:
                 m "Ты не смешной, Дик. Ты очень умный..."
 
             if dickClothShopOffended1 == True and dickClothShopOffended2 == True: #ты уродливый и уродливый галстук
-                show screen notify (_("Моника сказала в магазине что Дик уродливый... (негатив)"))
+                show screen notify (t_("Моника сказала в магазине что Дик уродливый... (негатив)"))
                 $ dickSavesMonica = False
                 img 5700
                 dick "К сожалению, Моника, ум - это не все что заставляет мужчину действовать ради женщины."
@@ -500,7 +500,7 @@ label dickAfterJail_secretary_dialogue5:
                 img 5707
                 "Это расстраивает меня."
             if dickDriveRestaurantOffended1 == True: #ты виноват что уже поздно, не отвез меня в нормальный магазин
-                show screen notify (_("Моника сказала в машине что во всем виноват Дик... (негатив)"))
+                show screen notify (t_("Моника сказала в машине что во всем виноват Дик... (негатив)"))
                 $ dickSavesMonica = False
                 img 5708
                 dick "Как бы я ни старался, я всегда останусь виноват у тебя."
@@ -578,7 +578,7 @@ label dickAfterJail_secretary_dialogue5:
                     # день свадьбы
 
                     stop music fadeout 1.0
-                    call textonblack(_("Спустя некоторое время...")) from _call_textonblack_32
+                    call textonblack(t_("Спустя некоторое время...")) from _call_textonblack_32
                     music tour_of_the_flowers
                     img black_screen
                     with Dissolve(1)
@@ -655,7 +655,7 @@ label dickAfterJail_secretary_dialogue5:
                     return
                     #Victoria
                 else:
-                    show screen notify (_("Моника говорила другим людям про Дика плохо... (негатив)"))
+                    show screen notify (t_("Моника говорила другим людям про Дика плохо... (негатив)"))
             img 5713
             dick "Моника, я уже сказал."
             img 5712
@@ -996,7 +996,7 @@ label dickAfterJail_secretary_dialogue7:
     "(хмык)"
     music Gearhead
 
-    $ add_objective("tie_for_dick", _("Купить галстук для Дика"), c_red, 6)
+    $ add_objective("tie_for_dick", t_("Купить галстук для Дика"), c_red, 6)
     $ map_enabled = False
     $ dickOfficeSecretaryMonicaStageGfx = 1
     $ dickOfficeSecretaryMonicaStage = 9

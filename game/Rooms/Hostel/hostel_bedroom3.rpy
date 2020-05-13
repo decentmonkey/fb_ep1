@@ -3,7 +3,7 @@ label hostel_bedroom3:
     $ miniMapData = []
 
     $ scene_name = "hostel_bedroom3"
-    $ scene_caption = _("HOSTEL BEDROOM")
+    $ scene_caption = t_("HOSTEL BEDROOM")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_hostel_bedroom3_Monica_Nude"

@@ -31,9 +31,9 @@ label afterJailHouse_dialogue1:
 
     music Groove2_85
 
-    $ add_objective("take_governess_cloth", _("Одеть униформу"), c_blue, 10)
-    $ add_objective("take_bath", _("Принять душ"), c_green, 11)
-    $ add_objective("to_eat", _("Поесть"), c_orange, 12)
+    $ add_objective("take_governess_cloth", t_("Одеть униформу"), c_blue, 10)
+    $ add_objective("take_bath", t_("Принять душ"), c_green, 11)
+    $ add_objective("to_eat", t_("Поесть"), c_orange, 12)
 
     $ monicaEated = False
     $ bathTaken = False
@@ -299,7 +299,7 @@ label afterJailHouse_dialogue16:
     mt "(хмык)"
     "Пойду спать."
     "У меня нет больше сил..."
-    $ add_objective("to_sleep", _("Лечь спать"), c_green, 12)
+    $ add_objective("to_sleep", t_("Лечь спать"), c_green, 12)
 
     music casualMusic
 
@@ -458,7 +458,7 @@ label afterJailHouse_dialogue17:
     m "Спасибо, Миссис Робертс..."
 
     $ ralphStage = 1
-    $ add_objective("ask_ralph", _("Узнать у Ральфа по поводу оплаты"), c_orange, 13)
+    $ add_objective("ask_ralph", t_("Узнать у Ральфа по поводу оплаты"), c_orange, 13)
 
     $ autorun_to_object("bedroom_second", "afterJailHouse_dialogue17a")
 
@@ -539,7 +539,7 @@ label afterJailHouse_dialogue20:
     $ miniMapEnabledOnly = ["none"]
 
 
-    $ add_objective("take_journal", _("Там на столике что-то лежит..."), c_white, 15)
+    $ add_objective("take_journal", t_("Там на столике что-то лежит..."), c_white, 15)
 
 #    call refresh_scene_fade()
     return

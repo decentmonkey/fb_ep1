@@ -128,7 +128,7 @@ label eat:
                 $ remove_objective("eat")
                 $ juliaLocation = "floor2"
                 sound highheels_run1
-                show screen notify (_("Юлия убежала тереть пятно."))
+                show screen notify (t_("Юлия убежала тереть пятно."))
                 call refresh_scene_fade() from _call_refresh_scene_fade_180
                 return
 #default juliaPunishedLow = False #наказана криком, но разрешено не убирать пятно
@@ -161,7 +161,7 @@ label eat:
                 $ remove_objective("eat")
                 $ juliaLocation = "floor1"
                 sound highheels_run1
-                show screen notify (_("Юлия убежала выполнять обязанности."))
+                show screen notify (t_("Юлия убежала выполнять обязанности."))
                 call refresh_scene_fade() from _call_refresh_scene_fade_181
                 return
             if juliaPunishedVoluntarily == True:
@@ -223,7 +223,7 @@ label eat_day2:
             $ remove_objective("eat")
             $ juliaLocation = "floor2"
             sound highheels_run1
-            show screen notify (_("Юлия убежала тереть пятно."))
+            show screen notify (t_("Юлия убежала тереть пятно."))
             call refresh_scene_fade() from _call_refresh_scene_fade_184
             return
         if juliaPunishedLow == True:
@@ -235,7 +235,7 @@ label eat_day2:
             $ remove_objective("eat")
             $ juliaLocation = "floor1"
             sound highheels_run1
-            show screen notify (_("Юлия убежала выполнять обязанности."))
+            show screen notify (t_("Юлия убежала выполнять обязанности."))
             call refresh_scene_fade() from _call_refresh_scene_fade_185
             return
         if juliaPunishedVoluntarily == True:
@@ -251,7 +251,7 @@ label eat_day2:
             $ remove_objective("eat")
             $ juliaLocation = "floor1"
             sound highheels_run1
-            show screen notify (_("Юлия убежала выполнять обязанности."))
+            show screen notify (t_("Юлия убежала выполнять обязанности."))
             call refresh_scene_fade() from _call_refresh_scene_fade_186
             return
         if juliaMonicaForgivenessAfterPunishment == True:
@@ -267,7 +267,7 @@ label eat_day2:
             $ remove_objective("eat")
             $ juliaLocation = "floor1"
             sound highheels_run1
-            show screen notify (_("Юлия убежала выполнять обязанности."))
+            show screen notify (t_("Юлия убежала выполнять обязанности."))
             call refresh_scene_fade() from _call_refresh_scene_fade_187
             return
 
@@ -283,7 +283,7 @@ label eat_day2:
     $ remove_objective("eat")
     $ juliaLocation = "floor1"
     sound highheels_run1
-    show screen notify (_("Юлия убежала выполнять обязанности."))
+    show screen notify (t_("Юлия убежала выполнять обязанности."))
     call refresh_scene_fade() from _call_refresh_scene_fade_188
     return
 
@@ -310,7 +310,7 @@ label eat_day2_evening:
         $ juliaLocation = "floor2"
         $ autorun_to_object("floor1", "eat_day2_evening_after")
         sound highheels_run1
-        show screen notify (_("Юлия убежала выполнять обязанности."))
+        show screen notify (t_("Юлия убежала выполнять обязанности."))
         call refresh_scene_fade() from _call_refresh_scene_fade_189
         return
     if juliaPunished == True and juliaMonicaForgivenessAfterPunishment == True:
@@ -331,7 +331,7 @@ label eat_day2_evening:
         $ juliaLocation = "floor1"
         $ autorun_to_object("floor1", "eat_day2_evening_after")
         sound highheels_run1
-        show screen notify (_("Юлия убежала выполнять обязанности."))
+        show screen notify (t_("Юлия убежала выполнять обязанности."))
         call refresh_scene_fade() from _call_refresh_scene_fade_190
         return
     if juliaPunishedLow == True:
@@ -353,7 +353,7 @@ label eat_day2_evening:
         $ juliaLocation = "floor1"
         $ autorun_to_object("floor1", "eat_day2_evening_after")
         sound highheels_run1
-        show screen notify (_("Юлия убежала выполнять обязанности."))
+        show screen notify (t_("Юлия убежала выполнять обязанности."))
         call refresh_scene_fade() from _call_refresh_scene_fade_191
         return
     if juliaPunishedVoluntarily == True:
@@ -375,7 +375,7 @@ label eat_day2_evening:
         $ juliaLocation = "floor1"
         $ autorun_to_object("floor1", "eat_day2_evening_after")
         sound highheels_run1
-        show screen notify (_("Юлия убежала выполнять обязанности."))
+        show screen notify (t_("Юлия убежала выполнять обязанности."))
         call refresh_scene_fade() from _call_refresh_scene_fade_192
 
         return
@@ -397,7 +397,7 @@ label eat_day2_evening:
     $ autorun_to_object("floor1", "eat_day2_evening_after")
     sound highheels_run1
 
-    show screen notify (_("Юлия убежала выполнять обязанности."))
+    show screen notify (t_("Юлия убежала выполнять обязанности."))
 
     call refresh_scene_fade() from _call_refresh_scene_fade_193
     return
@@ -453,7 +453,7 @@ label eat_day3:
 
                 img 2029
                 with fadelong
-                show screen notify (_("Юлия расплакалась и убежала."))
+                show screen notify (t_("Юлия расплакалась и убежала."))
                 music Cheery_Monday
                 mt "Я поела."
                 "Вечером мне уже будет готовить другая служанка."
@@ -476,7 +476,7 @@ label eat_day3:
                 "Спасибо ВАМ!!!"
                 $ juliaLocation = "floor2"
                 sound highheels_run1
-                show screen notify (_("Юлия убежала тереть пятно."))
+                show screen notify (t_("Юлия убежала тереть пятно."))
 
         $ monicaEated = True
         $ remove_objective("eat")
@@ -504,6 +504,6 @@ label eat_day3:
     $ remove_objective("eat")
     $ juliaLocation = "none"
     sound highheels_run1
-    show screen notify (_("Юлия убежала выполнять обязанности."))
+    show screen notify (t_("Юлия убежала выполнять обязанности."))
     call refresh_scene_fade() from _call_refresh_scene_fade_195
     return

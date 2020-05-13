@@ -4,7 +4,7 @@ label kitchen2:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_15
 
     $ scene_name = "kitchen2"
-    $ scene_caption = _("Kitchen")
+    $ scene_caption = t_("Kitchen")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Kitchen2_Monica_" + cloth + day_suffix
 
@@ -23,8 +23,8 @@ label kitchen2:
     $ add_object_to_scene("Small_Chairs", {"type":2, "base":"Kitchen2_Small_Chairs", "click" : "kitchen2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Windows", {"type":2, "base":"Kitchen2_Windows", "click" : "floor1_environment", "actions" : "l", "zorder" : 0, "b":0.03})
 
-    $ add_object_to_scene("Teleport_Kitchen", {"type":3, "text" : _("КУХНЯ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "kitchen_teleport", "xpos" : 210, "ypos" : 520, "zorder":11})
-    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : _("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "kitchen_teleport", "xpos" : 960, "ypos" : 956, "zorder":12})
+    $ add_object_to_scene("Teleport_Kitchen", {"type":3, "text" : t_("КУХНЯ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "kitchen_teleport", "xpos" : 210, "ypos" : 520, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : t_("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "kitchen_teleport", "xpos" : 960, "ypos" : 956, "zorder":12})
 
     return
 

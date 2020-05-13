@@ -4,7 +4,7 @@ label floor1_fountain:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_9
 
     $ scene_name = "floor1_fountain"
-    $ scene_caption = _("Fountain")
+    $ scene_caption = t_("Fountain")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Floor1_Fountain" + day_suffix
 
@@ -21,7 +21,7 @@ label floor1_fountain:
             $ add_object_to_scene("Bardie", {"type" : 2, "base" : "Floor1_Fountain_Bardie" + day_suffix, "click" : "bardieInteract1", "actions" : "lt", "zorder":10, "icon_t":"/Icons/talk" + res.suffix +".png"})
 
 
-    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor1_fountain_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor1_fountain_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 

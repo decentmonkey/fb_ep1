@@ -6,7 +6,7 @@ label police_entrance_s2:
     $ miniMapData = []
 
     $ scene_name = "police_entrance_s2"
-    $ scene_caption = _("Police Station")
+    $ scene_caption = t_("Police Station")
     $ clear_scene_from_objects(scene_name)
 
     if policeEntranceState == 4:
@@ -25,8 +25,8 @@ label police_entrance_s2:
 
     $ add_object_to_scene("Table", {"type":2, "base":"police_entrance_Table", "click" : "police_entrance_s2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Turniket", {"type":2, "base":"police_entrance_Turniket", "click" : "police_entrance_s2_environment", "actions" : "l", "zorder" : 0})
-    $ add_object_to_scene("Teleport_Inside", {"type":3, "text" : _("ВХОД"), "rarrow" : "arrow_right_2", "base":"police_entrance_Teleport_Inside", "click" : "police_entrance_s2_teleport", "xpos" : 1009, "ypos" : 59, "zorder":5})
-    $ add_object_to_scene("Telepost_Street_Police", {"type":3, "text" : _("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "police_entrance_s2_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Inside", {"type":3, "text" : t_("ВХОД"), "rarrow" : "arrow_right_2", "base":"police_entrance_Teleport_Inside", "click" : "police_entrance_s2_teleport", "xpos" : 1009, "ypos" : 59, "zorder":5})
+    $ add_object_to_scene("Telepost_Street_Police", {"type":3, "text" : t_("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "police_entrance_s2_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
 
     return
 #                            $ brightness_adjustment = 0.1

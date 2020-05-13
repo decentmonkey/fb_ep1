@@ -5,7 +5,7 @@ label basement_laundry2_box1:
     $ miniMapData = []
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_2
     $ scene_name = "basement_laundry2_box1"
-    $ scene_caption = _("Laundry")
+    $ scene_caption = t_("Laundry")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Laundry2_Box1"
 
@@ -13,14 +13,14 @@ label basement_laundry2_box1:
     $ add_object_to_scene("Detergents", {"type":2, "base":"Basement_Laundry2_Box1_Detergents", "click" : "basement_laundry2_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Towels", {"type":2, "base":"Basement_Laundry2_Box1_Towels", "click" : "basement_laundry2_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Basement2_Laundry", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_boxes_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement2_Laundry", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_boxes_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label basement_laundry2_box2:
     $ miniMapData = []
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_3
     $ scene_name = "basement_laundry2_box2"
-    $ scene_caption = _("Laundry")
+    $ scene_caption = t_("Laundry")
     $ clear_scene_from_objects(scene_name)
     if laundry2_box2_empty == False:
         $ scene_image = "scene_Laundry2_Box2"
@@ -31,7 +31,7 @@ label basement_laundry2_box2:
     else:
         $ scene_image = "scene_Laundry2_Box2_Empty"
 
-    $ add_object_to_scene("Teleport_Basement2_Laundry", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_boxes_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement2_Laundry", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_boxes_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 
 label basement_laundry2_boxes_teleport(obj_name, obj_data):
@@ -57,7 +57,7 @@ label basement_laundry2_boxes_environment(obj_name, obj_data):
     return
 
 label basement_laundry2_box2_take_iron:
-    $ define_inventory_object("iron", {"description" : _("Утюг"), "label_suffix" : "_use_iron", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/iron" + res.suffix + ".png"})
+    $ define_inventory_object("iron", {"description" : t_("Утюг"), "label_suffix" : "_use_iron", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/iron" + res.suffix + ".png"})
     $ add_inventory("iron", 1, True)
     $ remove_objective("laundry_find_iron")
     $ laundryIronFound = True
@@ -70,7 +70,7 @@ label basement_laundry2_box2_take_iron:
     imgc Monica_HomeCloth1_Thinking1
     "Теперь надо погладить платье."
 
-    $ add_objective("iron_dress", _("Погладить платье"), c_pink, 20)
+    $ add_objective("iron_dress", t_("Погладить платье"), c_pink, 20)
     $ landryIroningActive = True
     $ laundryBoxesActive = False
 

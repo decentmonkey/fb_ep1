@@ -8,7 +8,7 @@ label monica_office_cabinet_table:
     $ miniMapData = []
 
     $ scene_name = "monica_office_cabinet_table"
-    $ scene_caption = _("Monica's Office")
+    $ scene_caption = t_("Monica's Office")
     $ clear_scene_from_objects(scene_name)
 
     if monicaOfficeCabinetMonkeys == False:
@@ -21,7 +21,7 @@ label monica_office_cabinet_table:
 
     if check_inventory("phone"):
         if monicaOfficeSteveCall1Planned == True:
-            $ add_object_to_scene("Phone", {"type":3, "text" : _("ТЕЛЕФОН"), "larrow" : "arrow_left_2", "img_overlay":"Office_Monica_Cabinet_Table_Phone", "base":"Office_Monica_Cabinet_Table_Phone", "click" : "monkeys_monica_office1", "xpos" : 1416, "ypos" : 633, "zorder":11, "hover_overlay":True})
+            $ add_object_to_scene("Phone", {"type":3, "text" : t_("ТЕЛЕФОН"), "larrow" : "arrow_left_2", "img_overlay":"Office_Monica_Cabinet_Table_Phone", "base":"Office_Monica_Cabinet_Table_Phone", "click" : "monkeys_monica_office1", "xpos" : 1416, "ypos" : 633, "zorder":11, "hover_overlay":True})
         else:
             $ add_object_to_scene("Phone", {"type" : 2, "base" : "Office_Monica_Cabinet_Table_Phone", "click" : "monica_office_cabinet_table_environment", "actions" : "lt", "zorder":10})
     else:
@@ -35,7 +35,7 @@ label monica_office_cabinet_table:
     if check_inventory("phone"):
         $ add_object_to_scene("Table", {"type" : 2, "base" : "Office_Monica_Cabinet_Table_Table" + day_suffix, "click" : "monica_office_cabinet_table_environment", "actions" : "lh", "zorder":1})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : _("К СЕКРЕТАРЮ"), "larrow" : "arrow_left_2", "base":"Office_Monica_Cabinet_Table_Exit", "click" : "monica_office_cabinet_table_teleport", "xpos" : 723, "ypos" : 166, "zorder":11, "b":0.15, "tint":[1.0, 1.0, 0.85]})
+    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : t_("К СЕКРЕТАРЮ"), "larrow" : "arrow_left_2", "base":"Office_Monica_Cabinet_Table_Exit", "click" : "monica_office_cabinet_table_teleport", "xpos" : 723, "ypos" : 166, "zorder":11, "b":0.15, "tint":[1.0, 1.0, 0.85]})
 
     return
 #                            $ brightness_adjustment = 0.1

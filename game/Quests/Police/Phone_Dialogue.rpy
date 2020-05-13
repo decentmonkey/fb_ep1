@@ -383,7 +383,7 @@ label police_phone_dialogue1(target_scene):
     "Мммммм..."
 
     music Cheery_Monday
-    $ add_objective("go_to_police", _("Заехать по пути в полицию на 5 минут"), c_green, 30)
+    $ add_objective("go_to_police", t_("Заехать по пути в полицию на 5 минут"), c_green, 30)
 
     return
 

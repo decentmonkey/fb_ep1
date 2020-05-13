@@ -12,7 +12,7 @@ label dress_return_drive1(target_scene):
     imgr 1905
     fred "Хорошо, Мэм!"
 
-    call textonblack(_("СПУСТЯ ЧАС...")) from _call_textonblack
+    call textonblack(t_("СПУСТЯ ЧАС...")) from _call_textonblack
     img scene_Map_Evening
     imgl 1904
     with Dissolve(1)
@@ -524,7 +524,7 @@ label dress_return_cashier_talk1:
     call refresh_scene_fade() from _call_refresh_scene_fade_12
     music Stealth_Groover
     $ remove_objective("return_dress")
-    $ add_objective("return_to_home", _("Ехать домой"), c_green, 20)
+    $ add_objective("return_to_home", t_("Ехать домой"), c_green, 20)
     #$ drivingPlacePlannedArray["House"] = "dress_return_drive3"
     $ dressReturnDialoguePlanned = True
     $ returnDressInProgress = False

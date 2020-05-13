@@ -26,7 +26,7 @@
 from __future__ import print_function
 
 # Import the python ast module, not ours.
-ast = __import__("ast", { })
+ast = __import_t_("ast", { })
 
 # Import the future module itself.
 import __future__

@@ -942,7 +942,7 @@ class CustomParser(Parser):
 class ScreenParser(Parser):
 
     def __init__(self):
-        super(ScreenParser, self).__init__("screen")
+        super(ScreenParser, self).__init_t_("screen")
 
     def parse(self, loc, l, parent, name="_name"):
 

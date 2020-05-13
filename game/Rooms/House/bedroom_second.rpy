@@ -22,7 +22,7 @@ label bedroom_second:
     $ add_object_to_scene("Window1", {"type":2, "base":"House_BedroomSecond_Window1", "click" : "bedroom_second_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Window2", {"type":2, "base":"House_BedroomSecond_Window2", "click" : "bedroom_second_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : _("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"House_BedroomSecond_Teleport_Floor2", "click" : "bedroom_second_teleport", "xpos" : 960, "ypos" : 956, "zorder":20})
+    $ add_object_to_scene("Teleport_Floor2", {"type":3, "text" : t_("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"House_BedroomSecond_Teleport_Floor2", "click" : "bedroom_second_teleport", "xpos" : 960, "ypos" : 956, "zorder":20})
     return
 
 #    $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})

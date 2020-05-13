@@ -104,7 +104,7 @@ label floor1_no_julia:
 
     call miniMapRemoveDisabled("Basement") from _call_miniMapRemoveDisabled
 
-    $ add_objective("laundry_find_dress", _("Отыскать в прачечной свое платье"), c_blue, 20)
+    $ add_objective("laundry_find_dress", t_("Отыскать в прачечной свое платье"), c_blue, 20)
     $ businessClothSearchDressInProgress = True
     $ notWantToBasement = False
     return

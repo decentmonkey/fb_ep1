@@ -5,7 +5,7 @@ label street_house_fence:
 
     $ scene_name = "street_house_fence"
     $ sceneIsStreet = True
-    $ scene_caption = _("House Fence")
+    $ scene_caption = t_("House Fence")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Street_House_Fence_Monica_" + cloth + day_suffix
 
@@ -13,8 +13,8 @@ label street_house_fence:
 
     $ add_object_to_scene("Scratch", {"type":2, "base":"Street_House_Fence_Scratch", "click" : "street_house_fence_environment", "actions" : "l", "zorder" : 0})
 
-#    $ add_object_to_scene("Teleport_House_Fence_Scratch", {"type":3, "text" : _("ЦАРАПИНА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_fence_teleport", "xpos" : 638, "ypos" : 564, "zorder":11})
-    $ add_object_to_scene("Teleport_House_Yard", {"type":3, "text" : _("НАЗАД ВО ДВОР"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_house_fence_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+#    $ add_object_to_scene("Teleport_House_Fence_Scratch", {"type":3, "text" : t_("ЦАРАПИНА"), "rarrow" : "arrow_up_2", "base":"Street_House_Gate_Teleport_Outside", "click" : "street_house_fence_teleport", "xpos" : 638, "ypos" : 564, "zorder":11})
+    $ add_object_to_scene("Teleport_House_Yard", {"type":3, "text" : t_("НАЗАД ВО ДВОР"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "street_house_fence_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

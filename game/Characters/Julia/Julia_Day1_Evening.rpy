@@ -30,7 +30,7 @@ label julia_day1_evening(obj_name, obj_data):
         $ juliaLocation = "kitchen"
         sound highheels_run1
         call refresh_scene_fade() from _call_refresh_scene_fade_156
-        show screen notify (_("Юлия убежала на кухню."))
+        show screen notify (t_("Юлия убежала на кухню."))
         return
 
     return

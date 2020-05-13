@@ -5,7 +5,7 @@ label hostel_bedroom:
     $ miniMapData = []
 
     $ scene_name = "hostel_bedroom"
-    $ scene_caption = _("HOSTEL BEDROOM")
+    $ scene_caption = t_("HOSTEL BEDROOM")
     $ clear_scene_from_objects(scene_name)
 
     if hostelBedroomStage == 0 or hostelBedroomStage == 1:
@@ -14,7 +14,7 @@ label hostel_bedroom:
     if hostelBedroomStage == 2:
         $ scene_image = "scene_Hostel_Bedroom_Monica_Nude2"
         $ add_object_to_scene("Monica", {"type":2, "base":"Hostel_Bedroom_Monica_Nude2", "click" : "hostel_bedroom_environment", "actions" : "l", "zorder" : 10})
-        $ add_object_to_scene("Teleport_Hostel_Reception", {"type":3, "text" : _("РЕЦЕПШИН"), "rarrow" : "arrow_right_2", "base":"Hostel_Bedroom_Teleport_Hostel_Reception", "click" : "hostel_bedroom_teleport", "xpos" : 1692, "ypos" : 755, "zorder":15})
+        $ add_object_to_scene("Teleport_Hostel_Reception", {"type":3, "text" : t_("РЕЦЕПШИН"), "rarrow" : "arrow_right_2", "base":"Hostel_Bedroom_Teleport_Hostel_Reception", "click" : "hostel_bedroom_teleport", "xpos" : 1692, "ypos" : 755, "zorder":15})
         return
 
 
@@ -34,8 +34,8 @@ label hostel_bedroom:
     $ add_object_to_scene("Vase3", {"type":2, "base":"Hostel_Bedroom_Vase3", "click" : "hostel_bedroom_environment", "actions" : "l", "zorder" : 0, "b":0.13})
     $ add_object_to_scene("Window", {"type":2, "base":"Hostel_Bedroom_Window", "click" : "hostel_bedroom_environment", "actions" : "l", "zorder" : 0, "b":0.13})
 
-    $ add_object_to_scene("Teleport_Hostel_Bathroom", {"type":3, "text" : _("ДУШ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bedroom_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
-    $ add_object_to_scene("Teleport_Hostel_Reception", {"type":3, "text" : _("РЕЦЕПШИН"), "rarrow" : "arrow_right_2", "base":"Hostel_Bedroom_Teleport_Hostel_Reception", "click" : "hostel_bedroom_teleport", "xpos" : 1692, "ypos" : 755, "zorder":15})
+    $ add_object_to_scene("Teleport_Hostel_Bathroom", {"type":3, "text" : t_("ДУШ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "hostel_bedroom_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hostel_Reception", {"type":3, "text" : t_("РЕЦЕПШИН"), "rarrow" : "arrow_right_2", "base":"Hostel_Bedroom_Teleport_Hostel_Reception", "click" : "hostel_bedroom_teleport", "xpos" : 1692, "ypos" : 755, "zorder":15})
 
 
     $ hostelReceptionVisited = True

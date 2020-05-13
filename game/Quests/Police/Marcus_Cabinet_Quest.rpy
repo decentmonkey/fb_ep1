@@ -109,7 +109,7 @@ label marcus_cabinet_dialogue3:
     stop music fadeout 1.0
     $ renpy.pause(1)
     sound snd_handcuffs
-    call textonblack(_("ЧТО?????")) from _call_textonblack_33
+    call textonblack(t_("ЧТО?????")) from _call_textonblack_33
     img black_screen
     with Dissolve(1)
 

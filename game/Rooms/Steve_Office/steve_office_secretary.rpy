@@ -10,7 +10,7 @@ label steve_office_secretary:
     $ miniMapData = []
 
     $ scene_name = "steve_office_secretary"
-    $ scene_caption = _("STEVE'S SECRETARY")
+    $ scene_caption = t_("STEVE'S SECRETARY")
     $ clear_scene_from_objects(scene_name)
     if steveSecretaryOffended == False:
         $ scene_image = "scene_Steve_Office_Secretary_Monica_" + cloth
@@ -30,8 +30,8 @@ label steve_office_secretary:
     $ add_object_to_scene("Flower3", {"type":2, "base":"steve_office_secretary_Flower3", "click" : "steve_office_secretary_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Flower4", {"type":2, "base":"steve_office_secretary_Flower4", "click" : "steve_office_secretary_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "steve_office_secretary_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
-    $ add_object_to_scene("Teleport_Steve_Office_Office", {"type":3, "text" : _("КАБИНЕТ СТИВА"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "steve_office_secretary_teleport", "xpos" : 1630, "ypos" : 920, "zorder":11})
+    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "steve_office_secretary_teleport", "xpos" : 960, "ypos" : 956, "zorder":15})
+    $ add_object_to_scene("Teleport_Steve_Office_Office", {"type":3, "text" : t_("КАБИНЕТ СТИВА"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "steve_office_secretary_teleport", "xpos" : 1630, "ypos" : 920, "zorder":11})
     return
 
 #                            $ brightness_adjustment = 0.1

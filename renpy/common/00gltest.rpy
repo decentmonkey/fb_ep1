@@ -67,59 +67,59 @@ init -1500:
 
                     xmaximum 0.48
 
-                    label _("Renderer")
+                    label t_("Renderer")
 
                     null height 10
 
-                    textbutton _("Automatically Choose"):
+                    textbutton t_("Automatically Choose"):
                         action _SetRenderer("auto")
                         style_suffix "radio_button"
 
                     if renpy.renpy.windows:
-                        textbutton _("Force Angle/DirectX Renderer"):
+                        textbutton t_("Force Angle/DirectX Renderer"):
                             action _SetRenderer("angle")
                             style_suffix "radio_button"
 
-                    textbutton _("Force OpenGL Renderer"):
+                    textbutton t_("Force OpenGL Renderer"):
                         action _SetRenderer("gl")
                         style_suffix "radio_button"
 
-                    textbutton _("Force Software Renderer"):
+                    textbutton t_("Force Software Renderer"):
                         action _SetRenderer("sw")
                         style_suffix "radio_button"
 
                     null height 10
 
-                    label _("NPOT")
+                    label t_("NPOT")
 
                     null height 10
 
-                    textbutton _("Enable"):
+                    textbutton t_("Enable"):
                         action SetField(_preferences, "gl_npot", True)
                         style_suffix "radio_button"
 
-                    textbutton _("Disable"):
+                    textbutton t_("Disable"):
                         action SetField(_preferences, "gl_npot", False)
                         style_suffix "radio_button"
 
 
                     null height 10
 
-                    label _("Gamepad")
+                    label t_("Gamepad")
 
                     null height 10
 
-                    textbutton _("Enable"):
+                    textbutton t_("Enable"):
                         action SetField(_preferences, "pad_enabled", True)
                         style_suffix "radio_button"
 
-                    textbutton _("Disable"):
+                    textbutton t_("Disable"):
                         action SetField(_preferences, "pad_enabled", False)
                         style_suffix "radio_button"
 
                     null height 10
 
-                    textbutton _("Calibrate"):
+                    textbutton t_("Calibrate"):
                         action ui.invokesinnewcontext(_gamepad.calibrate)
                         xfill True
 
@@ -128,47 +128,47 @@ init -1500:
                     xmaximum 0.48
                     xpos 0.5
 
-                    label _("Powersave")
+                    label t_("Powersave")
 
                     null height 10
 
-                    textbutton _("Enable"):
+                    textbutton t_("Enable"):
                         action Preference("gl powersave", True)
                         style_suffix "radio_button"
 
-                    textbutton _("Disable"):
+                    textbutton t_("Disable"):
                         action Preference("gl powersave", False)
                         style_suffix "radio_button"
 
                     null height 10
 
-                    label _("Framerate")
+                    label t_("Framerate")
 
                     null height 10
 
-                    textbutton _("Screen"):
+                    textbutton t_("Screen"):
                         action Preference("gl framerate", None)
                         style_suffix "radio_button"
 
-                    textbutton _("60"):
+                    textbutton t_("60"):
                         action Preference("gl framerate", 60)
                         style_suffix "radio_button"
 
-                    textbutton _("30"):
+                    textbutton t_("30"):
                         action Preference("gl framerate", 30)
                         style_suffix "radio_button"
 
                     null height 10
 
-                    label _("Tearing")
+                    label t_("Tearing")
 
                     null height 10
 
-                    textbutton _("Enable"):
+                    textbutton t_("Enable"):
                         action Preference("gl tearing", True)
                         style_suffix "radio_button"
 
-                    textbutton _("Disable"):
+                    textbutton t_("Disable"):
                         action Preference("gl tearing", False)
                         style_suffix "radio_button"
 
@@ -176,7 +176,7 @@ init -1500:
 
             vbox:
 
-                text _("Changes will take effect the next time this program is run.") substitute True
+                text t_("Changes will take effect the next time this program is run.") substitute True
 
                 null height 10
 
@@ -188,7 +188,7 @@ init -1500:
                         yalign 1.0
 
                     if not renpy.display.interface.safe_mode:
-                        textbutton _("Return"):
+                        textbutton t_("Return"):
                             action Return(0)
                             yalign 1.0
 
@@ -210,46 +210,46 @@ init -1500:
 
             has vbox
 
-            label _("Performance Warning")
+            label t_("Performance Warning")
 
             null height 10
 
             if problem == "sw":
-                text _("This computer is using software rendering.")
+                text t_("This computer is using software rendering.")
             elif problem == "fixed":
-                text _("This computer is not using shaders.")
+                text t_("This computer is not using shaders.")
             elif problem == "slow":
-                text _("This computer is displaying graphics slowly.")
+                text t_("This computer is displaying graphics slowly.")
             else:
-                text _("This computer has a problem displaying graphics: [problem].") substitute True
+                text t_("This computer has a problem displaying graphics: [problem].") substitute True
 
             null height 10
 
             if directx_update:
-                text _("Its graphics drivers may be out of date or not operating correctly. This can lead to slow or incorrect graphics display. Updating DirectX could fix this problem.")
+                text t_("Its graphics drivers may be out of date or not operating correctly. This can lead to slow or incorrect graphics display. Updating DirectX could fix this problem.")
             else:
-                text _("Its graphics drivers may be out of date or not operating correctly. This can lead to slow or incorrect graphics display.")
+                text t_("Its graphics drivers may be out of date or not operating correctly. This can lead to slow or incorrect graphics display.")
 
             if directx_update:
                 null height 10
 
-                textbutton _("Update DirectX"):
+                textbutton t_("Update DirectX"):
                     action directx_update
                     xfill True
 
             null height 10
 
-            textbutton _("Continue, Show this warning again"):
+            textbutton t_("Continue, Show this warning again"):
                 action Return(True)
                 xfill True
 
-            textbutton _("Continue, Don't show warning again"):
+            textbutton t_("Continue, Don't show warning again"):
                 action Return(False)
                 xfill True
 
             null height 10
 
-            textbutton _("Quit"):
+            textbutton t_("Quit"):
                 action Quit(confirm=False)
                 xfill True
 
@@ -261,21 +261,21 @@ init -1500:
 
             has vbox
 
-            label _("Updating DirectX.")
+            label t_("Updating DirectX.")
 
             null height 10
 
-            text _("DirectX web setup has been started. It may start minimized in the taskbar. Please follow the prompts to install DirectX.")
+            text t_("DirectX web setup has been started. It may start minimized in the taskbar. Please follow the prompts to install DirectX.")
 
             null height 10
 
-            text _("{b}Note:{/b} Microsoft's DirectX web setup program will, by default, install the Bing toolbar. If you do not want this toolbar, uncheck the appropriate box.")
+            text t_("{b}Note:{/b} Microsoft's DirectX web setup program will, by default, install the Bing toolbar. If you do not want this toolbar, uncheck the appropriate box.")
 
             null height 10
 
-            text _("When setup finishes, please click below to restart this program.")
+            text t_("When setup finishes, please click below to restart this program.")
 
-            textbutton _("Restart") action Return(True)
+            textbutton t_("Restart") action Return(True)
 
 
 

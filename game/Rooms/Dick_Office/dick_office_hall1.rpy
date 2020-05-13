@@ -6,7 +6,7 @@ label dick_office_hall1:
     $ miniMapData = []
 
     $ scene_name = "dick_office_hall1"
-    $ scene_caption = _("Dick's Office Hall")
+    $ scene_caption = t_("Dick's Office Hall")
     $ clear_scene_from_objects(scene_name)
     if dickOfficeHallMonicaMode == 0:
         $ scene_image = "scene_Office_Dick_Hall1_Monica_" + cloth
@@ -21,8 +21,8 @@ label dick_office_hall1:
     $ add_object_to_scene("Exhibit3", {"type":2, "base":"Office_Dick_Hall1_Exhibit3", "click" : "dick_office_hall1_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Exhibit4", {"type":2, "base":"Office_Dick_Hall1_Exhibit4", "click" : "dick_office_hall1_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Entrance", {"type":3, "text" : _("ЛИФТ ВНИЗ"), "rarrow" : "arrow_down_2", "base":"Office_Dick_Hall1_Teleport_Entrance", "click" : "dick_office_hall1_teleport", "xpos" : 1534, "ypos" : 781, "zorder":9})
-    $ add_object_to_scene("Teleport_Secretary", {"type":3, "text" : _("СЕКРЕТАРЬ ДИКА"), "larrow" : "arrow_left_2", "base":"Office_Dick_Hall1_Teleport_Secretary", "click" : "dick_office_hall1_teleport", "xpos" : 273, "ypos" : 850, "zorder":9})
+    $ add_object_to_scene("Teleport_Entrance", {"type":3, "text" : t_("ЛИФТ ВНИЗ"), "rarrow" : "arrow_down_2", "base":"Office_Dick_Hall1_Teleport_Entrance", "click" : "dick_office_hall1_teleport", "xpos" : 1534, "ypos" : 781, "zorder":9})
+    $ add_object_to_scene("Teleport_Secretary", {"type":3, "text" : t_("СЕКРЕТАРЬ ДИКА"), "larrow" : "arrow_left_2", "base":"Office_Dick_Hall1_Teleport_Secretary", "click" : "dick_office_hall1_teleport", "xpos" : 273, "ypos" : 850, "zorder":9})
 
     $ dickOfficeHallVisited = True
     return

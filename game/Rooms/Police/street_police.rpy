@@ -5,7 +5,7 @@ label street_police:
     $ miniMapData = []
 
     $ scene_name = "street_police"
-    $ scene_caption = _("Police Station")
+    $ scene_caption = t_("Police Station")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True and map_scene == "Police":
         $ scene_image = "scene_street_Police_Driver_Monica_" + cloth + day_suffix

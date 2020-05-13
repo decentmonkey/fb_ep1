@@ -8,7 +8,7 @@ label street_cloth_shop:
 
     $ scene_name = "street_cloth_shop"
     $ sceneIsStreet = True
-    $ scene_caption = _("Clothing Shop")
+    $ scene_caption = t_("Clothing Shop")
     $ clear_scene_from_objects(scene_name)
     if bDickFollowingMonica == True:
         $ scene_image = "scene_Street_Cloth_Shop_Driver_Monica_DickTheLawyer_" + cloth + day_suffix
@@ -29,11 +29,11 @@ label street_cloth_shop:
 
     $ add_object_to_scene("Parking_Cash", {"type":2, "base":"Street_Cloth_Shop_Parking_Cash", "click" : "street_cloth_shop_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Trees", {"type":2, "base":"Street_Cloth_Shop_Trees", "click" : "street_cloth_shop_environment", "actions" : "l", "zorder" : 0})
-#    $ add_object_to_scene("Teleport_Cloth_Shop_Entrance", {"type":3, "text" : _("Магазин Одежды"), "larrow" : "arrow_up", "base": "Street_Cloth_Shop_Teleport_Inside", "click" : "street_cloth_shop_teleport", "xpos" : 1746, "ypos" : 649, "zorder":11})
-    $ add_object_to_scene("Teleport_Cloth_Shop_Entrance", {"type":3, "text" : _("Магазин Одежды"), "rarrow" : "arrow_right_2", "base": "Street_Cloth_Shop_Teleport_Inside", "click" : "street_cloth_shop_teleport", "xpos" : 835, "ypos" : 341, "zorder":11})
+#    $ add_object_to_scene("Teleport_Cloth_Shop_Entrance", {"type":3, "text" : t_("Магазин Одежды"), "larrow" : "arrow_up", "base": "Street_Cloth_Shop_Teleport_Inside", "click" : "street_cloth_shop_teleport", "xpos" : 1746, "ypos" : 649, "zorder":11})
+    $ add_object_to_scene("Teleport_Cloth_Shop_Entrance", {"type":3, "text" : t_("Магазин Одежды"), "rarrow" : "arrow_right_2", "base": "Street_Cloth_Shop_Teleport_Inside", "click" : "street_cloth_shop_teleport", "xpos" : 835, "ypos" : 341, "zorder":11})
 
     if whoresPlaceOpened == True:
-        $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : _("Вверх по улице"), "rarrow" : "arrow_up_2", "base": "Street_Cloth_Shop_Teleport_Shawarma", "click" : "street_cloth_shop_teleport", "xpos" : 1705, "ypos" : 887, "zorder":11})
+        $ add_object_to_scene("Teleport_Shawarma", {"type":3, "text" : t_("Вверх по улице"), "rarrow" : "arrow_up_2", "base": "Street_Cloth_Shop_Teleport_Shawarma", "click" : "street_cloth_shop_teleport", "xpos" : 1705, "ypos" : 887, "zorder":11})
     return
 
 #                            $ brightness_adjustment = 0.1

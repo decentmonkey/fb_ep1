@@ -754,7 +754,7 @@ label monkeys_monica_office1_get_out_now:
     $ photoStudioOpened = True
     $ photostudioEmpty = True
     $ scene_transition = "Fade_long"
-    $ add_objective("go_work", _("Продолжить работать"), c_green, 20)
+    $ add_objective("go_work", t_("Продолжить работать"), c_green, 20)
 #    $ autorun_to_object("monica_office_photostudio", "monica_office_photostudio_autorun_monica_day_1")
     call refresh_scene() from _call_refresh_scene_16
     return
@@ -763,7 +763,7 @@ label monkeys_monica_office1_get_out_now:
 label monkeys_monica_photostudio1:
     $ melaniePhotoShotProcessed = True
 
-    show screen notify(_("Кастинг модели убежали в фотостудию..."))
+    show screen notify(t_("Кастинг модели убежали в фотостудию..."))
     $ photoStudioOpened = True
     sound highheels_run1
     music casualMusic
@@ -773,7 +773,7 @@ label monkeys_monica_photostudio1:
     $ monicaOfficeCabinetMonkeys = False
     $ photoStudioOpened = True
     $ scene_transition = "Fade_long"
-    $ add_objective("go_photostudio", _("Идти в фотостудию"), c_green, 20)
+    $ add_objective("go_photostudio", t_("Идти в фотостудию"), c_green, 20)
     $ autorun_to_object("monica_office_photostudio", "monica_office_photostudio_autorun_monica_day_1")
     call refresh_scene() from _call_refresh_scene_17
     return
@@ -1073,7 +1073,7 @@ label monkeys_monica_photostudio1_2:
     $ monicaOfficeDickIncomingCallPlanned = True
     $ autorun_to_object("monica_office_cabinet_table", "dickIncomingCallDay1")
     sound highheels_run1
-    $ add_objective("go_work", _("Продолжить работать в своем офисе"), c_green, 20)
+    $ add_objective("go_work", t_("Продолжить работать в своем офисе"), c_green, 20)
     $ scene_transition = "Fade_long"
     call refresh_scene() from _call_refresh_scene_18
 

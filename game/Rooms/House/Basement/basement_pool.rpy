@@ -4,7 +4,7 @@ label basement_pool:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_1
 
     $ scene_name = "basement_pool"
-    $ scene_caption = _("Basement Pool")
+    $ scene_caption = t_("Basement Pool")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Basement_Pool_Monica_" + cloth
 #    $ scene_image = "scene_Basement_Pool_Monica_BusinessCloth1"
@@ -19,8 +19,8 @@ label basement_pool:
         $ add_object_to_scene("Pool_Water", {"type":2, "base":"Basement_Pool_Water", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
         $ add_object_to_scene("Lamps", {"type":2, "base":"Basement_Pool_Lamps", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
 
-        $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
-        $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : _("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+        $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+        $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : t_("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
     else:
         $ add_object_to_scene("Bidet", {"type":2, "base":"Basement_Pool_Bidet_b", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
         $ add_object_to_scene("Mat", {"type":2, "base":"Basement_Pool_Mat_b", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0, "b": 0.15, "s":1.1})
@@ -29,8 +29,8 @@ label basement_pool:
         $ add_object_to_scene("Pool_Water", {"type":2, "base":"Basement_Pool_Water_b", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
         $ add_object_to_scene("Lamps", {"type":2, "base":"Basement_Pool_Lamps_b", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
 
-        $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1_b", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
-        $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : _("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2_b", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+        $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1_b", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+        $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : t_("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2_b", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
     return
 
 #                            $ brightness_adjustment = 0.1

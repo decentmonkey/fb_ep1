@@ -46,7 +46,7 @@ label floor2_julia_monica_revenge_start:
 
             "Надо поискать что-нибудь у зеркал, на столике для косметики!"
 
-    $ add_objective("find_hair_dye", _("Найти что-нибудь что можно разлить и напакостить Юлии"), c_pink, 20)
+    $ add_objective("find_hair_dye", t_("Найти что-нибудь что можно разлить и напакостить Юлии"), c_pink, 20)
     $ subst_to_object("Teleport_Floor2_Stairs", "floor2_julia_monica_revenge_block_exits")
     $ subst_to_object("Teleport_Bedroom", "floor2_julia_monica_revenge_block_exits")
     $ subst_to_object("Teleport_Bathroom", "floor2_julia_monica_revenge_block_exits")
@@ -56,7 +56,7 @@ label floor2_julia_monica_revenge_start:
 
 label floor2_julia_monica_revenge_hair_dye_taken:
     $ remove_objective("find_hair_dye")
-    $ add_objective("spill_hair_dye", _("Разлить куда-нибудь краску для волос"), c_red, 20)
+    $ add_objective("spill_hair_dye", t_("Разлить куда-нибудь краску для волос"), c_red, 20)
     $ autorun_to_object("floor2", "floor2_julia_monica_revenge_look_for_spill_hair_dye")
     return
 
@@ -707,7 +707,7 @@ label julia_punished_talk_day1_evening:
         $ remove_objective("julia_check_spot")
         sound highheels_run1
         call refresh_scene_fade() from _call_refresh_scene_fade_110
-        show screen notify (_("Юлия убежала на кухню."))
+        show screen notify (t_("Юлия убежала на кухню."))
         return
     img 1464
     img 1463
@@ -897,7 +897,7 @@ label julia_punished_talk_day2_day:
     $ remove_objective("julia_check_spot")
     sound highheels_run1
     call refresh_scene_fade() from _call_refresh_scene_fade_112
-    show screen notify (_("Юлия убежала на кухню."))
+    show screen notify (t_("Юлия убежала на кухню."))
     return
 #juliaPunishedVoluntarily
 
@@ -1004,7 +1004,7 @@ label julia_punished_talk_day2_evening:
     $ juliaLocation = "kitchen"
     sound highheels_run1
     call refresh_scene_fade() from _call_refresh_scene_fade_114
-    show screen notify (_("Юлия убежала на кухню."))
+    show screen notify (t_("Юлия убежала на кухню."))
     music Mandeville
     return
 
@@ -1065,7 +1065,7 @@ label julia_punished_talk_day3_day:
         $ juliaLocation = "kitchen"
         sound highheels_run1
         call refresh_scene_fade() from _call_refresh_scene_fade_116
-        show screen notify (_("Юлия убежала на кухню."))
+        show screen notify (t_("Юлия убежала на кухню."))
         music Cheery_Monday
         return
     music Pyro_Flow
@@ -1188,7 +1188,7 @@ label julia_punished_talk_day3_day:
 
     img 2019
     with fadelong
-    show screen notify (_("Юлия убежала на кухню."))
+    show screen notify (t_("Юлия убежала на кухню."))
     mt "Пятно так и осталось."
     "Нерадивые сотрудники вечно оставляют за собой недоделанную работу."
 

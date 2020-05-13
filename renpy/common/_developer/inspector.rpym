@@ -35,11 +35,11 @@ screen _inspector:
         has side "t c b":
             spacing gui._scale(10)
 
-        label _("Displayable Inspector")
+        label t_("Displayable Inspector")
 
         if not tree:
 
-            text _("Nothing to inspect.")
+            text t_("Nothing to inspect.")
 
         else:
 
@@ -58,17 +58,17 @@ screen _inspector:
                         min_width gui._scale(350)
                         xmaximum gui._scale(350)
 
-                    text _("Size"):
+                    text t_("Size"):
                         min_width gui._scale(90)
                         underline True
 
-                    text _("Style"):
+                    text t_("Style"):
                         min_width gui._scale(225)
                         underline True
 
                     null width gui._scale(5)
 
-                    text _("Location"):
+                    text t_("Location"):
                         underline True
 
                 null height gui._scale(5)
@@ -102,7 +102,7 @@ screen _inspector:
                                 action _EditFile(d._location[0], d._location[1])
 
         hbox:
-            textbutton _("Return") action Return(True)
+            textbutton t_("Return") action Return(True)
 
     key "game_menu" action Return(True)
 
@@ -119,7 +119,7 @@ screen _style_inspector:
             spacing gui._scale(10)
 
         $ displayable_name = unicode(d)
-        label _("Inspecting Styles of [displayable_name!q]")
+        label t_("Inspecting Styles of [displayable_name!q]")
 
         $ styles = d.style.inspect()
 
@@ -136,15 +136,15 @@ screen _style_inspector:
                     $ name, properties = j
 
                     if name is None:
-                        text _("displayable:")
+                        text t_("displayable:")
                     else:
                         $ style_name = __format_style(name)
                         text "style [style_name!q]:"
 
                     if not properties:
-                        text _("        (no properties affect the displayable)")
+                        text t_("        (no properties affect the displayable)")
                     elif i == (len(styles) - 1):
-                        text _("        (default properties omitted)")
+                        text t_("        (default properties omitted)")
                     else:
                         for propname in sorted(properties):
                             $ value = __safe_repr(properties[propname])
@@ -152,7 +152,7 @@ screen _style_inspector:
 
                     null height 5
 
-        textbutton _("Return") action Hide("_style_inspector")
+        textbutton t_("Return") action Hide("_style_inspector")
 
     key "game_menu" action Hide("_style_inspector")
 
@@ -182,7 +182,7 @@ init python:
 
             return s
         except:
-            return _("<repr() failed>")
+            return t_("<repr() failed>")
 
     def __inspect(tree):
         renpy.context_dynamic("_window")

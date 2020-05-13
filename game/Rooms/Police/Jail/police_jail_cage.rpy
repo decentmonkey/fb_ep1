@@ -8,7 +8,7 @@ label police_jail_cage_scene:
 
     $ jailCageLastScene = scene_name
     $ scene_name = "police_jail_cage_scene"
-    $ scene_caption = _("JAIL")
+    $ scene_caption = t_("JAIL")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Police_Cell_3"

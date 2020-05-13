@@ -5,7 +5,7 @@ label street_fitness_s2:
 
     $ scene_name = "street_fitness_s2"
     $ sceneIsStreet = True
-    $ scene_caption = _("Fitness")
+    $ scene_caption = t_("Fitness")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_fitness_street_Monica_" + cloth + day_suffix

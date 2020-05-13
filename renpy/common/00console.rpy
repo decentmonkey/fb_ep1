@@ -252,13 +252,13 @@ init -1500 python in _console:
             message = ""
 
             if self.first_time:
-                message += __("Press <esc> to exit console. Type help for help.\n")
+                message += _t_("Press <esc> to exit console. Type help for help.\n")
                 self.first_time = False
 
             if self.can_renpy():
-                message += __("Ren'Py script enabled.")
+                message += _t_("Ren'Py script enabled.")
             else:
-                message += __("Ren'Py script disabled.")
+                message += _t_("Ren'Py script disabled.")
 
             he.result = message
             he.update_lines()
@@ -493,12 +493,12 @@ init -1500 python in _console:
 
         return wrap
 
-    @command(_("help: show this help"))
+    @command(t_("help: show this help"))
     def help(l):
         keys = list(config.console_commands.iterkeys())
         keys.sort()
 
-        rv = __("commands:\n")
+        rv = _t_("commands:\n")
 
         for k in keys:
             f = config.console_commands[k]
@@ -508,9 +508,9 @@ init -1500 python in _console:
             rv += " " + __(f.help) + "\n"
 
         if console.can_renpy():
-            rv += __(" <renpy script statement>: run the statement\n")
+            rv += _t_(" <renpy script statement>: run the statement\n")
 
-        rv += __(" <python expression or statement>: run the expression or statement")
+        rv += _t_(" <python expression or statement>: run the expression or statement")
 
         return rv
 
@@ -518,11 +518,11 @@ init -1500 python in _console:
     def halp(l):
         return help(l).replace("e", "a")
 
-    @command(_("clear: clear the console history"))
+    @command(t_("clear: clear the console history"))
     def clear(l):
         console.history[:] = [ ]
 
-    @command(_("exit: exit the console"))
+    @command(t_("exit: exit the console"))
     def exit(l):
         renpy.jump("_console_return")
 
@@ -530,7 +530,7 @@ init -1500 python in _console:
     def quit(l):
         renpy.jump("_console_return")
 
-    @command(_("load <slot>: loads the game from slot"))
+    @command(t_("load <slot>: loads the game from slot"))
     def load(l):
         name = l.rest().strip()
 
@@ -543,7 +543,7 @@ init -1500 python in _console:
             console.history[-1].result = "Loading slot {!r}.".format(name)
 
 
-    @command(_("save <slot>: saves the game in slot"))
+    @command(t_("save <slot>: saves the game in slot"))
     def save(l):
         name = l.rest().strip()
 
@@ -554,7 +554,7 @@ init -1500 python in _console:
 
         return "Saved slot {!r}.".format(name)
 
-    @command(_("reload: reloads the game, refreshing the scripts"))
+    @command(t_("reload: reloads the game, refreshing the scripts"))
     def reload(l):
         store._reload_game()
 
@@ -562,7 +562,7 @@ init -1500 python in _console:
     def R(l):
         store._reload_game()
 
-    @command(_("watch <expression>: watch a python expression"))
+    @command(t_("watch <expression>: watch a python expression"))
     def watch(l):
         expr = l.rest()
         expr.strip()
@@ -588,7 +588,7 @@ init -1500 python in _console:
 
     renpy.watch = renpy_watch
 
-    @command(_("unwatch <expression>: stop watching an expression"))
+    @command(t_("unwatch <expression>: stop watching an expression"))
     def unwatch(l):
         expr = l.rest()
         expr.strip()
@@ -619,7 +619,7 @@ init -1500 python in _console:
     renpy.unwatch = renpy_unwatch
 
 
-    @command(_("unwatchall: stop watching all expressions"))
+    @command(t_("unwatchall: stop watching all expressions"))
     def unwatchall(l):
         traced_expressions[:] = [ ]
         renpy.hide_screen("_trace_screen")
@@ -636,7 +636,7 @@ init -1500 python in _console:
 
     renpy.unwatchall = renpy_unwatchall
 
-    @command(_("jump <label>: jumps to label"))
+    @command(t_("jump <label>: jumps to label"))
     def jump(l):
         label = l.name()
 

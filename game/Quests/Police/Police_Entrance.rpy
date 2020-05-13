@@ -80,7 +80,7 @@ label entrance_dialogue2:
             detective "Хорошо."
             "Сейчас подойду."
             stop music fadeout 1.0
-            call textonblack(_("СПУСТЯ 5 МИНУТ...")) from _call_textonblack_11
+            call textonblack(t_("СПУСТЯ 5 МИНУТ...")) from _call_textonblack_11
             img black_screen
             with Dissolve(1)
             music Stealth_Groover
@@ -139,7 +139,7 @@ label entrance_dialogue5:
     img 2083
     detective "..."
     stop music fadeout 1.0
-    call textonblack(_("СПУСТЯ 5 МИНУТ...")) from _call_textonblack_12
+    call textonblack(t_("СПУСТЯ 5 МИНУТ...")) from _call_textonblack_12
     img black_screen
     with Dissolve(1)
     music Pyro_Flow
@@ -235,9 +235,9 @@ label entrance_dialogue8:
     "И домом?"
     "Но сейчас надо найти Дика!"
 
-    $ objectiveName1 = _("Найти где переночевать. На улице холодно!")
-    $ add_objective("dick_search", _("Найти Дика"), c_blue, 5)
+    $ objectiveName1 = t_("Найти где переночевать. На улице холодно!")
+    $ add_objective("dick_search", t_("Найти Дика"), c_blue, 5)
     $ add_objective("find_sleep", objectiveName1, c_green, 10)
-    $ add_objective("home_visit", _("Проверить дом"), c_orange, 20)
+    $ add_objective("home_visit", t_("Проверить дом"), c_orange, 20)
 
     return

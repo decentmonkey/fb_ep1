@@ -5,7 +5,7 @@ label police_marcuscabinet_door:
     $ miniMapData = []
 
     $ scene_name = "police_marcuscabinet_door"
-    $ scene_caption = _("Marcus Cabinet")
+    $ scene_caption = t_("Marcus Cabinet")
     $ clear_scene_from_objects(scene_name)
 
     if marcusCabinetDoorState == 0:
@@ -19,7 +19,7 @@ label police_marcuscabinet_door:
     $ add_object_to_scene("FileCabinet", {"type":2, "base":"Police_MarcusCabinet2_FileCabinet", "click" : "police_marcuscabinet_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Door", {"type":2, "base":"Police_MarcusCabinet2_Door", "click" : "police_marcuscabinet_door_teleport", "actions" : "lw", "zorder" : 0})
 
-#    $ add_object_to_scene("Telepost_Police_Entrance", {"type":3, "text" : _("ВЫХОД"), "larrow" : "arrow_down_2", "base":"police_marcuscabinet_door_Teleport_Entrance", "click" : "police_marcuscabinet_door_teleport", "xpos" : 100, "ypos" : 716, "zorder":5})
+#    $ add_object_to_scene("Telepost_Police_Entrance", {"type":3, "text" : t_("ВЫХОД"), "larrow" : "arrow_down_2", "base":"police_marcuscabinet_door_Teleport_Entrance", "click" : "police_marcuscabinet_door_teleport", "xpos" : 100, "ypos" : 716, "zorder":5})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

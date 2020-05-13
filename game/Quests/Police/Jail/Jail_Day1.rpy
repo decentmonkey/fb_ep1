@@ -134,7 +134,7 @@ label jail_day1:
     policeman2 "Мы к тебе как-нибудь заглянем, возможно."
 
     $ objectives_list = []
-    $ add_objective("freedom", _("Избежать наказания"), c_red, 0)
+    $ add_objective("freedom", t_("Избежать наказания"), c_red, 0)
     $ cloth_type = "Jail"
     $ cloth = "Lingerie"
     $ inventory = []

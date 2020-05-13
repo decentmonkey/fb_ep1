@@ -6,7 +6,7 @@ label kitchen:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_5
 
     $ scene_name = "kitchen"
-    $ scene_caption = _("Kitchen")
+    $ scene_caption = t_("Kitchen")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Kitchen_Monica_" + cloth + day_suffix
 
@@ -27,8 +27,8 @@ label kitchen:
     $ add_object_to_scene("Drawers", {"type":2, "base":"Kitchen_Drawers", "click" : "kitchen_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Wine", {"type":2, "base":"Kitchen_Wine", "click" : "kitchen_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : _("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "kitchen_teleport", "xpos" : 960, "ypos" : 956, "zorder":15, "high_sprite_hover": True})
-    $ add_object_to_scene("Teleport_Kitchen2", {"type":3, "text" : _("ОБЕДЕННЫЙ СТОЛИК"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "kitchen_teleport", "xpos" : 1620, "ypos" : 520, "zorder":15})
+    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : t_("ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "kitchen_teleport", "xpos" : 960, "ypos" : 956, "zorder":15, "high_sprite_hover": True})
+    $ add_object_to_scene("Teleport_Kitchen2", {"type":3, "text" : t_("ОБЕДЕННЫЙ СТОЛИК"), "rarrow" : "arrow_right_2", "base":"Screen_Right_Arrow_Tight", "click" : "kitchen_teleport", "xpos" : 1620, "ypos" : 520, "zorder":15})
 
     if gameStage > 2:
         if monicaKitchenForbidden == True and scene_name != lastSceneName:

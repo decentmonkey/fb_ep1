@@ -5,7 +5,7 @@ label dick_office_cabinet:
     $ miniMapData = []
 
     $ scene_name = "dick_office_cabinet"
-    $ scene_caption = _("Dick's Cabinet")
+    $ scene_caption = t_("Dick's Cabinet")
     $ clear_scene_from_objects(scene_name)
     if dickOfficeCabinetStage == 0 or dickOfficeCabinetStage == 2:
         $ scene_image = "scene_Office_Dick_Cabinet_Dick_Monica_Whore_1"
@@ -38,7 +38,7 @@ label dick_office_cabinet:
         $ add_object_to_scene("Vase", {"type":2, "base":"Office_Dick_Cabinet_Vase", "click" : "dick_office_cabinet_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Portrait", {"type":2, "base":"Office_Dick_Cabinet_Portrait", "click" : "dick_office_cabinet_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Secretary", {"type":3, "text" : _("СЕКРЕТАРЬ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "dick_office_cabinet_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
+    $ add_object_to_scene("Teleport_Secretary", {"type":3, "text" : t_("СЕКРЕТАРЬ"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "dick_office_cabinet_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
 
     return
     #                            $ brightness_adjustment = 0.1

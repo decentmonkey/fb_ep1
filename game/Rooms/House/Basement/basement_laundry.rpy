@@ -19,7 +19,7 @@ label basement_laundry:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_22
 
     $ scene_name = "basement_laundry"
-    $ scene_caption = _("Laundry")
+    $ scene_caption = t_("Laundry")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Laundry1_" + laundryIroningBoardState
 #    $ scene_image = "scene_Basement_Pool_Monica_BusinessCloth1"
@@ -27,8 +27,8 @@ label basement_laundry:
 #    $ add_object_to_scene("Monica", {"type" : 2, "base" : "Basement_Pool_Monica_" + cloth, "click" : "basement_pool_environment", "actions" : "l", "zorder":10, "tint": monica_tint})
 
 #    $ add_object_to_scene("Bidet", {"type":2, "base":"Basement_Pool_Bidet", "click" : "basement_pool_environment", "actions" : "l", "zorder" : 0})
-#    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
-#    $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : _("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+#    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "rarrow" : "arrow_down_2", "base":"Basement_Pool_Door1", "click" : "basement_pool_teleport", "xpos" : 1043, "ypos" : 173, "zorder":0, "tint": [1.0, 1.0, 0.6]})
+#    $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : t_("ПРАЧЕЧНАЯ"), "larrow" : "arrow_left_2", "base":"Basement_Pool_Door2", "click" : "basement_pool_teleport", "xpos" : 1561, "ypos" : 408, "zorder":0, "tint": [1.0, 1.0, 0.6]})
 
     if businessClothSearchDressInProgress == True:
         $ add_object_to_scene("Accessories1", {"type":2, "base":"Basement_Laundry_Accessories1", "click" : "basement_laundry_environment", "actions" : "l", "zorder" : 0})
@@ -61,11 +61,11 @@ label basement_laundry:
             $ businessClothSearchDressInProgressLaundryVisited = True
             $ autorun_to_object("basement_laundry", "basement_laundry_dress_visit")
             $ laundrySearchingForDress = True
-        $ add_object_to_scene("Teleport_Basement_Ironing_Board", {"type":3, "text" : _("ГЛАДИЛЬНАЯ ДОСКА"), "rarrow" : "arrow_down_2", "base": "Basement_Laundry_Teleport_Ironing_Board_" + laundryIroningBoardState, "click" : "basement_laundry_teleport", "xpos" : 1652, "ypos" : 555, "zorder":11})
+        $ add_object_to_scene("Teleport_Basement_Ironing_Board", {"type":3, "text" : t_("ГЛАДИЛЬНАЯ ДОСКА"), "rarrow" : "arrow_down_2", "base": "Basement_Laundry_Teleport_Ironing_Board_" + laundryIroningBoardState, "click" : "basement_laundry_teleport", "xpos" : 1652, "ypos" : 555, "zorder":11})
 
 
-    $ add_object_to_scene("Teleport_Basement_Hole", {"type":3, "text" : _("В ПОДВАЛ"), "larrow" : "arrow_dl", "base":"empty", "click" : "basement_laundry_teleport", "xpos" : 183, "ypos" : 873, "zorder":11})
-    $ add_object_to_scene("Teleport_Basement_Pool", {"type":3, "text" : _("НАЗАД К БАССЕЙНУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement_Hole", {"type":3, "text" : t_("В ПОДВАЛ"), "larrow" : "arrow_dl", "base":"empty", "click" : "basement_laundry_teleport", "xpos" : 183, "ypos" : 873, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement_Pool", {"type":3, "text" : t_("НАЗАД К БАССЕЙНУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 

@@ -4,7 +4,7 @@ label street_corner:
 
     $ scene_name = "street_corner"
     $ sceneIsStreet = True
-    $ scene_caption = _("Street Edge")
+    $ scene_caption = t_("Street Edge")
     $ clear_scene_from_objects(scene_name)
     if bFredFollowingMonica == True and map_scene == "Street_Corner":
         $ scene_image = "scene_street_Whores_Place_Car_Stop_Monica_Driver_" + cloth + day_suffix
@@ -17,7 +17,7 @@ label street_corner:
 
 
 
-    $ add_object_to_scene("Teleport_Street1", {"type":3, "text" : _("ВНИЗ ПО УЛИЦЕ"), "larrow" : "arrow_left_2", "base":"Street_Whores_Place_Car_Stop_Teleport_Street1", "click" : "street_corner_teleport", "xpos" : 200, "ypos" : 644, "zorder":15})
+    $ add_object_to_scene("Teleport_Street1", {"type":3, "text" : t_("ВНИЗ ПО УЛИЦЕ"), "larrow" : "arrow_left_2", "base":"Street_Whores_Place_Car_Stop_Teleport_Street1", "click" : "street_corner_teleport", "xpos" : 200, "ypos" : 644, "zorder":15})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

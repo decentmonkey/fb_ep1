@@ -15,7 +15,7 @@ label fitness1_trainer_talk1:
         fitness_instructor "Моника, ты можешь идти переодеваться и мы начнем заниматься."
 
         m "Да, хорошо."
-        $ add_objective("change_cloth_to_fitness", _("Переодеться в раздевалке"), c_green, 20)
+        $ add_objective("change_cloth_to_fitness", t_("Переодеться в раздевалке"), c_green, 20)
     return
 
 label fitness1_stephanie_rebecca_talk1:
@@ -297,8 +297,8 @@ label fitness1_change_cloth1():
 
 
     $ remove_objective("change_cloth_to_fitness")
-    $ add_objective("fitness_go_workout", _("Идти заниматься Йогой"), c_orange, 20)
-#    $ remove_objective("change_cloth_to_fitness", _("Переодеться в раздевалке"), c_green, 20)
+    $ add_objective("fitness_go_workout", t_("Идти заниматься Йогой"), c_orange, 20)
+#    $ remove_objective("change_cloth_to_fitness", t_("Переодеться в раздевалке"), c_green, 20)
     return
 
 label fitness1_trainer_workout():
@@ -496,7 +496,7 @@ label fitness1_trainer_talk2:
         "Сказать НЕТ...":
             m "Спасибо, но я и так хорошо справляюсь!"
     call refresh_scene_fade_long() from _call_refresh_scene_fade_long_2
-    $ add_objective("fitness_change_cloth_to_bc1", _("Переодеться в раздевалке"), c_pink, 20)
+    $ add_objective("fitness_change_cloth_to_bc1", t_("Переодеться в раздевалке"), c_pink, 20)
 
     return
 
@@ -536,7 +536,7 @@ label fitness1_change_cloth2:
     $ cloth = "BusinessCloth2"
     $ cloth_type = "BusinessCloth"
     $ remove_objective("fitness_change_cloth_to_bc1")
-    $ add_objective("goto_bank1", _("Ехать в Банк по вопросу денег от Стива"), c_red, 20)
+    $ add_objective("goto_bank1", t_("Ехать в Банк по вопросу денег от Стива"), c_red, 20)
     call refresh_scene_fade_long() from _call_refresh_scene_fade_long_4
 
     return

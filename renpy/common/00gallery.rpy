@@ -570,7 +570,7 @@ init -1500:
 
         if locked:
             add "#000"
-            text _("Image [index] of [count] locked.") align (0.5, 0.5)
+            text t_("Image [index] of [count] locked.") align (0.5, 0.5)
         else:
             for d in displayables:
                 add d
@@ -590,10 +590,10 @@ init -1500:
             style_group "gallery"
             align (.98, .98)
 
-            textbutton _("prev") action gallery.Previous(unlocked=gallery.unlocked_advance)
-            textbutton _("next") action gallery.Next(unlocked=gallery.unlocked_advance)
-            textbutton _("slideshow") action gallery.ToggleSlideshow()
-            textbutton _("return") action gallery.Return()
+            textbutton t_("prev") action gallery.Previous(unlocked=gallery.unlocked_advance)
+            textbutton t_("next") action gallery.Next(unlocked=gallery.unlocked_advance)
+            textbutton t_("slideshow") action gallery.ToggleSlideshow()
+            textbutton t_("return") action gallery.Return()
 
     python:
         style.gallery = Style(style.default)

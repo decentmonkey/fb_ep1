@@ -20,7 +20,7 @@ label monica_office_secretary:
     $ miniMapData = []
 
     $ scene_name = "monica_office_secretary"
-    $ scene_caption = _("Monica's Secretary")
+    $ scene_caption = t_("Monica's Secretary")
     $ clear_scene_from_objects(scene_name)
 
     if monicaOfficeSecretaryAtDesk == True:
@@ -41,11 +41,11 @@ label monica_office_secretary:
     $ add_object_to_scene("Teatable", {"type" : 2, "base" : "Office_Monica_Secretary_Teatable_Object", "click" : "monica_office_secretary_environment", "actions" : "lw", "zorder":0})
     $ add_object_to_scene("Windows", {"type" : 2, "base" : "Office_Monica_Secretary_Windows", "click" : "monica_office_secretary_environment", "actions" : "l", "zorder":0})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Photostudio", {"type":3, "text" : _("ФОТОСТУДИЯ"), "larrow" : "arrow_left_2", "base":"empty", "click" : "monica_office_secretary_teleport", "xpos" : 178, "ypos" : 1014, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Photostudio", {"type":3, "text" : t_("ФОТОСТУДИЯ"), "larrow" : "arrow_left_2", "base":"empty", "click" : "monica_office_secretary_teleport", "xpos" : 178, "ypos" : 1014, "zorder":11})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Cabinet", {"type":3, "text" : _("КАБИНЕТ МОНИКИ"), "rarrow" : "arrow_down_2", "base":"Office_Monica_Secretary_Teleport_Cabinet", "click" : "monica_office_secretary_teleport", "xpos" : 1692, "ypos" : 756, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Cabinet", {"type":3, "text" : t_("КАБИНЕТ МОНИКИ"), "rarrow" : "arrow_down_2", "base":"Office_Monica_Secretary_Teleport_Cabinet", "click" : "monica_office_secretary_teleport", "xpos" : 1692, "ypos" : 756, "zorder":11})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Entrance", {"type":3, "text" : _("ЛИФТ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_secretary_teleport", "xpos" : 780, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Entrance", {"type":3, "text" : t_("ЛИФТ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_secretary_teleport", "xpos" : 780, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07
@@ -337,7 +337,7 @@ label monica_office_secretary_environment(obj_name, obj_data):
                 $ monicaOfficeSecretaryCasualMode = True
                 $ monicaOfficeWorkMonkeysPlanned = True
                 $ monicaOfficeSteveCall1Planned = True
-                $ add_objective("go_work", _("Идти в свой кабинет и позвонить Стиву"), c_green, 1)
+                $ add_objective("go_work", t_("Идти в свой кабинет и позвонить Стиву"), c_green, 1)
                 return
     return
 

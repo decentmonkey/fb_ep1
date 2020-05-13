@@ -4,7 +4,7 @@ label floor1:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_10
 
     $ scene_name = "floor1"
-    $ scene_caption = _("Hall Ground Floor")
+    $ scene_caption = t_("Hall Ground Floor")
     $ clear_scene_from_objects(scene_name)
     $ monica_tint = [1.0, 1.0, 1.0]
     if (cloth_type == "Lingerie" or cloth_type == "HomeCloth"):
@@ -32,15 +32,15 @@ label floor1:
 
 
     if gameStage >= 3:
-        $ add_object_to_scene("Teleport_LivingRoom", {"type":3, "text" : _("ГОСТИНАЯ"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "floor1_teleport", "xpos" : 1594, "ypos" : 306, "zorder":9, "b":0.15, "tint":[1.0, 1.0, 0.9]})
+        $ add_object_to_scene("Teleport_LivingRoom", {"type":3, "text" : t_("ГОСТИНАЯ"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "floor1_teleport", "xpos" : 1594, "ypos" : 306, "zorder":9, "b":0.15, "tint":[1.0, 1.0, 0.9]})
         if bardieLocation == "Floor1":
             $ add_object_to_scene("Bardie", {"type" : 2, "base" : "Floor1_Bardie" + day_suffix, "click" : "bardieInteract1", "actions" : "lw", "zorder":10})
         if ralphLocation == "Floor1":
             $ add_object_to_scene("Ralph", {"type" : 2, "base" : "Floor1_Ralph" + day_suffix, "click" : "ralphInteract1", "actions" : "lt", "zorder":10, "icon_t":"/Icons/talk" + res.suffix +".png"})
 
-    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : _("ЛЕСТНИЦА"), "larrow" : "arrow_left_2", "base":"Floor1_Stairs_Object", "click" : "floor1_teleport", "xpos" : 367, "ypos" : 219, "zorder":9, "b":0.15, "tint":[1.0, 1.0, 0.9]})
-    $ add_object_to_scene("Teleport_Kitchen", {"type":3, "text" : _("КУХНЯ"), "larrow" : "arrow_left_2", "base":"Floor1_Teleport_Kitchen", "click" : "floor1_teleport", "xpos" : 130, "ypos" : 758, "zorder":9, "b":0.2})
-    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : _("НА УЛИЦУ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11, "high_sprite_hover": True})
+    $ add_object_to_scene("Teleport_Floor1_Stairs", {"type":3, "text" : t_("ЛЕСТНИЦА"), "larrow" : "arrow_left_2", "base":"Floor1_Stairs_Object", "click" : "floor1_teleport", "xpos" : 367, "ypos" : 219, "zorder":9, "b":0.15, "tint":[1.0, 1.0, 0.9]})
+    $ add_object_to_scene("Teleport_Kitchen", {"type":3, "text" : t_("КУХНЯ"), "larrow" : "arrow_left_2", "base":"Floor1_Teleport_Kitchen", "click" : "floor1_teleport", "xpos" : 130, "ypos" : 758, "zorder":9, "b":0.2})
+    $ add_object_to_scene("Teleport_Street", {"type":3, "text" : t_("НА УЛИЦУ"), "rarrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "floor1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11, "high_sprite_hover": True})
 
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

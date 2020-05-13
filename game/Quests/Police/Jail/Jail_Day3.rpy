@@ -11,7 +11,7 @@ label jail_day3:
     $ policeCellBedLabel = "jail_day3_Bed"
     $ policeCellCageLabel = "jail_day3_Cage"
     stop music fadeout 1.0
-    call textonblack(_("ДЕНЬ 3")) from _call_textonblack_31
+    call textonblack(t_("ДЕНЬ 3")) from _call_textonblack_31
     img black_screen
     with Dissolve(1)
     music Jail_Clock

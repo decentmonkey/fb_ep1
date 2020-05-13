@@ -525,13 +525,13 @@ init python:
 # added arguments.
 screen _exception_actions(traceback_fn, tt, *args):
 
-    textbutton _("Open"):
+    textbutton t_("Open"):
         action _EditFile(traceback_fn)
-        hovered tt.action(_("Opens the traceback.txt file in a text editor."))
+        hovered tt.action(t_("Opens the traceback.txt file in a text editor."))
 
-    textbutton _("Copy"):
+    textbutton t_("Copy"):
         action _CopyFile(traceback_fn)
-        hovered tt.action(_("Copies the traceback.txt file to the clipboard."))
+        hovered tt.action(t_("Copies the traceback.txt file to the clipboard."))
 
 python early in _errorhandling:
 
@@ -558,7 +558,7 @@ screen _exception:
 
         side "c r":
             xfill True
-            label _("An exception has occurred.")
+            label t_("An exception has occurred.")
             text "{size=-3}[config.version!q]\n[renpy.version_only!q]\n[renpy.platform!q]{/size}" text_align 1.0 yalign 0.5
 
         viewport:
@@ -578,39 +578,39 @@ screen _exception:
                 spacing gui._scale(25)
 
                 if rollback_action and _errorhandling.rollback:
-                    textbutton _("Rollback"):
+                    textbutton t_("Rollback"):
                         action rollback_action
-                        hovered tt.action(_("Attempts a roll back to a prior time, allowing you to save or choose a different choice."))
+                        hovered tt.action(t_("Attempts a roll back to a prior time, allowing you to save or choose a different choice."))
 
                 if ignore_action and _errorhandling.ignore:
-                    textbutton _("Ignore"):
+                    textbutton t_("Ignore"):
                         action ignore_action
 
                         if _ignore_action:
-                            hovered tt.action(_("Ignores the exception, allowing you to continue."))
+                            hovered tt.action(t_("Ignores the exception, allowing you to continue."))
                         else:
-                            hovered tt.action(_("Ignores the exception, allowing you to continue. This often leads to additional errors."))
+                            hovered tt.action(t_("Ignores the exception, allowing you to continue. This often leads to additional errors."))
 
                 if config.developer and not renpy.mobile:
                     if _errorhandling.reload:
-                        textbutton _("Reload"):
+                        textbutton t_("Reload"):
                             action reload_action
-                            hovered tt.action(_("Reloads the game from disk, saving and restoring game state if possible."))
+                            hovered tt.action(t_("Reloads the game from disk, saving and restoring game state if possible."))
 
                     if _errorhandling.console:
-                        textbutton _("Console") :
+                        textbutton t_("Console") :
                             action __EnterConsole()
-                            hovered tt.action(_("Opens a console to allow debugging the problem."))
+                            hovered tt.action(t_("Opens a console to allow debugging the problem."))
 
                 use _exception_actions(traceback_fn, tt)
 
                 vbox:
                     xfill True
 
-                    textbutton _("Quit"):
+                    textbutton t_("Quit"):
                         xalign 1.0
                         action __ErrorQuit()
-                        hovered tt.action(_("Quits the game."))
+                        hovered tt.action(t_("Quits the game."))
 
             # Tooltip.
             text tt.value
@@ -634,7 +634,7 @@ screen _parse_errors:
         has side "t c b":
             spacing gui._scale(10)
 
-        label _("Parsing the script failed.")
+        label t_("Parsing the script failed.")
 
         viewport:
             id "viewport"
@@ -654,24 +654,24 @@ screen _parse_errors:
             hbox:
                 spacing gui._scale(25)
 
-                textbutton _("Reload"):
+                textbutton t_("Reload"):
                     action reload_action
-                    hovered tt.action(_("Reloads the game from disk, saving and restoring game state if possible."))
+                    hovered tt.action(t_("Reloads the game from disk, saving and restoring game state if possible."))
 
-                textbutton _("Open"):
+                textbutton t_("Open"):
                     action _EditFile(error_fn)
-                    hovered tt.action(_("Opens the errors.txt file in a text editor."))
+                    hovered tt.action(t_("Opens the errors.txt file in a text editor."))
 
-                textbutton _("Copy"):
+                textbutton t_("Copy"):
                     action _CopyFile(error_fn)
-                    hovered tt.action(_("Copies the errors.txt file to the clipboard."))
+                    hovered tt.action(t_("Copies the errors.txt file to the clipboard."))
 
                 vbox:
                     xfill True
 
-                    textbutton _("Quit"):
+                    textbutton t_("Quit"):
                         action __ErrorQuit()
-                        hovered tt.action(_("Quits the game."))
+                        hovered tt.action(t_("Quits the game."))
                         xalign 1.0
 
             # Tooltip.

@@ -7,7 +7,7 @@ label police_jailcabinet:
     $ miniMapData = []
 
     $ scene_name = "police_jailcabinet"
-    $ scene_caption = _("Interrogation Room")
+    $ scene_caption = t_("Interrogation Room")
     $ clear_scene_from_objects(scene_name)
 
     if jailCabinetState == 0 or jailCabinetState == 1 or jailCabinetState == 2 or jailCabinetState == 3 or jailCabinetMonicaStanding == False:
@@ -32,7 +32,7 @@ label police_jailcabinet:
         $ add_object_to_scene("Chair", {"type":2, "base":"Police_JailCabinet_Chair", "click" : "police_jailcabinet_environment", "actions" : "l", "zorder" : 0, "b":0.13, "s":1.3, "tint":[1.0, 1.0, 0.8]})
     $ add_object_to_scene("Lamp", {"type":2, "base":"Police_JailCabinet_Lamp", "click" : "police_jailcabinet_environment", "actions" : "l", "zorder" : 0, "b":0.13, "s":1.3, "tint":[1.0, 1.0, 0.8]})
     $ add_object_to_scene("Table", {"type":2, "base":"Police_JailCabinet_Table", "click" : "police_jailcabinet_environment", "actions" : "l", "zorder" : 0, "b":0.13, "s":1.3, "tint":[1.0, 1.0, 0.8]})
-    $ add_object_to_scene("Teleport_Jail_Cabinet2", {"type":3, "text" : _("ДВЕРЬ"), "larrow" : "arrow_down_2", "base":"empty", "click" : "police_jailcabinet_teleport", "xpos" : 1523, "ypos" : 969, "zorder":5})
+    $ add_object_to_scene("Teleport_Jail_Cabinet2", {"type":3, "text" : t_("ДВЕРЬ"), "larrow" : "arrow_down_2", "base":"empty", "click" : "police_jailcabinet_teleport", "xpos" : 1523, "ypos" : 969, "zorder":5})
 
     return
 
@@ -41,7 +41,7 @@ label police_jailcabinet2:
     $ miniMapData = []
 
     $ scene_name = "police_jailcabinet2"
-    $ scene_caption = _("Interrogation Room")
+    $ scene_caption = t_("Interrogation Room")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Police_JailCabinet2_Monica_Marcus_1"
@@ -51,7 +51,7 @@ label police_jailcabinet2:
 
     $ add_object_to_scene("Chair", {"type":2, "base":"Police_JailCabinet2_Chair", "click" : "police_jailcabinet_environment", "actions" : "lh", "zorder" : 0, "b":0.13, "s":1.3, "tint":[1.0, 1.0, 0.8]})
     $ add_object_to_scene("Door", {"type":2, "base":"Police_JailCabinet2_Door", "click" : "police_jailcabinet2_environment", "actions" : "lh", "zorder" : 0, "b":0.13, "s":1.3, "tint":[1.0, 1.0, 0.8]})
-    $ add_object_to_scene("Teleport_Jail_Cabinet", {"type":3, "text" : _("СТОЛ"), "larrow" : "arrow_down_2", "base":"empty", "click" : "police_jailcabinet_teleport", "xpos" : 326, "ypos" : 986, "zorder":5})
+    $ add_object_to_scene("Teleport_Jail_Cabinet", {"type":3, "text" : t_("СТОЛ"), "larrow" : "arrow_down_2", "base":"empty", "click" : "police_jailcabinet_teleport", "xpos" : 326, "ypos" : 986, "zorder":5})
 
     return
 #                            $ brightness_adjustment = 0.1

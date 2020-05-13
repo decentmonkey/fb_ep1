@@ -24,55 +24,55 @@ init -1500 python:
     # File contstants.
 
     _weekday_name_long = [
-        _("{#weekday}Monday"),
-        _("{#weekday}Tuesday"),
-        _("{#weekday}Wednesday"),
-        _("{#weekday}Thursday"),
-        _("{#weekday}Friday"),
-        _("{#weekday}Saturday"),
-        _("{#weekday}Sunday"),
+        t_("{#weekday}Monday"),
+        t_("{#weekday}Tuesday"),
+        t_("{#weekday}Wednesday"),
+        t_("{#weekday}Thursday"),
+        t_("{#weekday}Friday"),
+        t_("{#weekday}Saturday"),
+        t_("{#weekday}Sunday"),
     ]
 
 
     _weekday_name_short = [
-        _("{#weekday_short}Mon"),
-        _("{#weekday_short}Tue"),
-        _("{#weekday_short}Wed"),
-        _("{#weekday_short}Thu"),
-        _("{#weekday_short}Fri"),
-        _("{#weekday_short}Sat"),
-        _("{#weekday_short}Sun"),
+        t_("{#weekday_short}Mon"),
+        t_("{#weekday_short}Tue"),
+        t_("{#weekday_short}Wed"),
+        t_("{#weekday_short}Thu"),
+        t_("{#weekday_short}Fri"),
+        t_("{#weekday_short}Sat"),
+        t_("{#weekday_short}Sun"),
     ]
 
     _month_name_long = [
-        _("{#month}January"),
-        _("{#month}February"),
-        _("{#month}March"),
-        _("{#month}April"),
-        _("{#month}May"),
-        _("{#month}June"),
-        _("{#month}July"),
-        _("{#month}August"),
-        _("{#month}September"),
-        _("{#month}October"),
-        _("{#month}November"),
-        _("{#month}December"),
+        t_("{#month}January"),
+        t_("{#month}February"),
+        t_("{#month}March"),
+        t_("{#month}April"),
+        t_("{#month}May"),
+        t_("{#month}June"),
+        t_("{#month}July"),
+        t_("{#month}August"),
+        t_("{#month}September"),
+        t_("{#month}October"),
+        t_("{#month}November"),
+        t_("{#month}December"),
     ]
 
 
     _month_name_short = [
-        _("{#month_short}Jan"),
-        _("{#month_short}Feb"),
-        _("{#month_short}Mar"),
-        _("{#month_short}Apr"),
-        _("{#month_short}May"),
-        _("{#month_short}Jun"),
-        _("{#month_short}Jul"),
-        _("{#month_short}Aug"),
-        _("{#month_short}Sep"),
-        _("{#month_short}Oct"),
-        _("{#month_short}Nov"),
-        _("{#month_short}Dec"),
+        t_("{#month_short}Jan"),
+        t_("{#month_short}Feb"),
+        t_("{#month_short}Mar"),
+        t_("{#month_short}Apr"),
+        t_("{#month_short}May"),
+        t_("{#month_short}Jun"),
+        t_("{#month_short}Jul"),
+        t_("{#month_short}Aug"),
+        t_("{#month_short}Sep"),
+        t_("{#month_short}Oct"),
+        t_("{#month_short}Nov"),
+        t_("{#month_short}Dec"),
     ]
 
     def _strftime(format, t):
@@ -234,7 +234,7 @@ init -1500 python:
             return Null(config.thumbnail_width, config.thumbnail_height)
 
 
-    def FileTime(name, format=_("%b %d, %H:%M"), empty="", page=None):
+    def FileTime(name, format=t_("%b %d, %H:%M"), empty="", page=None):
         """
          :doc: file_action_function
 
@@ -342,7 +342,7 @@ init -1500 python:
             self.cycle = cycle
 
             try:
-                self.alt = __("Save slot %s: [text]") % (name,)
+                self.alt = _t_("Save slot %s: [text]") % (name,)
             except:
                 self.alt = "Save slot %s: [text]" % (name,)
 
@@ -418,7 +418,7 @@ init -1500 python:
             self.newest = newest
 
             try:
-                self.alt = __("Load slot %s: [text]") % (name,)
+                self.alt = _t_("Load slot %s: [text]") % (name,)
             except:
                 self.alt = "Load slot %s: [text]" % (name,)
 
@@ -463,7 +463,7 @@ init -1500 python:
              If true, prompts before deleting a file.
          """
 
-        alt = _("Delete slot [text]")
+        alt = t_("Delete slot [text]")
 
         def __init__(self, name, confirm=True, page=None):
             self.name = name
@@ -543,11 +543,11 @@ init -1500 python:
             self.page = str(page)
 
             if page == "auto":
-                self.alt = _("File page auto")
+                self.alt = t_("File page auto")
             elif page == "quick":
-                self.alt = _("File page quick")
+                self.alt = t_("File page quick")
             else:
-                self.alt = _("File page [text]")
+                self.alt = t_("File page [text]")
 
         def __call__(self):
             if not self.get_sensitive():
@@ -605,7 +605,7 @@ init -1500 python:
             If true, this input can be editable by default.
         """
 
-        def __init__(self, pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"), page=None, default=False):
+        def __init__(self, pattern=t_("Page {}"), auto=t_("Automatic saves"), quick=t_("Quick saves"), page=None, default=False):
 
             self.pattern = pattern
             self.auto = auto
@@ -737,7 +737,7 @@ init -1500 python:
              If true, we can go to the first page when on the last file page if max is set.
          """
 
-        alt = _("Next file page.")
+        alt = t_("Next file page.")
 
         def __init__(self, max=None, wrap=False):
 
@@ -801,7 +801,7 @@ init -1500 python:
              If true, we can go to the last page when on the first file page if max is set.
          """
 
-        alt = _("Previous file page.")
+        alt = t_("Previous file page.")
 
         def __init__(self, max=None, wrap=False):
 
@@ -862,7 +862,7 @@ init -1500 python:
             renpy.take_screenshot()
 
     @renpy.pure
-    def QuickSave(message=_("Quick save complete."), newest=False):
+    def QuickSave(message=t_("Quick save complete."), newest=False):
         """
         :doc: file_action
 
@@ -880,7 +880,7 @@ init -1500 python:
             Notify(message),
             ]
 
-        rv[0].alt = _("Quick save.")
+        rv[0].alt = t_("Quick save.")
 
         if not getattr(renpy.context(), "_menu", False):
             rv.insert(0, FileTakeScreenshot())
@@ -899,7 +899,7 @@ init -1500 python:
         """
 
         rv = FileLoad(1, page="quick", confirm=confirm, newest=False)
-        rv.alt = _("Quick load.")
+        rv.alt = t_("Quick load.")
         return rv
 
 init 1050 python hide:

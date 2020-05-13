@@ -398,7 +398,7 @@ label drive_speak_monica_dick_day1_need_refuel1:
     $ subst_to_object("Teleport_Gas_Station", "drive_speak_monica_dick_day1_need_refuel2")
 
     $ autorun_to_object("street_gas_station", "drive_speak_monica_dick_day1_need_refuel3")
-    $ add_objective("fuel_car", _("Заправить машину топливом"), c_green, 25)
+    $ add_objective("fuel_car", t_("Заправить машину топливом"), c_green, 25)
     $ driveCanceled = True
     $ scene_transition = "Fade"
     $ hud_preset_current = "map_locked"

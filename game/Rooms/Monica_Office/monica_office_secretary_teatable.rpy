@@ -3,7 +3,7 @@ label monica_office_secretary_teatable:
     $ miniMapData = []
 
     $ scene_name = "monica_office_secretary_teatable"
-    $ scene_caption = _("Monica's Secretary")
+    $ scene_caption = t_("Monica's Secretary")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Office_Monica_Secretary_Teatable_Monica_" + cloth + day_suffix
@@ -19,7 +19,7 @@ label monica_office_secretary_teatable:
     $ add_object_to_scene("Sofa", {"type" : 2, "base" : "Office_Monica_Secretary_Teatable_Sofa", "click" : "monica_office_secretary_teatable_environment", "actions" : "l", "zorder":-1})
     $ add_object_to_scene("TableBooks", {"type" : 2, "base" : "Office_Monica_Secretary_Teatable_TableBooks", "click" : "monica_office_secretary_teatable_environment", "actions" : "l", "zorder":0})
 
-    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_secretary_teatable_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Monica_Office_Secretary", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "monica_office_secretary_teatable_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
 #                            $ brightness_adjustment = 0.1
 #                            $ saturation_adjustment = 1.07

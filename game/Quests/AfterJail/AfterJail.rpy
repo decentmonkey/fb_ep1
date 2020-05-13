@@ -559,7 +559,7 @@ label after_jail_cloth_shop_enter:
     "Мне надо что-то придумать!"
     "Может быть просто спрятаться от продавца, пока он не уйдет?"
     $ autorun_to_object("cloth_shop_dressing_room2", "after_jail_cloth_shop_cashier4")
-    $ add_objective("hide_trader", _("Прятаться от продавца, пока она не уйдет"), c_orange, 20)
+    $ add_objective("hide_trader", t_("Прятаться от продавца, пока она не уйдет"), c_orange, 20)
     call refresh_scene_fade() from _call_refresh_scene_fade_96
 
     return
@@ -588,7 +588,7 @@ label after_jail_cloth_shop_cashier4:
     mt "Спрячусь здесь!"
     "Сюда она не должна зайти!"
     stop music fadeout 1.0
-    call textonblack(_("СПУСТЯ 15 МИНУТ...")) from _call_textonblack_15
+    call textonblack(t_("СПУСТЯ 15 МИНУТ...")) from _call_textonblack_15
     img black_screen
     with Dissolve(1)
     music Groove2_85
@@ -614,7 +614,7 @@ label after_jail_cloth_shop_cashier6:
     "Кажется я видела на прилавке шололадку."
     "Я заслужила ее!!!"
     $ remove_objective("hide_trader")
-    $ add_objective("eat_chocolate", _("Съесть шоколадку!"), c_pink, 20)
+    $ add_objective("eat_chocolate", t_("Съесть шоколадку!"), c_pink, 20)
     $ s2ClothShopStage = 2
     $ clothShopCashierAtCashDesk = False
     $ autorun_to_object("cloth_shop_cashier", "after_jail_cloth_shop_cashier7")
@@ -686,7 +686,7 @@ label after_jail_cloth_shop_cashier8:
     "..."
     "Может посмотреть в примерочной?"
     $ remove_objective("eat_chocolate")
-    $ add_objective("look_dressroom", _("Может посмотреть в примерочной?"), c_blue, 20)
+    $ add_objective("look_dressroom", t_("Может посмотреть в примерочной?"), c_blue, 20)
     $ s2ClothShopStage = 3
     call change_scene("cloth_shop_view1_s2", False, False) from _call_change_scene_187
     return
@@ -1007,7 +1007,7 @@ label after_jail_cloth_shop_cashier9:
         "Надо быстрее закончить этот кошмар!"
         $ remove_objective("look_dressroom")
         $ remove_objective("find_sleep")
-        $ add_objective("dick_search", _("Идти к Дику в офис."), c_blue, 5)
+        $ add_objective("dick_search", t_("Идти к Дику в офис."), c_blue, 5)
         $ autorun_to_object("street_cloth_shop_s2", "afterJailDay2_clothShopStreet1")
 
         $ s2ClothShopStage = 4

@@ -21,13 +21,13 @@ label miniMapClose:
 label miniMapHouseGenerate:
     $ miniMapOpened = False
     $ miniMapData = []
-    $ miniMapData.append({"name":"Bedroom", "caption":_("Bedroom"), "img":"Bedroom_Map", "teleport_scene":"bedroom2", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Bathroom", "caption":_("Bathroom"), "img":"Bathroom_Map", "teleport_scene":"bathroom_bath", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Floor1", "caption":_("Down Floor"), "img":"Floor1_Map", "teleport_scene":"floor1", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Floor2", "caption":_("Up Floor"), "img":"Floor2_Map", "teleport_scene":"floor2", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Kitchen", "caption":_("Kitchen"), "img":"Kitchen_Map", "teleport_scene":"kitchen2", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Basement", "caption":_("Basement"), "img":"Basement_Map", "teleport_scene":"basement_pool", "teleport_type":"scene"})
-    $ miniMapData.append({"name":"Street_Yard", "caption":_("Street Yard"), "img":"Street_Yard_Map", "teleport_scene":"house_out", "teleport_type":"function"})
+    $ miniMapData.append({"name":"Bedroom", "caption":t_("Bedroom"), "img":"Bedroom_Map", "teleport_scene":"bedroom2", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Bathroom", "caption":t_("Bathroom"), "img":"Bathroom_Map", "teleport_scene":"bathroom_bath", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Floor1", "caption":t_("Down Floor"), "img":"Floor1_Map", "teleport_scene":"floor1", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Floor2", "caption":t_("Up Floor"), "img":"Floor2_Map", "teleport_scene":"floor2", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Kitchen", "caption":t_("Kitchen"), "img":"Kitchen_Map", "teleport_scene":"kitchen2", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Basement", "caption":t_("Basement"), "img":"Basement_Map", "teleport_scene":"basement_pool", "teleport_type":"scene"})
+    $ miniMapData.append({"name":"Street_Yard", "caption":t_("Street Yard"), "img":"Street_Yard_Map", "teleport_scene":"house_out", "teleport_type":"function"})
     return
 
 label miniMapDisabled(name, minimapCell):

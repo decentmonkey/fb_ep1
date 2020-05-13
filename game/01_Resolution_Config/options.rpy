@@ -13,7 +13,7 @@
 ## The _() surrounding the string marks it as eligible for translation.
 define config.default_language = "english"
 
-#define config.name = _("FashionBusinessEP1")
+#define config.name = t_("FashionBusinessEP1")
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.

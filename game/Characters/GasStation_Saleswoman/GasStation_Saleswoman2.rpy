@@ -10,7 +10,7 @@ label gas_saleswoman_dialogue2:
         call gas_saleswoman_dialogue2_alternative() from _call_gas_saleswoman_dialogue2_alternative
         return
     music Hidden_Agenda
-    call textonblack(_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_13
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_13
     img black_screen
     with Dissolve(1)
 #    music Groove2_85
@@ -616,7 +616,7 @@ label gas_station_view_door_scene1:
     $ print "enter_gas_station_view_door_scene1"
 
     $ scene_name = "gas_station_view_door_scene1"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Gas_Station_View_Door"
@@ -1147,7 +1147,7 @@ label gas_saleswoman_dialogue2_2:
 
 label gas_saleswoman_dialogue2_alternative():
     music Hidden_Agenda
-    call textonblack(_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_14
+    call textonblack(t_("ТЕМ ВРЕМЕНЕМ...")) from _call_textonblack_14
     img black_screen
     with Dissolve(1)
 #    music Groove2_85

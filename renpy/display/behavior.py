@@ -921,7 +921,7 @@ class Button(renpy.display.layout.Window):
         rv = self._tts_common(alt(self.action))
 
         if self.is_selected():
-            rv += " " + renpy.minstore.__("selected")
+            rv += " " + renpy.minstore._t_("selected")
 
         return rv
 
@@ -1086,7 +1086,7 @@ class Input(renpy.text.text.Text):  # @UndefinedVariable
                  value=None,
                  **properties):
 
-        super(Input, self).__init__("", style=style, replaces=replaces, substitute=False, **properties)
+        super(Input, self).__init_t_("", style=style, replaces=replaces, substitute=False, **properties)
 
         if value:
             self.value = value
@@ -1780,7 +1780,7 @@ class Bar(renpy.display.core.Displayable):
         ignore_event = False
 
         if not grabbed and map_event(ev, "bar_activate"):
-            renpy.display.tts.speak(renpy.minstore.__("activate"))
+            renpy.display.tts.speak(renpy.minstore._t_("activate"))
             renpy.display.focus.set_grab(self)
             self.set_style_prefix("selected_hover_", True)
             just_grabbed = True
@@ -1797,12 +1797,12 @@ class Bar(renpy.display.core.Displayable):
                 decrease = "bar_left"
 
             if map_event(ev, decrease):
-                renpy.display.tts.speak(renpy.minstore.__("decrease"))
+                renpy.display.tts.speak(renpy.minstore._t_("decrease"))
                 value -= self.adjustment.step
                 ignore_event = True
 
             if map_event(ev, increase):
-                renpy.display.tts.speak(renpy.minstore.__("increase"))
+                renpy.display.tts.speak(renpy.minstore._t_("increase"))
                 value += self.adjustment.step
                 ignore_event = True
 
@@ -1844,7 +1844,7 @@ class Bar(renpy.display.core.Displayable):
             value = range - value
 
         if grabbed and not just_grabbed and map_event(ev, "bar_deactivate"):
-            renpy.display.tts.speak(renpy.minstore.__("deactivate"))
+            renpy.display.tts.speak(renpy.minstore._t_("deactivate"))
             self.set_style_prefix("hover_", True)
             renpy.display.focus.set_grab(None)
             ignore_event = True
@@ -1873,7 +1873,7 @@ class Bar(renpy.display.core.Displayable):
         else:
             alt = ""
 
-        return self._tts_common(alt) + renpy.minstore.__("bar")
+        return self._tts_common(alt) + renpy.minstore._t_("bar")
 
 
 class Conditional(renpy.display.layout.Container):

@@ -34,7 +34,7 @@ label cloth_shop_view1:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_view1"
-    $ scene_caption = _("Clothing Shop")
+    $ scene_caption = t_("Clothing Shop")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Cloth_Shop_View1"
@@ -57,8 +57,8 @@ label cloth_shop_view1:
 
     $ add_object_to_scene("Teleport_Cashier", {"type":2, "base":"Cloth_Shop_View1_Cashier", "click" : "cloth_shop_view1_teleport", "actions" : "lw", "zorder" : 0})
     $ add_object_to_scene("Teleport_Dressing_Room", {"type":2, "base":"Cloth_Shop_View1_DressingRoom", "click" : "cloth_shop_view1_teleport", "actions" : "lw", "zorder" : 0})
-    $ add_object_to_scene("Teleport_View2", {"type":3, "text" : _("ИДТИ ДАЛЬШЕ"), "rarrow" : "arrow_up_2", "base":"Cloth_Shop_View1_Teleport_View2", "click" : "cloth_shop_view1_teleport", "xpos" : 183, "ypos" : 929, "zorder":11})
-    $ add_object_to_scene("Teleport_Street_Cloth_Shop", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_View2", {"type":3, "text" : t_("ИДТИ ДАЛЬШЕ"), "rarrow" : "arrow_up_2", "base":"Cloth_Shop_View1_Teleport_View2", "click" : "cloth_shop_view1_teleport", "xpos" : 183, "ypos" : 929, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Cloth_Shop", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view1_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     if clothShopInited == False:
         call cloth_shop_init() from _call_cloth_shop_init
@@ -246,7 +246,7 @@ label cloth_shop_view2:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_view2"
-    $ scene_caption = _("Clothing Shop")
+    $ scene_caption = t_("Clothing Shop")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Cloth_Shop_View2"
@@ -261,8 +261,8 @@ label cloth_shop_view2:
 
         $ add_object_to_scene("Pouf1", {"type":2, "base":"Cloth_Shop_View2_Pouf1", "click" : "cloth_shop_view2_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Cashier", {"type":3, "text" : _("К КАССЕ"), "rarrow" : "arrow_right_2", "base":"Cloth_Shop_View2_Teleport_Cashier", "click" : "cloth_shop_view2_teleport", "xpos" : 1602, "ypos" : 917, "zorder":11})
-    $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Cashier", {"type":3, "text" : t_("К КАССЕ"), "rarrow" : "arrow_right_2", "base":"Cloth_Shop_View2_Teleport_Cashier", "click" : "cloth_shop_view2_teleport", "xpos" : 1602, "ypos" : 917, "zorder":11})
+    $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 label cloth_shop_view2_teleport(obj_name, obj_data):
@@ -408,7 +408,7 @@ label cloth_shop_cashier:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_cashier"
-    $ scene_caption = _("Cashier")
+    $ scene_caption = t_("Cashier")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Cloth_Shop_Cashier"
@@ -428,8 +428,8 @@ label cloth_shop_cashier:
         $ add_object_to_scene("Rack2", {"type":2, "base":"Cloth_Shop_Cashier_Rack2", "click" : "cloth_shop_cashier_environment", "actions" : "l", "zorder" : 0})
 
 
-    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : _("К ПРИМЕРОЧНОЙ"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "cloth_shop_cashier_teleport", "xpos" : 1640, "ypos" : 152, "zorder":11})
-    $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : t_("К ПРИМЕРОЧНОЙ"), "rarrow" : "arrow_right_2", "base":"empty", "click" : "cloth_shop_cashier_teleport", "xpos" : 1640, "ypos" : 152, "zorder":11})
+    $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 label cloth_shop_cashier_teleport(obj_name, obj_data):
@@ -523,7 +523,7 @@ label cloth_shop_dressing_room:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_dressing_room"
-    $ scene_caption = _("Dressing Room")
+    $ scene_caption = t_("Dressing Room")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Cloth_Shop_Dressing_Room"
@@ -533,9 +533,9 @@ label cloth_shop_dressing_room:
     $ add_object_to_scene("Teleport_Dressing_Room2", {"type":2, "base":"Cloth_Shop_Dressing_Room_Teleport_Dressing_Room2", "click" : "cloth_shop_dressing_room_teleport", "actions" : "lw", "zorder" : 0})
 
     if eveningDressFitted == False and dressFitOwnDressDressedOut == True:
-        $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_dressing_room_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+        $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_dressing_room_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     else:
-        $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+        $ add_object_to_scene("Teleport_Cloth_Shop_View1", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_view2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 label cloth_shop_dressing_room_spawn1:
@@ -625,7 +625,7 @@ label cloth_shop_dressing_room2:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_dressing_room2"
-    $ scene_caption = _("Dressing Room")
+    $ scene_caption = t_("Dressing Room")
     $ clear_scene_from_objects(scene_name)
 
     if dressFitOwnDressDressedOut == True:
@@ -652,7 +652,7 @@ label cloth_shop_dressing_room2:
         $ add_object_to_scene("Sofa", {"type":2, "base":"Cloth_Shop_Dressing_Room2_Sofa", "click" : "cloth_shop_view1_environment2", "actions" : "lh", "zorder" : 0})
 
 
-    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_dressing_room2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "cloth_shop_dressing_room2_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 label cloth_shop_dressing_room2_teleport(obj_name, obj_data):
@@ -773,7 +773,7 @@ label cloth_shop_dressing_room3:
     $ miniMapData = []
 
     $ scene_name = "cloth_shop_dressing_room3"
-    $ scene_caption = _("Dressing Room")
+    $ scene_caption = t_("Dressing Room")
     $ clear_scene_from_objects(scene_name)
 
     if shopDressFit1End == True:
@@ -783,7 +783,7 @@ label cloth_shop_dressing_room3:
         $ scene_image = "scene_Cloth_Shop_Dressing_Room3_2"
         $ add_object_to_scene("Monica", {"type":2, "base":"Cloth_Shop_Dressing_Room3_Monica2", "click" : "cloth_shop_dressing_room3_environment", "actions" : "l", "zorder" : 5})
 
-    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : _("ПОКАЗАТЬСЯ ДИКУ"), "rarrow" : "arrow_down_2", "base":"Cloth_Shop_Dressing_Room3_Teleport_Dressing_Room", "click" : "cloth_shop_dressing_room3_teleport", "xpos" : 1213, "ypos" : 88, "zorder":11})
+    $ add_object_to_scene("Teleport_Dressing_Room", {"type":3, "text" : t_("ПОКАЗАТЬСЯ ДИКУ"), "rarrow" : "arrow_down_2", "base":"Cloth_Shop_Dressing_Room3_Teleport_Dressing_Room", "click" : "cloth_shop_dressing_room3_teleport", "xpos" : 1213, "ypos" : 88, "zorder":11})
 
     $ add_object_to_scene("Pouf1", {"type":2, "base":"Cloth_Shop_Dressing_Room3_Pouf1", "click" : "cloth_shop_dressing_room2_environment", "actions" : "l", "zorder" : 12})
     $ add_object_to_scene("Sofa", {"type":2, "base":"Cloth_Shop_Dressing_Room3_Sofa", "click" : "cloth_shop_dressing_room2_environment", "actions" : "lh", "zorder" : 0})
@@ -818,7 +818,7 @@ label clothShopCheckFinalFitting:
         $ shopDressFit3Begin = True
     $ dressFitInProgress = True
     $ dressFitInProgressEnded = False
-    $ add_objective("cloth_shop_fit_dress", _("Померять платье в примерочной"), c_green, 25)
+    $ add_objective("cloth_shop_fit_dress", t_("Померять платье в примерочной"), c_green, 25)
     return
 
 label clothShopCheckFinalFittingOwnDressOut:
@@ -1160,7 +1160,7 @@ label clothShopCheckFinalFitting2:
         $ shopDressFit3End = True
         $ remove_objective("dick_cloth_shop_buy_dress")
         $ remove_objective("cloth_shop_fit_dress")
-        $ add_objective("cloth_shop_buy_dress_cashier", _("Купить вечернее платье"), c_pink, 25)
+        $ add_objective("cloth_shop_buy_dress_cashier", t_("Купить вечернее платье"), c_pink, 25)
         $ eveningDressFitted = True
         $ dressFitInProgress = False
         $ autorun_to_object("cloth_shop_cashier", "clothShopCheckFinalBeforeBuyDress")
@@ -1168,7 +1168,7 @@ label clothShopCheckFinalFitting2:
         return
     $ remove_objective("cloth_shop_fit_dress")
     $ dressFitInProgress = False
-    $ add_objective("cloth_shop_fit_dress_show_dick", _("Показаться Дику"), c_white, 25)
+    $ add_objective("cloth_shop_fit_dress_show_dick", t_("Показаться Дику"), c_white, 25)
     $ remove_objective("cloth_shop_fit_dress")
     call change_scene("cloth_shop_dressing_room3", "Fade_long", "snd_fabric1") from _call_change_scene_121
     return
@@ -1518,7 +1518,7 @@ label clothShopCheckFinalBuyDress:
     if dressFitOwnDressDressedOut == False:
         call change_scene("street_cloth_shop", "Fade_long") from _call_change_scene_122
     else:
-        $ add_objective("cloth_shop_forgot_own_dress", _("Забрать свое платье из примерочной"), c_green, 25)
+        $ add_objective("cloth_shop_forgot_own_dress", t_("Забрать свое платье из примерочной"), c_green, 25)
         $ autorun_to_object("cloth_shop_view1", "clothShopForgotOwnDress")
         call change_scene("cloth_shop_view1", "Fade_long") from _call_change_scene_123
     return
@@ -1534,8 +1534,8 @@ label clothShopForgotOwnDress:
     return
 
 label cloth_shop_init:
-    $ define_inventory_object("shop_dress1", {"description" : _("Платье для примерки"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress1" + res.suffix + ".png"})
-    $ define_inventory_object("shop_dress2", {"description" : _("Платье для примерки"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress2" + res.suffix + ".png"})
-    $ define_inventory_object("shop_dress_eveningdress", {"description" : _("Вечернее платье"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress_eveningdress" + res.suffix + ".png"})
+    $ define_inventory_object("shop_dress1", {"description" : t_("Платье для примерки"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress1" + res.suffix + ".png"})
+    $ define_inventory_object("shop_dress2", {"description" : t_("Платье для примерки"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress2" + res.suffix + ".png"})
+    $ define_inventory_object("shop_dress_eveningdress", {"description" : t_("Вечернее платье"), "label_suffix" : "_use_shop_dress", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/shop_dress_eveningdress" + res.suffix + ".png"})
     # $ add_inventory("phone", 1, True)
     return

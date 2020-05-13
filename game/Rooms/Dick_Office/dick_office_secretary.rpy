@@ -8,7 +8,7 @@ label dick_office_secretary:
     $ miniMapData = []
 
     $ scene_name = "dick_office_secretary"
-    $ scene_caption = _("Dick's Secretary")
+    $ scene_caption = t_("Dick's Secretary")
     $ clear_scene_from_objects(scene_name)
     if dickOfficeSecretaryMonicaStageGfx == 0:
         $ scene_image = "scene_Office_Dick_Secretary_Monica_Secretary1_" + cloth
@@ -28,7 +28,7 @@ label dick_office_secretary:
 
     $ add_object_to_scene("Door", {"type":2, "base":"Office_Dick_Secretary_Door", "click" : "dick_office_secretary_teleport", "actions" : "lw", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Hall", {"type":3, "text" : _("НАЗАД В ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "dick_office_secretary_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Hall", {"type":3, "text" : t_("НАЗАД В ХОЛЛ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "dick_office_secretary_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
     return
     #                            $ brightness_adjustment = 0.1
     #                            $ saturation_adjustment = 1.07

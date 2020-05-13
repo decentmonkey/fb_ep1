@@ -3,7 +3,7 @@ label basement_bedroom_table:
     $ miniMapData = []
 
     $ scene_name = "basement_bedroom_table"
-    $ scene_caption = _("BASEMENT")
+    $ scene_caption = t_("BASEMENT")
     $ clear_scene_from_objects(scene_name)
 
     $ scene_image = "scene_Basement_Bedroom_Table"
@@ -15,7 +15,7 @@ label basement_bedroom_table:
     if basementBedroomJournal == True:
         $ add_object_to_scene("Journal", {"type":2, "base":"Basement_Bedroom_Table_Journal", "click" : "basement_bedroom_table_environment", "actions" : "lh", "zorder" : 1})
 
-    $ add_object_to_scene("Teleport_Bedroom_Back", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_bedroom_table_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Bedroom_Back", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_bedroom_table_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 

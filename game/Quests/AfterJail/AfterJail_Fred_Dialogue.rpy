@@ -36,7 +36,7 @@ label afterJailFredDialogue:
     "ФРЕД!!!"
     $ renpy.music.set_pause(False, "rain")
 
-    $ add_objective("come_to_fred", _("Подойти к Фреду"), c_blue, 10)
+    $ add_objective("come_to_fred", t_("Подойти к Фреду"), c_blue, 10)
 
 
     return
@@ -685,7 +685,7 @@ label afterJailFredDialogue3:
     $ subst_to_object("Teleport_Fence", "afterJailHouseFamily_dialogue1")
 
     $ remove_objective("come_to_fred")
-    $ add_objective("come_to_family", _("Идти к новым хозяевам"), c_orange, 10)
+    $ add_objective("come_to_family", t_("Идти к новым хозяевам"), c_orange, 10)
     $ autorun_to_object("street_house_main_yard", "afterJailHouseFamily_dialogue0")
 
     $ rain = False

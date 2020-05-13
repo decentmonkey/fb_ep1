@@ -253,7 +253,7 @@ label hostelAfterJail_Perry_dialogue3:
     "Сделай это!"
 
     $ remove_objective("go_hostel")
-    $ add_objective("put_cloth_to_box", _("Положить платье в коробку"), c_blue, 10)
+    $ add_objective("put_cloth_to_box", t_("Положить платье в коробку"), c_blue, 10)
     call question_helper_enable("question_hostel_perry_dress") from _call_question_helper_enable_3
     $ autorun_to_object("hostel_reception", "hostelAfterJail_Perry_dialogue4")
     $ hostelReceptionStage = 2
@@ -409,7 +409,7 @@ label hostelAfterJail_Perry_dialogue8a:
     mt "!!!!!!!"
 
     $ remove_objective("put_cloth_to_box")
-    $ add_objective("go_sleep", _("Принять душ и лечь спать"), c_orange, 10)
+    $ add_objective("go_sleep", t_("Принять душ и лечь спать"), c_orange, 10)
 
     $ hostelReceptionStage = 5
     $ autorun_to_object("hostel_bedroom", "hostelAfterJail_bedroom_dialogue1")
@@ -588,8 +588,8 @@ label hostelAfterJail_bedroom_sleep1:
     $ hostelBathTaken = False
     $ remove_objective("go_sleep")
     $ remove_objective("dick_tomorrow1")
-    $ add_objective("go_dick", _("Идти к Дику!"), c_blue, 6)
-    $ add_objective("go_bath_call_dick", _("Принять душ и позвонить Дику"), c_green, 10)
+    $ add_objective("go_dick", t_("Идти к Дику!"), c_blue, 6)
+    $ add_objective("go_bath_call_dick", t_("Принять душ и позвонить Дику"), c_green, 10)
 
     $ autorun_to_object("hostel_bedroom", "hostelAfterJail_bedroom_dialogue3")
 
@@ -729,7 +729,7 @@ label hostelAfterJail_street_dialogue1:
 
     $ remove_objective("go_bath_call_dick")
     $ subst_to_object("Teleport_Shawarma", "hostelAfterJail_street_dialogue2")
-    $ add_objective("find_place_to_take_cloth", _("Найти место где можно одеться!"), c_red, 10)
+    $ add_objective("find_place_to_take_cloth", t_("Найти место где можно одеться!"), c_red, 10)
     call refresh_scene_fade() from _call_refresh_scene_fade_31
     return
 
@@ -815,7 +815,7 @@ label hostelAfterJail_street_dialogue2(o, d):
     $ subst_to_object("Teleport_Shawarma", "hostelAfterJail_street_dialogue2")
     $ autorun_to_object("whores_place_shawarma_s2", "hostelAfterJail_street_dialogue5")
     $ autorun_to_object("hostel_street", "hostelAfterJail_street_dialogue4a")
-    $ add_objective("steal_cloth", _("Украсть в магазине одежды новое платье!"), c_blue, 10)
+    $ add_objective("steal_cloth", t_("Украсть в магазине одежды новое платье!"), c_blue, 10)
     $ map_enabled = False
 
     $ subst_to_object("Teleport_Shawarma", False)
@@ -937,7 +937,7 @@ label hostelAfterJail_street_dialogue4:
     $ subst_to_object("Teleport_Shawarma", "hostelAfterJail_street_dialogue2")
     $ autorun_to_object("whores_place_shawarma_s2", "hostelAfterJail_street_dialogue5")
     $ autorun_to_object("hostel_edge_1_a", "hostelAfterJail_street_dialogue4a")
-    $ add_objective("steal_cloth", _("Украсть в магазине одежды новое платье!"), c_blue, 10)
+    $ add_objective("steal_cloth", t_("Украсть в магазине одежды новое платье!"), c_blue, 10)
     $ map_enabled = False
 
     $ subst_to_object("Teleport_Shawarma", False)
@@ -1076,7 +1076,7 @@ label hostelAfterJail_street_dialogue8:
     $ autorun_to_object("gas_station_view1_s2", False)
 
     $ remove_objective("steal_cloth")
-#    $ add_objective("steal_cloth", _("Украсть в магазине одежды новое платье!"), c_blue, 10)
+#    $ add_objective("steal_cloth", t_("Украсть в магазине одежды новое платье!"), c_blue, 10)
     $ autorun_to_object("street_dick_office", "hostelAfterJail_street_dialogue10")
     $ dickReceptionStage = 5
     $ teleportDickOfficeHeavyRainFlag = True

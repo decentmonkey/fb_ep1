@@ -143,19 +143,19 @@ init -1700 python:
     # Self-voicing
 
     # Strings used internally in Ren'Py.
-    _("Self-voicing disabled.")
-    _("Clipboard voicing enabled. ")
-    _("Self-voicing enabled. ")
+    t_("Self-voicing disabled.")
+    t_("Clipboard voicing enabled. ")
+    t_("Self-voicing enabled. ")
 
-    _("bar")
-    _("selected")
-    _("viewport")
-    _("horizontal scroll")
-    _("vertical scroll")
-    _("activate")
-    _("deactivate")
-    _("increase")
-    _("decrease")
+    t_("bar")
+    t_("selected")
+    t_("viewport")
+    t_("horizontal scroll")
+    t_("vertical scroll")
+    t_("activate")
+    t_("deactivate")
+    t_("increase")
+    t_("decrease")
 
     def sv(what, interact=True):
         """
@@ -276,7 +276,7 @@ init -1700 python:
     config.font_replacement_map["DejaVuSans.ttf", True, False] = ("DejaVuSans-Bold.ttf", False, False)
 
     # License text.
-    renpy.license = _("This program contains free software under a number of licenses, including the MIT License and GNU Lesser General Public License. A complete list of software, including links to full source code, can be found {a=https://www.renpy.org/l/license}here{/a}.")
+    renpy.license = t_("This program contains free software under a number of licenses, including the MIT License and GNU Lesser General Public License. A complete list of software, including links to full source code, can be found {a=https://www.renpy.org/l/license}here{/a}.")
 
 init -1000 python:
     # Set developer to the auto default.

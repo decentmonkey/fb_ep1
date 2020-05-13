@@ -29,17 +29,17 @@ screen _gamepad_select(joysticks):
 
         has vbox
 
-        label _("Select Gamepad to Calibrate")
+        label t_("Select Gamepad to Calibrate")
 
         if not joysticks:
-            text _("No Gamepads Available")
+            text t_("No Gamepads Available")
         else:
             for i, name in joysticks:
                 textbutton "[i]: [name]" action Return(i) size_group "joysticks"
 
         null height 20
 
-        textbutton _("Cancel") action Return("cancel")
+        textbutton t_("Cancel") action Return("cancel")
 
 screen _gamepad_control(name, control, kind, mappings, back, i, total):
 
@@ -51,22 +51,22 @@ screen _gamepad_control(name, control, kind, mappings, back, i, total):
 
         has vbox
 
-        label _("Calibrating [name] ([i]/[total])")
+        label t_("Calibrating [name] ([i]/[total])")
 
         null height 20
 
-        text _("Press or move the [control!r] [kind].")
+        text t_("Press or move the [control!r] [kind].")
 
 
         null height 20
 
         hbox:
-            textbutton _("Cancel") action Return("cancel")
+            textbutton t_("Cancel") action Return("cancel")
             if len(mappings) >= 2:
-                textbutton _("Skip (A)") action Return("skip")
+                textbutton t_("Skip (A)") action Return("skip")
 
             if back and len(mappings) >= 3:
-                textbutton _("Back (B)") action Return(back)
+                textbutton t_("Back (B)") action Return(back)
 
     add _gamepad.EventWatcher(mappings)
 

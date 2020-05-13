@@ -4,7 +4,7 @@ label rich_hotel_restaurant_entrance:
     $ miniMapData = []
 
     $ scene_name = "rich_hotel_restaurant_entrance"
-    $ scene_caption = _("Restaurant")
+    $ scene_caption = t_("Restaurant")
     $ clear_scene_from_objects(scene_name)
     $ scene_image = "scene_Rich_Hotel_Restaurant_Entrance_Monica_" + cloth
 
@@ -13,7 +13,7 @@ label rich_hotel_restaurant_entrance:
         $ add_object_to_scene("Waitress", {"type":2, "base":"rich_hotel_restaurant_entrance_Waitress_Angry", "click" : "rich_hotel_restaurant_entrance_environment", "actions" : "lt", "zorder" : 10})
     else:
         $ add_object_to_scene("Waitress", {"type":2, "base":"rich_hotel_restaurant_entrance_Waitress_Smile", "click" : "rich_hotel_restaurant_entrance_environment", "actions" : "lt", "zorder" : 10})
-    $ add_object_to_scene("Teleport_Reception", {"type":3, "text" : _("РЕЦЕПШИН"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "rich_hotel_restaurant_entrance_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
+    $ add_object_to_scene("Teleport_Reception", {"type":3, "text" : t_("РЕЦЕПШИН"), "larrow" : "arrow_left_2", "base":"Screen_Left_Arrow_Tight", "click" : "rich_hotel_restaurant_entrance_teleport", "xpos" : 220, "ypos" : 545, "zorder":11})
 
     return
 #                            $ brightness_adjustment = 0.1

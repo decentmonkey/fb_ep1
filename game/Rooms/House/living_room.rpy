@@ -32,7 +32,7 @@ label living_room:
     $ add_object_to_scene("Wine1", {"type":2, "base":"House_LivingRoom_Wine1", "click" : "living_room_environment", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Wine2", {"type":2, "base":"House_LivingRoom_Wine2", "click" : "living_room_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : _("ХОЛЛ"), "larrow" : "arrow_left_2", "base":"House_LivingRoom_Teleport_Floor1", "click" : "living_room_teleport", "xpos" : 460, "ypos" : 956, "zorder":20})
+    $ add_object_to_scene("Teleport_Floor1", {"type":3, "text" : t_("ХОЛЛ"), "larrow" : "arrow_left_2", "base":"House_LivingRoom_Teleport_Floor1", "click" : "living_room_teleport", "xpos" : 460, "ypos" : 956, "zorder":20})
     return
 
 #    $ add_object_to_scene("Mirrors", {"type":2, "base":"Floor2_Mirrors", "click" : "floor2_environment", "actions" : "l", "zorder" : 0})

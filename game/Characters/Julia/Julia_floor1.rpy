@@ -133,7 +133,7 @@ label julia_interact(obj_name, obj_data):
                         $ juliaLocation = "kitchen"
                         $ juliaSeen = True
                         call refresh_scene() from _call_refresh_scene_9
-                        show screen notify (_("Юлия убежала на кухню."))
+                        show screen notify (t_("Юлия убежала на кухню."))
                         $ juliaNeedToCheckStreet = True
 
                         menu:
@@ -197,7 +197,7 @@ label julia_interact(obj_name, obj_data):
                                 $ juliaLocation = "kitchen"
                                 $ juliaSeen = True
                                 call refresh_scene() from _call_refresh_scene_10
-                                show screen notify (_("Юлия убежала на кухню."))
+                                show screen notify (t_("Юлия убежала на кухню."))
                                 $ juliaNeedToCheckStreet = True
 
                             "Попросить подать еду.":
@@ -211,7 +211,7 @@ label julia_interact(obj_name, obj_data):
                                 $ juliaLocation = "kitchen"
                                 $ juliaSeen = True
                                 call refresh_scene() from _call_refresh_scene_11
-                                show screen notify (_("Юлия убежала на кухню."))
+                                show screen notify (t_("Юлия убежала на кухню."))
 
         if juliaSeen == True:
             call julia_interact3(obj_name, obj_data) from _call_julia_interact3

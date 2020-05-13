@@ -5,7 +5,7 @@ label gas_station_view1_s2:
     $ miniMapData = []
 
     $ scene_name = "gas_station_view1_s2"
-    $ scene_caption = _("Gas Station")
+    $ scene_caption = t_("Gas Station")
     $ clear_scene_from_objects(scene_name)
 
     if saleWomanAtCashier == True:
@@ -25,7 +25,7 @@ label gas_station_view1_s2:
 
     $ add_object_to_scene("Logo", {"type":2, "base":"Gas_Station_View1_Logo", "click" : "street_gas_station_environment", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Street_Gas_Station", {"type":3, "text" : _("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Gas_Station", {"type":3, "text" : t_("НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "gas_station_view1_teleport2", "xpos" : 960, "ypos" : 956, "zorder":11})
     if gas_station_view1_s2_visited == False and gameStage < 3:
         $ gas_station_view1_s2_visited = True
         $ autorun_to_object("gas_station_view1_s2", "gas_station_view1_environment2_a")

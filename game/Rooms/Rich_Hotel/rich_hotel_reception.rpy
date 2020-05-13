@@ -10,7 +10,7 @@ label rich_hotel_reception:
     $ miniMapData = []
 
     $ scene_name = "rich_hotel_reception"
-    $ scene_caption = _("Hotel Reception")
+    $ scene_caption = t_("Hotel Reception")
     $ clear_scene_from_objects(scene_name)
 
     if richHotelReceptionistEnabled == False:
@@ -43,8 +43,8 @@ label rich_hotel_reception:
     $ add_object_to_scene("Desk", {"type":2, "base":"Rich_Hotel_Reception_Desk", "click" : "rich_hotel_reception_environment", "actions" : "l", "zorder" : 3})
     $ add_object_to_scene("Chair", {"type":2, "base":"Rich_Hotel_Reception_Chair", "click" : "rich_hotel_reception_environment", "actions" : "l", "zorder" : 3})
 
-    $ add_object_to_scene("Teleport_Restaurant", {"type":3, "text" : _("РЕСТОРАН"), "rarrow" : "arrow_right_2", "base":"Rich_Hotel_Reception_Teleport_Restaurant", "click" : "rich_hotel_reception_teleport", "xpos" : 1018, "ypos" : 103, "zorder":11})
-    $ add_object_to_scene("Teleport_Street_Rich_Hotel", {"type":3, "text" : _("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "rich_hotel_reception_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Restaurant", {"type":3, "text" : t_("РЕСТОРАН"), "rarrow" : "arrow_right_2", "base":"Rich_Hotel_Reception_Teleport_Restaurant", "click" : "rich_hotel_reception_teleport", "xpos" : 1018, "ypos" : 103, "zorder":11})
+    $ add_object_to_scene("Teleport_Street_Rich_Hotel", {"type":3, "text" : t_("НАЗАД НА УЛИЦУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "rich_hotel_reception_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return
 #                            $ brightness_adjustment = 0.1

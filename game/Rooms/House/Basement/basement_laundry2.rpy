@@ -16,7 +16,7 @@ label basement_laundry2:
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_8
 
     $ scene_name = "basement_laundry2"
-    $ scene_caption = _("Laundry")
+    $ scene_caption = t_("Laundry")
     $ clear_scene_from_objects(scene_name)
 
     if landryIroningActive == False:
@@ -88,7 +88,7 @@ label basement_laundry2:
     $ add_object_to_scene("Teleport_Box1", {"type":2, "base":"Basement_Laundry2_Box1", "click" : "basement_laundry2_teleport", "actions" : "l", "zorder" : 0})
     $ add_object_to_scene("Teleport_Box2", {"type":2, "base":"Basement_Laundry2_Box2", "click" : "basement_laundry2_teleport", "actions" : "l", "zorder" : 0})
 
-    $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : _("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_teleport", "xpos" : 510, "ypos" : 956, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement_Laundry", {"type":3, "text" : t_("НАЗАД"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry2_teleport", "xpos" : 510, "ypos" : 956, "zorder":11})
 
     return
 
@@ -184,10 +184,10 @@ label basement_laundry2_environment(obj_name, obj_data):
                 if Dress_Ironed_looked == False:
                     m "В конце концов получилось погладить платье."
                 sound put_dress
-                $ define_inventory_object("businesscloth1", {"description" : _("Красивое платье"), "label_suffix" : "_use_businesscloth", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/inv_businesscloth1" + res.suffix + ".png"})
+                $ define_inventory_object("businesscloth1", {"description" : t_("Красивое платье"), "label_suffix" : "_use_businesscloth", "default_label" : False, "default_nolabel" : "cant_use", "icon" : "Inventory/inv_businesscloth1" + res.suffix + ".png"})
                 $ add_inventory("businesscloth1", 1, True)
                 $ remove_objective("take_ironed_dress")
-                $ add_objective("dress_businesscloth", _("Одеть платье у гардероба в спальне."), c_pink, 20)
+                $ add_objective("dress_businesscloth", t_("Одеть платье у гардероба в спальне."), c_pink, 20)
                 $ scene_transition = "Fade"
                 $ autorun_to_object("basement_laundry2", "basement_laundry2_iron_taked")
                 $ landryIroningActive = False
@@ -257,7 +257,7 @@ label basement_laundry2_dress_ironed:
     else:
         m "Почему Юлия его не погладила?"
     $ remove_objective("iron_dress")
-    $ add_objective("take_ironed_dress", _("Забрать платье с гладильной доски"), c_white, 20)
+    $ add_objective("take_ironed_dress", t_("Забрать платье с гладильной доски"), c_white, 20)
 return
 
 

@@ -45,7 +45,7 @@ label dickIncomingCallDay1_subst(obj_name, obj_data):
 label dickIncomingCallDay1:
 
     $ remove_objective("go_work")
-    $ add_objective("take_phone", _("Взять трубку"), c_orange, 20)
+    $ add_objective("take_phone", t_("Взять трубку"), c_orange, 20)
 
     sound snd_phone_ring
     pause 1.5
@@ -280,7 +280,7 @@ label dickIncomingCallDay1_2(obj_name, obj_data): #take phone
         else:
             m "Я думаю он захочет сделать мне приятно!"
 
-        $ add_objective("go_dick_day1", _("Отправиться на встречу с Диком"), c_orange, 20)
+        $ add_objective("go_dick_day1", t_("Отправиться на встречу с Диком"), c_orange, 20)
         $ subst_to_object("Teleport_Monica_Office_Secretary", False)
         $ subst_to_object("Phone", False)
         $ monicaOfficeSteveCall1Planned = False
