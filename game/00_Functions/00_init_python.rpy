@@ -6,6 +6,7 @@ python early:
     import pygame.scrap
     import random
     import math
+    import json
 
     dialogue_active_flag = False
     list_files = []

@@ -1,7 +1,7 @@
 python early:
     language_dict = json.loads(renpy.file("language_dict.json").read())
 #    language_dict = renpy.file("language_dict.json").read()
-    language_fields = {None:1, "english":2, "german":3, "spain":4, "chinese":5}
+    language_fields = {None:1, "english":2, "german":3, "spain":4, "chinese":5, "french":6, "turkish":7}
 
 #    open(config.basedir + "/game/update_data.json", "wb").write(str)
     def parse_tstr(str1):

@@ -1000,6 +1000,7 @@ screen textonblack_screen(in_text):
                 yanchor 0.5
                 xalign 0.5
                 yalign 0.5
+                font gui.text_font_chinese
 
 screen intro_image(image_name):
     zorder 190
@@ -1052,7 +1053,7 @@ screen say(who, what):
                 style "namebox"
                 if _preferences.language != "chinese":
                     if who_color != False:
-                        text t__(who_name) id "who"
+                        text t__(who_name) id "who":
                             color who_color
                     else:
                         text t__(who_name) id "who"
@@ -1061,9 +1062,9 @@ screen say(who, what):
                         text t__(who_name) id "who":
                             font gui.text_font_chinese
                             color who_color
-                        else:
-                            text t__(who_name) id "who":
-                                font gui.text_font_chinese
+                    else:
+                        text t__(who_name) id "who":
+                            font gui.text_font_chinese
 
         if _preferences.language != "chinese":
             if what_color != False:
@@ -1176,8 +1177,14 @@ screen input(prompt):
             xsize gui.dialogue_width
             ypos gui.dialogue_ypos
 
-            text t__(prompt) style "input_prompt"
-            input id "input"
+            if _preferences.language != "chinese":
+                text t__(prompt) style "input_prompt"
+                input id "input"
+            else:
+                text t__(prompt) style "input_prompt":
+                    font gui.text_font_chinese
+                input id "input":
+                    font gui.text_font_chinese
 
 style input_prompt is default
 
@@ -1944,15 +1951,19 @@ screen history():
                     yfit True
 
                 if h.who:
-                    label t__(h.who):
-                        style "history_name"
+                    if _preferences.language != "chinese":
+                        label t__(h.who):
+                            style "history_name"
 
-                        ## Take the color of the who text from the Character, if
-                        ## set.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
-                        if _preferences.language == "chinese":
-                            font gui.text_font_chinese
+                            ## Take the color of the who text from the Character, if
+                            ## set.
+                            if "color" in h.who_args:
+                                text_color h.who_args["color"]
+                    else:
+                        label t__(h.who) text_style "text_chinese":
+                            style "history_name"
+                            if "color" in h.who_args:
+                                text_color h.who_args["color"]
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 if _preferences.language != "chinese":
