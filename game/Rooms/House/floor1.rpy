@@ -2,7 +2,6 @@ label floor1:
     $ print "enter_floor1"
     $ miniMapData = []
     call miniMapHouseGenerate() from _call_miniMapHouseGenerate_10
-
     $ scene_name = "floor1"
     $ scene_caption = t_("Hall Ground Floor")
     $ clear_scene_from_objects(scene_name)

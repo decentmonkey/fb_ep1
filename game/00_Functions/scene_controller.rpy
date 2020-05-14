@@ -83,7 +83,8 @@ label show_scene_now:
 
 label show_scene_loop:
     $ pause_enter += 1
-    pause
+    $ interact_data = ui.interact()
+label show_scene_loop2:
     $ pause_exit += 1
     if show_scene_loop_flag == False:
         jump show_scene_loop
@@ -135,6 +136,7 @@ label after_load():
     call define_autorun()
     $ imagesSizesCache = {}
     $ show_scene_loop_flag = True
+    $ renpy.pop_call()
     jump show_scene
 #    return
 
