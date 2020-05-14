@@ -94,6 +94,9 @@ label show_scene_loop:
             call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
         if interact_data[0] == "question_helper_call":
             call question_helper_call() from _rcall_sprites_action4
+        if interact_data[0] == "map_show":
+            call map_show() from _rcall_sprites_action5
+
 label show_scene_loop2:
     $ pause_exit += 1
     if show_scene_loop_flag == False:
@@ -157,5 +160,4 @@ label call_save():
     if renpy.get_screen("say") != None or renpy.get_screen("choice") != None:
         return
     call screen save()
-    return
     return

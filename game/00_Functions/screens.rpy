@@ -907,7 +907,7 @@ screen hud_screen(hud_presets):
 #                           hover "mega_test_image"
 #                           at map_icon_button_transform
                             action [
-                                Call("map_show")
+                                Return(["map_show"])
 #                                Notify("Map")
                             ]
 
