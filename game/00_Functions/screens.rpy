@@ -754,12 +754,12 @@ screen hud_minimap(minimapData):
                                     style "minimap_button_text_chinese"
                             if locationDisabledFlag == False:
                                 action [
-                                    Call("miniMapHouseGenerateTeleport", minimapCell["name"], minimapCell)
+                                    Return(["miniMapHouseGenerateTeleport", minimapCell["name"], minimapCell])
 #                                   Return(False)
                                 ]
                             else:
                                 action [
-                                    Call("miniMapDisabled", minimapCell["name"], minimapCell)
+                                    Return(["miniMapDisabled", minimapCell["name"], minimapCell])
                                 ]
 #                    hovered tt.Action("This is City 1")
                         null:

@@ -96,6 +96,12 @@ label show_scene_loop:
             call question_helper_call() from _rcall_sprites_action4
         if interact_data[0] == "map_show":
             call map_show() from _rcall_sprites_action5
+        if interact_data[0] == "miniMapHouseGenerateTeleport":
+            call miniMapHouseGenerateTeleport(interact_data[1], interact_data[2]) from _rcall_sprites_action6
+        if interact_data[0] == "miniMapDisabled":
+            call miniMapDisabled(interact_data[1], interact_data[2]) from _rcall_sprites_action7
+
+
 
 label show_scene_loop2:
     $ pause_exit += 1
