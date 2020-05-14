@@ -255,7 +255,7 @@ screen screen_sprites(scenes_data):
                                 focus_mask True
                                 if data[i]["actions"] == "l": #если объекту не заданы действия кроме просмотра, то не выводим доп. меню
                                     action [
-                                        Call("process_object_click", data[i]["click"], i, data[i]),
+                                        Return(["process_object_click", data[i]["click"], i, data[i]]),
                                     ]
                                 else:
                                     action [
@@ -344,7 +344,7 @@ screen screen_sprites(scenes_data):
                                 unhovered [
                                     Hide("hover_text_sprite_high_hover_sprite", Dissolve(0.4)),
                                 ]
-                            action Call("process_object_click", data[i]["click"], i, data[i])
+                            action Return(["process_object_click", data[i]["click"], i, data[i]])
 
                         $ spriteImageStr = spriteStr if spriteStr != False else scene_image_file
 #                        $ idleImg = im.FactorScale(im.AlphaMask(Image(spriteImageStr), Image(maskStr)),zoom_factor) if maskStr != False else im.FactorScale(Image(spriteImageStr),1.5)
@@ -391,7 +391,7 @@ screen screen_sprites(scenes_data):
                                 unhovered Hide("hover_sprite_text", None)
                                 at imagebutton_hover_type1(idle_num)
                                 focus_mask True
-                                action Call("process_object_click", data[i]["click"], i, data[i])
+                                action Return(["process_object_click", data[i]["click"], i, data[i]])
 
 
 screen hover_text_sprite(spriteImageStr, maskImageStr, disableSprite, brightness_adjustment, saturation_adjustment, contrast_adjustment, tint_adjustment, data, canvas_offset):
@@ -572,7 +572,7 @@ screen action_menu_screen(click_label, name, data):
                         hover icon_image_hover xalign 0.5 yalign 0.5
                         action [
                             Hide("action_menu_tooltip_screen"),
-                            Call("process_object_click_alternate_action", idx, actions_list, click_label, name, data)
+                            Return(["process_object_click_alternate_action", idx, actions_list, click_label, name, data])
                         ]
                         hovered Show("action_menu_tooltip_screen", None, x, y, item_offset, action_data["description"], "#83bac4")
                         unhovered Hide("action_menu_tooltip_screen")
@@ -598,7 +598,7 @@ screen action_menu_screen(click_label, name, data):
                         unhovered Hide("action_menu_tooltip_screen")
                         action [
                             Hide("action_menu_tooltip_screen"),
-                            Call("process_object_click_alternate_inventory", idx, inventory_data, click_label, name, data)
+                            Return(["process_object_click_alternate_inventory", idx, inventory_data, click_label, name, data])
                         ]
                     $ item_offset += gui.resolution.action_menu.item_offset
 
@@ -864,7 +864,7 @@ screen hud_screen(hud_presets):
                             idle "icons/question_icon" + res.suffix + ".png"
                             hover "icons/question_icon_hover" + res.suffix + ".png"
                             action [
-                                Call("question_helper_call")
+                                Return(["question_helper_call"])
                             ]
     frame:
         background None
@@ -1294,7 +1294,7 @@ screen quick_menu():
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = False
+define quick_menu = True
 
 style quick_button is default
 style quick_button_text is button_text
@@ -1659,7 +1659,7 @@ style about_label_text:
 screen save():
 
     tag menu
-    if (gui.save_game.enabled == False or dialogue_active_flag == True) and 1==1:
+    if (gui.save_game.enabled == False or dialogue_active_flag == True) and 1==2:
         use game_menu("Save"):
             fixed:
                 order_reverse True

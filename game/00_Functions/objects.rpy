@@ -127,8 +127,7 @@ label process_object_click(func_name, obj_name, obj_data):
         return
 #    $ print renpy.get_screen("say")
     if renpy.get_screen("say") != None or renpy.get_screen("choice") != None:
-        $ renpy.pop_call()
-        jump show_scene_loop2
+        return
     if scenes_data["substs"].has_key(obj_name):
         if scenes_data["substs"][obj_name] != False:
             $ func_name = scenes_data["substs"][obj_name]
@@ -152,8 +151,7 @@ label process_object_click(func_name, obj_name, obj_data):
 #        $ dialogue_active_flag = False
     $ show_scene_loop_flag = True
     $ parse_transition_flag = False
-    $ renpy.pop_call()
-    jump show_scene_loop2
+    return
 #    jump show_scene
 
 #    return
@@ -162,8 +160,7 @@ label process_object_click_alternate_action(idx, actions_list, click_label, name
     if interface_blocked_flag == True:
         return
     if renpy.get_screen("say") != None or renpy.get_screen("choice") != None:
-        $ renpy.pop_call()
-        jump show_scene_loop2
+        return
     if idx == 0:
         $ func_name = click_label
     else:
@@ -194,18 +191,15 @@ label process_object_click_alternate_action(idx, actions_list, click_label, name
     $ show_scene_loop_flag = True
     $ parse_transition_flag = False
     call remove_dialogue()
-    $ renpy.pop_call()
-    jump show_scene_loop2
+    return
 #    jump show_scene
 #    return
 
 label process_object_click_alternate_inventory(idx, inventory_data, click_label, name, data):
     if interface_blocked_flag == True:
-        $ renpy.pop_call()
-        jump show_scene_loop2
+        return
     if renpy.get_screen("say") != None or renpy.get_screen("choice") != None:
-        $ renpy.pop_call()
-        jump show_scene_loop2
+        return
     $ func_name = name + inventory_data["label_suffix"]
     $ shortFunction = True
     if renpy.has_label(func_name) == False:
@@ -232,6 +226,5 @@ label process_object_click_alternate_inventory(idx, inventory_data, click_label,
 #        jump show_scene
     $ show_scene_loop_flag = True
     $ parse_transition_flag = False
-    $ renpy.pop_call()
-    jump show_scene_loop2
+    return
 #    jump show_scene

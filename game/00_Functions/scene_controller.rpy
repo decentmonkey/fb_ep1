@@ -83,7 +83,17 @@ label show_scene_now:
 
 label show_scene_loop:
     $ pause_enter += 1
+    $ interact_data = None
     $ interact_data = ui.interact()
+    if interact_data != None:
+        if interact_data[0] == "process_object_click":
+            call process_object_click(interact_data[1], interact_data[2], interact_data[3]) from _rcall_sprites_action1
+        if interact_data[0] == "process_object_click_alternate_action":
+            call process_object_click_alternate_action(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action2
+        if interact_data[0] == "process_object_click_alternate_inventory":
+            call process_object_click_alternate_inventory(interact_data[1], interact_data[2], interact_data[3], interact_data[4], interact_data[5]) from _rcall_sprites_action3
+        if interact_data[0] == "question_helper_call":
+            call question_helper_call() from _rcall_sprites_action4
 label show_scene_loop2:
     $ pause_exit += 1
     if show_scene_loop_flag == False:
@@ -136,8 +146,9 @@ label after_load():
     call define_autorun()
     $ imagesSizesCache = {}
     $ show_scene_loop_flag = True
-    $ renpy.pop_call()
-    jump show_scene
+    return
+#    $ renpy.pop_call()
+#    jump show_scene
 #    return
 
 label call_save():

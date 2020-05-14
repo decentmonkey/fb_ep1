@@ -214,8 +214,8 @@ init python:
 
 #    config.keymap["game_menu"].remove("mouseup_3")
     config.keymap["hide_windows"] = []
-    config.keymap["rollback"] = []
-    config.keymap["rollforward"] = []
+#    config.keymap["rollback"] = []
+#    config.keymap["rollforward"] = []
 
 ## Set this to a string containing your Apple Developer ID Application to enable
 ## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
@@ -237,13 +237,3 @@ init python:
 
 #define config.mouse = {"default" : [("gui/mouse_pointer_default.png", 0, 0)],}
     config.layers = [ 'zero', 'master', 'transient', 'belowmid', 'midlayer', 'abovemid', 'screens', 'overlay', 'hud']
-
-define config.hard_rollback_limit = 0
-define config.rollback_enabled = False
-define config.conditionswitch_predict_all = True
-#define config.predict_statements = 40
-define config.developer = "auto"
-define config.predict_screen_statements = True
-define config.predict_screens = True
-define config.autosave_on_choice = False
-define config.has_autosave = False
