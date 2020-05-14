@@ -163,6 +163,8 @@ transform credits_black_overlay:
     alpha 0.0
     linear 5.0 alpha 0.8
 
+style pref_lang_mainmenu_text:
+    size 20
 
 
 #translate german python:

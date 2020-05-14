@@ -64,7 +64,7 @@ label basement_laundry:
         $ add_object_to_scene("Teleport_Basement_Ironing_Board", {"type":3, "text" : t_("ГЛАДИЛЬНАЯ ДОСКА"), "rarrow" : "arrow_down_2", "base": "Basement_Laundry_Teleport_Ironing_Board_" + laundryIroningBoardState, "click" : "basement_laundry_teleport", "xpos" : 1652, "ypos" : 555, "zorder":11})
 
 
-    $ add_object_to_scene("Teleport_Basement_Hole", {"type":3, "text" : t_("В ПОДВАЛ"), "larrow" : "arrow_dl", "base":"empty", "click" : "basement_laundry_teleport", "xpos" : 183, "ypos" : 873, "zorder":11})
+    $ add_object_to_scene("Teleport_Basement_Hole", {"type":3, "text" : t_("В ПОДВАЛ"), "larrow" : "arrow_dl", "base":"empty", "click" : "basement_laundry_teleport", "xpos" : 203, "ypos" : 873, "zorder":11})
     $ add_object_to_scene("Teleport_Basement_Pool", {"type":3, "text" : t_("НАЗАД К БАССЕЙНУ"), "larrow" : "arrow_down_2", "base":"Screen_Down_Arrow", "click" : "basement_laundry_teleport", "xpos" : 960, "ypos" : 956, "zorder":11})
 
     return

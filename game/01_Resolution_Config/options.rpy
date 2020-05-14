@@ -212,7 +212,7 @@ init python:
     build.documentation('*.html')
     build.documentation('*.txt')
 
-    config.keymap["game_menu"].remove("mouseup_3")
+#    config.keymap["game_menu"].remove("mouseup_3")
     config.keymap["hide_windows"] = []
 
 ## Set this to a string containing your Apple Developer ID Application to enable

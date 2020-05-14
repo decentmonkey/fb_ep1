@@ -58,6 +58,10 @@ define gui.resolution.map.text_button_active.style = "sprite_textbutton_active_m
 define gui.resolution.map.text_button_active.force_hovered.style = "sprite_textbutton_active_map_force_hovered_text"
 #
 
+define gui.resolution.main_menu.lang.padding = 30
+define gui.resolution.main_menu.font_size1 = 30
+define gui.resolution.main_menu.font_size2 = 25
+
 define gui.resolution.choice_box.y_pos = 405 #405, 270
 
 define gui.choice_button_text_size = 34 #25

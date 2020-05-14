@@ -17,10 +17,10 @@ label show_scene:
 label show_scene_now:
     if define_version_current != define_version:
         call define_autorun() from _call_define_autorun_2
-    $ print "pause_enter"
-    $ print pause_enter
-    $ print "pause_exit"
-    $ print pause_exit
+#    $ print "pause_enter"
+#    $ print pause_enter
+#    $ print "pause_exit"
+#    $ print pause_exit
 
     if rain != True or sceneIsStreet != True:
         hide screen Rain
@@ -31,8 +31,8 @@ label show_scene_now:
         $ sound_to_play = get_filename(scene_sound)
         play sound sound_to_play
         $ scene_sound = False
-    $ print "Bitchiness"
-    $ print bitchmeterValue
+#    $ print "Bitchiness"
+#    $ print bitchmeterValue
     hide screen sprites_hover_dummy_screen
 
 #    window hide

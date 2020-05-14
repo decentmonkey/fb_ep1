@@ -18,7 +18,7 @@ init python:
             inventory.insert(0, [name, amount])
         if notification == True:
             if amount > 0:
-                renpy.show_screen("notify", str(amount) + "x " + __(inventory_objects[name]["description"]) + " received")
+                renpy.show_screen("notify", str(amount) + "x " + t__(inventory_objects[name]["description"]) + " received")
             else:
                 renpy.show_screen("notify", inventory_objects[name]["description"] + " received")
         return
@@ -33,7 +33,7 @@ init python:
             inventory[idx][1] -= amount
         if notification == True:
             if amount > 0:
-                renpy.show_screen("notify", str(amount) + "x " + __(inventory_objects[name]["description"]) + " decreased")
+                renpy.show_screen("notify", str(amount) + "x " + t__(inventory_objects[name]["description"]) + " decreased")
             else:
                 renpy.show_screen("notify", inventory_objects[name]["description"] + " decreased")
         return

@@ -22,6 +22,7 @@ python early:
         renpy.scene()
         renpy.show_screen("show_image_screen", imagePath)
         image_screen_scene_flag = False
+        dialogue_active_flag = True
         screenActionHappened = True
     def img_pred(s):
         return [Image(img_find_path(s))]
@@ -104,8 +105,6 @@ python early:
         what = re.sub("Mr\.\\n", "Mr. ", what)
         what = re.sub("Mrs\.\\n", "Mrs. ", what)
         what = re.sub("Ms\.\\n", "Ms. ", what)
-        renpy.say(who, what)
-
         renpy.say(who, what)
 
     renpy.register_statement("", parse=saywrapper_parse, execute=saywrapper_execute, lint = saywrapper_lint, translatable=True) #враппер для say, чтобы подымать флаг активного диалога

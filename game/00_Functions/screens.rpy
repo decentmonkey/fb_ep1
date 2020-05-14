@@ -143,16 +143,8 @@ screen screen_sprites(scenes_data):
                     Hide("action_menu_screen"),
                     Hide("action_menu_tooltip_screen")
                 ]
-                alternate [
-                    Hide("say"),
-                    Hide("dialogue_image_left"),
-                    Hide("dialogue_image_right"),
-                    Hide("dialogue_image_center"),
-                    Hide("dialogue_down_arrow"),
-                    Hide("action_menu_screen"),
-                    Hide("action_menu_tooltip_screen"),
-                    Call("call_save")
-                ]
+                if renpy.android:
+                    alternate ShowMenu("save")
 
             $ data = scenes_data["objects"][scene_name] if scene_name in scenes_data["objects"] else False
             if data != False and game_version1_screen_ready_to_render == True:
@@ -271,7 +263,7 @@ screen screen_sprites(scenes_data):
                                     ]
 
 #                                alternate Show("action_menu_screen", None, data[i]["click"], i, data[i])
-                                alternate Call("call_save")
+#                                alternate Call("call_save")
 
                     if data[i]["type"] == 3: #text with image
                         $ button_layout = data[i]["layout"] if data[i].has_key("layout") else text_button_default_layout
@@ -1207,6 +1199,9 @@ style input:
 
 screen choice(items):
     style_prefix "choice"
+
+    $ dialogue_active_flag = True
+
     fixed:
         button:
             style "menu_choice_empty_background_button"
@@ -1322,11 +1317,13 @@ style quick_button_text:
 
 screen navigation():
 
+
     vbox:
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
         yalign 0.5
+#        yanchor 0
 
         spacing gui.navigation_spacing
 
@@ -1374,7 +1371,6 @@ style navigation_button:
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
 
-
 ## Main Menu screen ############################################################
 ##
 ## Used to display the main menu when Ren'Py starts.
@@ -1407,6 +1403,31 @@ screen main_menu():
         add "gui/resolution_caption.png":
             xpos get_resolution_x(1345)
             ypos get_resolution_y(440)
+
+        frame:
+            pos (get_resolution_x(1520), get_resolution_y(650))
+            padding (gui.resolution.main_menu.lang.padding,gui.resolution.main_menu.lang.padding)
+            xysize (get_resolution_x(300), get_resolution_y(300))
+            anchor (0,0)
+            background Frame("gui/frame_lang.png", left=0, top=0, right=5, bottom=0)
+            vbox:
+                pos (0,0)
+                anchor (0,0)
+                style_prefix "navigation"
+                label t_("Language"):
+                    text_size gui.resolution.main_menu.font_size1
+                textbutton "English" action Language("english"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "German" action Language("german"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Spanish" action Language("spanish"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Chinese" action Language("chinese"):
+                    text_size gui.resolution.main_menu.font_size2
+                textbutton "Russian" action Language(None):
+                    text_size gui.resolution.main_menu.font_size2
+
+
 
     ## This empty frame darkens the main menu.
     frame:

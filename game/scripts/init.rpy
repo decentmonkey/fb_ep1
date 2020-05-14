@@ -22,6 +22,12 @@ default screenActionHappened = False
 
 define imagesSizesCache = {}
 
+default monica_tint = [1.0, 1.0, 1.0]
+
+define dissolve1 = Dissolve(0.5)
+default dialogue_active_flag = False
+default last_dialogue_character = "m"
+
 label define_autorun:
     $ print "autorun!"
 
@@ -149,9 +155,6 @@ label game_init:
     $ image_screen_scene_flag = False
     $ show_scene_loop_flag = False
     $ interface_blocked_flag = False
-    define dissolve1 = Dissolve(0.5)
-    define dialogue_active_flag = False
-    define last_dialogue_character = "m"
 
     $ width_half = config.screen_width / 2
 

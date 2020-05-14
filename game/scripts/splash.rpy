@@ -1,6 +1,6 @@
 label splashscreen:
     scene black
-    image videoIntro_Video = Movie(play="video/Intro_Video.mkv", fps=30)
+    image videoIntro_Video = Movie(play="video/Intro_Video.webm", fps=25)
     show videoIntro_Video
     $ renpy.pause(2.0, hard=True)
     $ renpy.pause(68.0)
