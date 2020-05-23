@@ -237,3 +237,5 @@ init python:
 
 #define config.mouse = {"default" : [("gui/mouse_pointer_default.png", 0, 0)],}
     config.layers = [ 'zero', 'master', 'transient', 'belowmid', 'midlayer', 'abovemid', 'screens', 'overlay', 'hud']
+
+    config.custom_text_tags["c"] = custom_tag1

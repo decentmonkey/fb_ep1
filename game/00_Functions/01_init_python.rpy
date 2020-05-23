@@ -183,3 +183,10 @@ python early:
 
 
     renpy.register_statement("video", parse=video_parse, execute=video_exec) #video - оператор воспроизведения видео
+
+    def custom_tag1(tag, argument, contents):
+        return [
+                (renpy.TEXT_TAG, u"color=#e8b131"),
+            ] + contents + [
+                (renpy.TEXT_TAG, u"/color"),
+            ]
