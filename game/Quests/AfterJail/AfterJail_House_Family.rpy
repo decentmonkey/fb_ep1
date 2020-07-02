@@ -92,10 +92,10 @@ label afterJailHouseFamily_dialogue3:
     "Мне нет!"
     img 3310
     mt "ССССССУЧКА!!!!"
-    music Hidden_Agenda
-    img 3311
-    bardie_t "Я считаю что шлюх много не бывает..."
-    "Надо рассмотреть эту MILF'у поближе"
+#    music Hidden_Agenda
+#    img 3311
+#    bardie_t "Я считаю что шлюх много не бывает..."
+#    "Надо рассмотреть эту MILF'у поближе"
 
     music Groove2_85
     img 3312
@@ -118,24 +118,24 @@ label afterJailHouseFamily_dialogue3:
     "Я не разрешала тебе говорить!"
     ralph "Прости, дорогая..."
 
-    img 3311
-    sound man_steps
-    img black_screen
-    with Dissolve(0.5)
-    $ renpy.pause(1.0)
-    img 3317
-    with fade
-    sound wow
-    w
+#    img 3311
+#    sound man_steps
+#    img black_screen
+#    with Dissolve(0.5)
+#    $ renpy.pause(1.0)
+#    img 3317
+#    with fade
+#    sound wow
+#    w
     music Power_Bots_Loop
-    img 3318
-    with fade
+#    img 3318
+#    with fade
     mt "МНЕ НАДО КАК-ТО УБЕДИТЬ ЭТУ СУЧКУ ВЗЯТЬ МЕНЯ!"
     "ААААААААРГХХ"
     "МОНИКА!"
     "КАК ЭТО ВСЕ МОГЛО СЛУЧИТЬСЯ????"
     music Hidden_Agenda
-    img 3319
+#    img 3319
     m "Миссис Робертс."
     "Пожалуйста, возьмите меня."
     img 3320
@@ -149,42 +149,42 @@ label afterJailHouseFamily_dialogue3:
     img 3322
     betty "Нет, я не думаю."
     "Твоя прическа мне тоже не нравится."
-    music Hidden_Agenda
-    img 3323
-    bardie_t "Хм..."
-    "Неплохо было бы переубедить мачеху..."
-    "Эта гувернантка весьма горяча..."
-    img 3324
-    "Еще такая послушная кукла может пригодиться для моих планов относительно мачехи..."
+#    music Hidden_Agenda
+#    img 3323
+#    bardie_t "Хм..."
+#    "Неплохо было бы переубедить мачеху..."
+#    "Эта гувернантка весьма горяча..."
+#    img 3324
+#    "Еще такая послушная кукла может пригодиться для моих планов относительно мачехи..."
 
-    sound man_steps
-    img black_screen
-    with Dissolve(0.5)
-    $ renpy.pause(1.0)
+#    sound man_steps
+#    img black_screen
+#    with Dissolve(0.5)
+#    $ renpy.pause(1.0)
 
-    music Hidden_Agenda
-    img 3325
-    bardie "Бетти!"
-    "Послушай."
-    "Давай возьмем эту гувернантку."
-    betty "С чего бы вдруг?"
-    bardie "Я думаю она может хорошо работать."
-    img 3326
-    bardie_t "Своей киской, хе-хе"
-    img 3326
-    bardie "А я начну тебя слушаться."
-    "И перестану донимать."
-    "Стану хорошо учиться и не буду лезть в то что ты тратишь много денег на одежду!"
-    betty "Хм..."
-    "Обещаешь?"
-    bardie "Обещаю, Бетти!"
-    bardie_t "Ты мне потом заплатишь за мои лишения, сполна! Хе-хе"
-    img 3327
-    betty "Ой, ну ладно..."
-    "Раз уж так..."
-    "Но Барди!"
-    "Я запомню твое обещание!"
-    bardie "Конечно, Бетти!"
+#    music Hidden_Agenda
+#    img 3325
+#    bardie "Бетти!"
+#    "Послушай."
+#    "Давай возьмем эту гувернантку."
+#    betty "С чего бы вдруг?"
+#    bardie "Я думаю она может хорошо работать."
+#    img 3326
+#    bardie_t "Своей киской, хе-хе"
+#    img 3326
+#    bardie "А я начну тебя слушаться."
+#    "И перестану донимать."
+#    "Стану хорошо учиться и не буду лезть в то что ты тратишь много денег на одежду!"
+#    betty "Хм..."
+#    "Обещаешь?"
+#    bardie "Обещаю, Бетти!"
+#    bardie_t "Ты мне потом заплатишь за мои лишения, сполна! Хе-хе"
+#    img 3327
+#    betty "Ой, ну ладно..."
+#    "Раз уж так..."
+#    "Но Барди!"
+#    "Я запомню твое обещание!"
+#    bardie "Конечно, Бетти!"
     img 3328
     betty "Хорошо."
     music Groove2_85
@@ -196,10 +196,10 @@ label afterJailHouseFamily_dialogue3:
     mt "!!!!!!!!"
     "ТВАРЬ!!!!"
     "НЕНАВИЖУ!!!"
-    music Hidden_Agenda
-    img 3330
-    bardie "Добро пожаловать, Моника!"
-    bardie_t "Хе-хе"
+#    music Hidden_Agenda
+#    img 3330
+#    bardie "Добро пожаловать, Моника!"
+#    bardie_t "Хе-хе"
 
     music Groove2_85
     img 3331
