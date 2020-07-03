@@ -190,7 +190,7 @@ label process_object_click_alternate_action(idx, actions_list, click_label, name
 #        $ dialogue_active_flag = False
     $ show_scene_loop_flag = True
     $ parse_transition_flag = False
-    call remove_dialogue()
+    call remove_dialogue() from _call_remove_dialogue
     return
 #    jump show_scene
 #    return

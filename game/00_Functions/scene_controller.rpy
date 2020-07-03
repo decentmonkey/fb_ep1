@@ -152,7 +152,7 @@ label after_load():
     if game_version1_screen_ready_to_render == False:
         $ game_version1_screen_ready_to_render = True
         call refresh_scene() from _call_refresh_scene_36
-    call define_autorun()
+    call define_autorun() from _call_define_autorun_3
     $ imagesSizesCache = {}
     $ show_scene_loop_flag = True
     return
