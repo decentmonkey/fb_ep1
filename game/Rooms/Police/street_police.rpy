@@ -51,7 +51,7 @@ label street_police_environment(obj_name, obj_data):
             stop music fadeout 4.0
             scene black_screen
             with Dissolve(1)
-            call textonblack_long("The End of V0.3\nYou could support me on Patreon if you like the game :)") from _call_textonblack_long_3
+#            call textonblack_long("The End of V0.3\nYou could support me on Patreon if you like the game :)") from _call_textonblack_long_3
             scene black_screen
             with Dissolve(1)
             $ renpy.full_restart(transition=Fade(1.0, 1.0, 1.0))

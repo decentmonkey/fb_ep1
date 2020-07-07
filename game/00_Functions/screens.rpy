@@ -1386,16 +1386,23 @@ screen main_menu():
 
     add gui.main_menu_background
     fixed:
+#        imagebutton:
+#            xpos get_resolution_x(1525)
+#            ypos get_resolution_y(35)
+#            idle "gui/patreon_button.png"
+#            hover "gui/patreon_button_hover.png"
+#            action OpenURL("https://www.patreon.com/decentmonkey")
+
+#        imagebutton:
+#            xpos get_resolution_x(1524)
+#            ypos get_resolution_y(162)
+#            idle "gui/web_button.png"
+#            hover "gui/web_button_hover.png"
+#            action OpenURL("http://decent-monkey.com/news/")
+
         imagebutton:
             xpos get_resolution_x(1525)
             ypos get_resolution_y(35)
-            idle "gui/patreon_button.png"
-            hover "gui/patreon_button_hover.png"
-            action OpenURL("https://www.patreon.com/decentmonkey")
-
-        imagebutton:
-            xpos get_resolution_x(1524)
-            ypos get_resolution_y(162)
             idle "gui/web_button.png"
             hover "gui/web_button_hover.png"
             action OpenURL("http://decent-monkey.com/news/")
