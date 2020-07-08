@@ -1349,6 +1349,7 @@ screen navigation():
 
             textbutton t_("Main Menu") action MainMenu()
 
+        textbutton t_("Walkthrough") action OpenURL("https://wiki.decent-monkey.com/wiki/Walkthrough_Fashion_Business:_Episode_1")
         textbutton t_("New Episodes") action OpenURL("http://decent-monkey.com/news/")
         textbutton t_("My Thanks") action ShowMenu("about")
 
