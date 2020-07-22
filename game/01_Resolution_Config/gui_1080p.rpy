@@ -188,9 +188,9 @@ transform credits_transform:
     ypos 1080
     linear 520.0 ypos -27240
 
-define gui.credits.offset1 = 10
-define gui.credits.offset2 = 28
-define gui.credits.offset3 = 20
-define gui.credits.offset4 = 30
-define gui.credits.offset5 = 30
+define gui.credits.offset1 = 24
+define gui.credits.offset2 = 40
+define gui.credits.offset3 = 34
+define gui.credits.offset4 = 54
+define gui.credits.offset5 = 42
 define gui.credits.timeout = 170.0
