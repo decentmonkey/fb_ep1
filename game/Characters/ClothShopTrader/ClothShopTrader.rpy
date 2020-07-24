@@ -385,8 +385,8 @@ label clothShopTraderScene1:
         img 5855
         with fadelong
         "Нет, мне так не расслабиться."
-        img 5856
-        with fade
+#        img 5856
+#        with fade
         "Где там моя игрушка?"
         img 5857
         with fade
